@@ -1,28 +1,26 @@
-const express = require('express');  // import required libraries
-
-const mongoose = require('mongoose');
+const express = require('express');
+const mongo = require('./db/mongo');
 const cors = require('cors');
-const routes = require('./routes/mainRoute');
 
-// parse incoming request bodies in a middleware before your handlers, available under the req.body property
-const bodyParser = require('body-parser');
-
-
-// load environment variables from .env file
-require('dotenv').config();
-
-
+const dotenv = require('dotenv').config();
 const app = express();
-
-// get port and MongoDB URI from .env file
-const port = process.env.PORT || 5000;
-const uri = process.env.MongoURI;
+const port = process.env.port || 3000;
 
 app.use(cors()); // enable CORS (Cross-origin resource sharing) for allowing access to resources from other domains
+app.use(express.json());
 
-mongoose.connect(uri)
-    .then(() => console.log('MongoDB Connected...'))
-    .catch(err => console.log(err));
+app.get("/", (req, res) => {
+    res.send("Hello World");
+});
 
-app.use(routes) // use routes from routes.js
-app.listen(port, () => console.log(`Server started on port ${port}`));
+const run = async () => {
+    try {
+        await mongo(process.env.MONGO_URL);
+        app.listen(port, () => console.log(`Server started on port ${port}`));
+    }
+    catch (err) {
+        console.log(err);
+    }
+}
+
+run();
