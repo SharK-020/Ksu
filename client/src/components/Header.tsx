@@ -9,7 +9,7 @@ const Header = () => {
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen);
   }, [isOpen]);
-
+  //when user scrolls down navbar will close
   useEffect(() => {
     const handleScroll = () => {
       setIsOpen(false);

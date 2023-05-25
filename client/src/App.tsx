@@ -9,6 +9,8 @@ function App() {
         </header>
         <main className="grid grid-cols-1 md:grid-cols-2 mx-4 gap-2">
           <article className="space-y-4">
+            {/*we'll fetch text content from the database later, this is just for sample*/}
+
             <p className="bg-gray-200 rounded-lg">
               Welcome to Kanchenjunga State University: An Introduction to Our
               Institution This article could provide a warm and inviting

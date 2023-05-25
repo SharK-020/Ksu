@@ -6,6 +6,6 @@
     .large-nav-item {
         @apply hover:bg-cyan-500/20 border-slate-100 border-b-2 lg:p-4
         md:p-1 transition-all hover:border-b-2
-        hover:border-sky-950 duration-300
+        hover:border-sky-950 duration-300;
     }
 }
