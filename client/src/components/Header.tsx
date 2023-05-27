@@ -28,7 +28,7 @@ const Header = () => {
         <div className="bg-white rounded-full inline-block w-12 md:w-auto m-2 md:m-2 lg:m-4 ">
           <img src={logo} alt="logo" width={100} height={100} />
         </div>
-        <nav className="relative place-self-end">
+        <nav className="relative place-self-end space-y-1">
           {/* Desktop nav */}
           <ul className="hidden md:flex bg-slate-100 space-x-2 text-center">
             <li className="large-nav-item">Home</li>
@@ -63,15 +63,15 @@ const Header = () => {
         md:hidden flex`}
       >
         {/* Mobile nav */}
-        <ul className="space-x-2 text-center">
-          <li className="">Home</li>
-          <li className="">Know KSU</li>
-          <li className="">Governance</li>
-          <li className="">Schools</li>
-          <li className="">Departments & Faculty</li>
-          <li className="">Life at KSU</li>
-          <li className="">Research</li>
-          <li className="">Mandatory Disclosure</li>
+        <ul className="space-y-1 text-center">
+          <li className="small-nav-items">Home</li>
+          <li className="small-nav-items">Know KSU</li>
+          <li className="small-nav-items">Governance</li>
+          <li className="small-nav-items">Schools</li>
+          <li className="small-nav-items">Departments & Faculty</li>
+          <li className="small-nav-items">Life at KSU</li>
+          <li className="small-nav-items">Research</li>
+          <li className="small-nav-items">Mandatory Disclosure</li>
         </ul>
       </nav>
     </>
