@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-    //funtion for route changing
-    const routeClick = () => {
-      window.scrollTo(0, 0);
-    }
+  //funtion for route changing
+  const routeClick = () => {
+    window.scrollTo(0, 0);
+  };
 
   // Function for menu button in small screens
   const toggleMenu = useCallback(() => {
@@ -37,28 +37,44 @@ const Header = () => {
           {/* Desktop nav */}
           <ul className="hidden md:flex bg-slate-100 space-x-2 text-center">
             <Link to="/">
-              <li className="large-nav-item" onClick={routeClick}>Home</li>
+              <li className="large-nav-item" onClick={routeClick}>
+                Home
+              </li>
             </Link>
             <Link to="/know">
-            <li className="large-nav-item" onClick={routeClick}>Know KSU</li>
+              <li className="large-nav-item" onClick={routeClick}>
+                Know KSU
+              </li>
             </Link>
             <Link to="/governance">
-            <li className="large-nav-item" onClick={routeClick}>Governance</li>
+              <li className="large-nav-item" onClick={routeClick}>
+                Governance
+              </li>
             </Link>
             <Link to="/schools">
-            <li className="large-nav-item" onClick={routeClick}>Schools</li>
+              <li className="large-nav-item" onClick={routeClick}>
+                Schools
+              </li>
             </Link>
             <Link to="/departments">
-            <li className="large-nav-item" onClick={routeClick}>Departments & Faculty</li>
+              <li className="large-nav-item" onClick={routeClick}>
+                Departments & Faculty
+              </li>
             </Link>
             <Link to="/life">
-            <li className="large-nav-item" onClick={routeClick}>Life at KSU</li>
+              <li className="large-nav-item" onClick={routeClick}>
+                Life at KSU
+              </li>
             </Link>
             <Link to="/research">
-            <li className="large-nav-item" onClick={routeClick}>Research</li>
+              <li className="large-nav-item" onClick={routeClick}>
+                Research
+              </li>
             </Link>
             <Link to="/mandis">
-            <li className="large-nav-item" onClick={routeClick}>Mandatory Disclosure</li>
+              <li className="large-nav-item" onClick={routeClick}>
+                Mandatory Disclosure
+              </li>
             </Link>
           </ul>
         </nav>
@@ -85,17 +101,33 @@ const Header = () => {
       >
         {/* Mobile nav */}
         <ul className="space-y-1 text-center">
-          <li className="small-nav-items">Home</li>
-          <li className="small-nav-items">Know KSU</li>
-          <li className="small-nav-items">Governance</li>
-          <li className="small-nav-items">Schools</li>
-          <li className="small-nav-items">Departments & Faculty</li>
-          <li className="small-nav-items">Life at KSU</li>
-          <li className="small-nav-items">Research</li>
-          <li className="small-nav-items">Mandatory Disclosure</li>
+          <Link to="/">
+            <li className="small-nav-items" onClick={routeClick}>Home</li>
+          </Link>
+          <Link to="/know">
+            <li className="small-nav-items" onClick={routeClick}>Know KSU</li>
+          </Link>
+          <Link to="/governance">
+            <li className="small-nav-items" onClick={routeClick}>Governance</li>
+          </Link>
+          <Link to="/schools">
+            <li className="small-nav-items" onClick={routeClick}>Schools</li>
+          </Link>
+          <Link to="/departments">
+            <li className="small-nav-items" onClick={routeClick}>Departments & Faculty</li>
+          </Link>
+          <Link to="/life">
+            <li className="small-nav-items" onClick={routeClick}>Life at KSU</li>
+          </Link>
+          <Link to="/research">
+            <li className="small-nav-items" onClick={routeClick}>Research</li>
+          </Link>
+          <Link to="/mandis">
+            <li className="small-nav-items" onClick={routeClick}>Mandatory Disclosure</li>
+          </Link>
         </ul>
       </nav>
-    </ header>
+    </header>
   );
 };
 

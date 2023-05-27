@@ -21,7 +21,6 @@ function App() {
       <Route path="/mandis" element={<Mandis />} />
       <Route path="/research" element={<Research />} />
     </Routes>
-  
     </>
   );
 }
