@@ -11,7 +11,7 @@ function App() {
           <article className="space-y-4">
             {/*we'll fetch text content from the database later, this is just for sample*/}
 
-            <p className="bg-gray-100 font-sanserif sm:tracking-tighter rounded-lg md:text-md md:tracking-tight lg:text-lg lg:tracking-normal lg:leading-relaxed mt-3">
+            <p className="bg-gray-100 font-sanserif tracking-tighter rounded-lg md:text-md md:tracking-tight lg:text-lg lg:tracking-normal lg:leading-relaxed mt-3">
               Welcome to Kanchenjunga State University: An Introduction to Our
               Institution This article could provide a warm and inviting
               introduction to the university, highlighting its history, mission,
@@ -21,7 +21,7 @@ function App() {
               breathtaking landscapes and proximity to the majestic Kanchenjunga
               mountain.
             </p>
-            <p className="bg-gray-100 font-sanserif sm:tracking-tighter rounded-lg md:text-md md:tracking-tight lg:text-lg lg:tracking-normal lg:leading-relaxed">
+            <p className="bg-gray-100 font-sanserif tracking-tighter rounded-lg md:text-md md:tracking-tight lg:text-lg lg:tracking-normal lg:leading-relaxed">
               This article could showcase the natural beauty of the region,
               including its flora, fauna, and adventure opportunities,
               emphasizing how the university is ideally located for students to
