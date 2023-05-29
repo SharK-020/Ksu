@@ -2,9 +2,9 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const userSchema = new Schema({
-    username: { type: String, required: true },
-    password: { type: String, required: true },
-    role: { type: String, required: true, default: 'admin' },
+  "username": { type: String, required: true },
+  "password": { type: String, required: true },
+  "role": { type: String, required: true, default: 'admin' }
 })
 //hashing password
 /* userSchema.pre('save', async function (next) {
@@ -16,5 +16,8 @@ const userSchema = new Schema({
     } catch (error) {
       next(error);
     }
-  });
-modules.exports = mongoose.model('User', userSchema) */
+  });*/
+
+const User = mongoose.model('User', userSchema);
+
+module.exports = User;
