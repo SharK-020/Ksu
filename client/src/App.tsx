@@ -7,6 +7,7 @@ import Life from "./pages/Life";
 import Mandis from "./pages/Mandis";
 import Research from "./pages/Research";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="/life" element={<Life />} />
       <Route path="/mandis" element={<Mandis />} />
       <Route path="/research" element={<Research />} />
+      <Route path="/login" element={<Login />} />
     </Routes>
     </>
   );
