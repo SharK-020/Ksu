@@ -1,13 +1,17 @@
-import jwtUtils from '../utils/jwtUtils.js';
-import User from '../models/userSchema.js';
+const jwtUtils = require('../utils/jwtUtils.js');
+const User = require('../models/userSchema.js');
 
 //not yet tested
+
 exports.login = async (req, res) => {
+
     const { username, password } = req.body;
 
     try {
-        const user = await User.findOne({ username });
+        const user = await User.findOne({ "username": username });
+
         if (!user) {
+            console.log(user)
             return res.status(404).json({ message: 'User not found' });
         }
 
@@ -18,6 +22,7 @@ exports.login = async (req, res) => {
 
         const token = jwtUtils.createToken(user.id);
         res.json({ token });
+
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: 'Server error' });
