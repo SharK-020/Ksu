@@ -29,7 +29,7 @@ const Header = () => {
 
   return (
     <header>
-      <div className="relative bg-sky-950 flex items-center justify-between md:space-x-6">
+      <div className="relative bg-gradient-to-b from-cyan-300 via-white flex items-center justify-between md:space-x-6">
         <div className="bg-white rounded-full inline-block w-12 md:w-auto m-2 md:m-2 lg:m-4 ">
           <img src={logo} alt="logo" width={100} height={100} />
         </div>
