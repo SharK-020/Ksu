@@ -96,22 +96,11 @@ const Header = () => {
       <nav
         className={`${
           isOpen ? "right-0" : "right-[-100%]"
-        } duration-[.7s] h-[100vh] bg-slate-200 w-[30vw] right-0 fixed tracking-tight
+        } duration-[.7s] h-[100vh] bg-slate-200 w-[40vw] right-0 fixed tracking-tight
         md:hidden flex`}
       >
         {/* Mobile nav */}
-<<<<<<< HEAD
-        <ul className="space-y-2 text-center">
-          <li className="small-nav-items">Home</li>
-          <li className="small-nav-items">Know KSU</li>
-          <li className="small-nav-items">Governance</li>
-          <li className="small-nav-items">Schools</li>
-          <li className="small-nav-items">Departments & Faculty</li>
-          <li className="small-nav-items">Life at KSU</li>
-          <li className="small-nav-items">Research</li>
-          <li className="small-nav-items">Mandatory Disclosure</li>
-=======
-        <ul className="space-y-1 text-center">
+        <ul className="space-y-2 pt-4 text-center">
           <Link to="/">
             <li className="small-nav-items" onClick={routeClick}>Home</li>
           </Link>
@@ -136,7 +125,6 @@ const Header = () => {
           <Link to="/mandis">
             <li className="small-nav-items" onClick={routeClick}>Mandatory Disclosure</li>
           </Link>
->>>>>>> origin/main
         </ul>
       </nav>
     </header>
