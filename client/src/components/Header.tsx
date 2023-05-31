@@ -63,7 +63,7 @@ const Header = () => {
         md:hidden flex`}
       >
         {/* Mobile nav */}
-        <ul className="space-y-1 text-center">
+        <ul className="space-y-2 text-center">
           <li className="small-nav-items">Home</li>
           <li className="small-nav-items">Know KSU</li>
           <li className="small-nav-items">Governance</li>
