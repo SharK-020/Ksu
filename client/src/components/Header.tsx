@@ -98,8 +98,8 @@ const Header = () => {
       <nav
         className={`${
           isOpen ? "right-0" : "right-[-100%]"
-        } duration-[.7s] h-[100vh] bg-slate-200 w-[40vw] right-0 fixed tracking-tight
-        md:hidden flex`}
+        } duration-[.5s] h-[100vh] bg-slate-200/70 w-[40vw] right-0 fixed tracking-tight
+        md:hidden flex backdrop-blur-md`}
       >
         {/* Mobile nav */}
         <ul className="space-y-2 pt-4 text-center">
