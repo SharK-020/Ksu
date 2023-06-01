@@ -45,7 +45,7 @@ const Header = () => {
             </Link>
             <Link to="/know">
               <li className="large-nav-item" onClick={routeClick}>
-                Know KSU
+                Test
               </li>
             </Link>
             <Link to="/governance">
