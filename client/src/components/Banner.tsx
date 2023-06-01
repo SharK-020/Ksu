@@ -27,16 +27,14 @@ const Banner = () => {
 
   return (
     <div
-      className="h-[400px] w-full bg-cover bg-center"
+      className="h-[500px]  bg-cover bg-center"
       style={{
         backgroundImage: `url(${currentImage.url})`,
         
         transition: "background-image 1s ease-in",
       }}
     >
-      <mask>
-        <div className="h-[400px] w-full bg-gradient-to-b from-transparent to-black"></div>
-      </mask>
+      
       {/* Additional content for the banner */}
     </div>
   );

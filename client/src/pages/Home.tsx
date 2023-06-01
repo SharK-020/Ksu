@@ -4,7 +4,9 @@ import Banner from "../components/Banner";
 const Home = () => {
   return (
     <main className="">
-      <Banner />
+      <section className="md:mx-10 lg:mx-20">
+        <Banner />
+      </section>
     </main>
   );
 };
