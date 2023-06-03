@@ -40,37 +40,38 @@ const Home = () => {
         </div>
       </section>
       {/* vison mission */}
-      <section>
+      <section className="flex justify-between">
         <div>
+          Few links here
 
         </div>
         <div>
-
+          vision and mission box here
         </div>
       </section>
       {/* Metrics and numbers */}
       <section>
-
+          Few Statistics here
       </section>
       {/* Campus Life and facilities overview */}
       <section>
-
+          Campus life images and stuff
       </section>
       {/* Overview of programs */}
       <section>
-
+          Programs overview
       </section>
       {/* Faculty overview */}
       <section>
-
+          Faculty overview
       </section>
       {/* Admission application overview */}
       <section>
-
+          Admission application overview
       </section>
       {/* Scholarship Programs */}
       <section>
-
+          Scholarship Programs
       </section>
 
     </main>
