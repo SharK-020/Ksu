@@ -29,15 +29,16 @@ const Header = () => {
 
   return (
     <header className="">
-      <div className="relative p-2 flex items-center justify-between md:space-x-6">
+      <div className="relative  flex items-center justify-between md:space-x-6">
         <div className="bg-white flex space-x-4 items-center rounded-full w-20 
         md:w-auto m-2 md:m-2 lg:m-4 ">
           <img className="" src={logo} alt="logo" width={100} height={100} />
-          <h1 className="text-sm md:hidden lg:block font-semibold text-slate-950 lg:text-center ">Kanchendzonga State University</h1>
+          <h1 className="text-sm md:hidden font-semibold text-slate-950 lg:text-center ">Kanchendzonga State University</h1>
         </div>
         <nav className="relative place-self-end space-y-1">
           {/* Desktop nav */}
-          <ul className="hidden md:flex bg-slate-100 space-x-2 text-center">
+          <ul className="hidden md:flex bg-slate-100 space-x-2 text-center
+          rounded-tl-3xl">
             <Link to="/">
               <li className="large-nav-item" onClick={routeClick}>
                 Home
@@ -45,7 +46,7 @@ const Header = () => {
             </Link>
             <Link to="/know">
               <li className="large-nav-item" onClick={routeClick}>
-                Test pushing
+                Know KSU
               </li>
             </Link>
             <Link to="/governance">
@@ -102,7 +103,7 @@ const Header = () => {
         md:hidden flex backdrop-blur-md`}
       >
         {/* Mobile nav */}
-        <ul className="space-y-2 pt-4 text-center">
+        <ul className="space-y-2 pt-4 text-center w-full">
           <Link to="/">
             <li className="small-nav-items" onClick={routeClick}>Home</li>
           </Link>
