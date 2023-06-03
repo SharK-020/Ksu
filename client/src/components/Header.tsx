@@ -28,14 +28,17 @@ const Header = () => {
   }, []);
 
   return (
-    <header>
-      <div className="relative bg-sky-950 flex items-center justify-between md:space-x-6">
-        <div className="bg-white rounded-full inline-block w-12 md:w-auto m-2 md:m-2 lg:m-4 ">
-          <img src={logo} alt="logo" width={100} height={100} />
+    <header className="">
+      <div className="relative  flex items-center justify-between md:space-x-6">
+        <div className="bg-white flex space-x-4 items-center rounded-full w-20 
+        md:w-auto m-2 md:m-2 lg:m-4 ">
+          <img className="" src={logo} alt="logo" width={100} height={100} />
+          <h1 className="text-sm md:hidden font-semibold text-slate-950 lg:text-center ">Kanchendzonga State University</h1>
         </div>
         <nav className="relative place-self-end space-y-1">
           {/* Desktop nav */}
-          <ul className="hidden md:flex bg-slate-100 space-x-2 text-center">
+          <ul className="hidden md:flex bg-slate-100 space-x-2 text-center
+          rounded-tl-3xl">
             <Link to="/">
               <li className="large-nav-item" onClick={routeClick}>
                 Home
@@ -81,12 +84,12 @@ const Header = () => {
 
         {/* Nav button */}
         <div
-          className={`mt-3 z-50 right-0 text-sm font-medium md:hidden cursor-pointer ${
-            isOpen ? "absolute" : ""
+          className={`z-50 right-0 text-sm font-medium md:hidden cursor-pointer ${
+            isOpen ? "" : ""
           }`}
         >
           <Bars3Icon
-            className={`h-6 w-6 mr-3 fill-white transition-transform duration-[.6] ${
+            className={`h-6 w-6 mr-3 fill-slate-900 transition-transform duration-[.6] ${
               isOpen ? "rotate-90" : "rotate-0"
             }`}
             onClick={toggleMenu}
@@ -96,11 +99,11 @@ const Header = () => {
       <nav
         className={`${
           isOpen ? "right-0" : "right-[-100%]"
-        } duration-[.7s] h-[100vh] bg-slate-200 w-[30vw] right-0 fixed tracking-tight
-        md:hidden flex`}
+        } duration-[.5s] h-[100vh] bg-slate-200/70 w-[40vw] right-0 fixed tracking-tight
+        md:hidden flex backdrop-blur-md`}
       >
         {/* Mobile nav */}
-        <ul className="space-y-1 text-center">
+        <ul className="space-y-2 pt-4 text-center w-full">
           <Link to="/">
             <li className="small-nav-items" onClick={routeClick}>Home</li>
           </Link>
