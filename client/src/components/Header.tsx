@@ -40,7 +40,7 @@ const Header = () => {
           <ul className="hidden md:flex bg-slate-100 space-x-2 text-center
           rounded-tl-3xl">
             <Link to="/">
-              <li className="large-nav-item" onClick={routeClick}>
+              <li className="large-nav-item rounded-tl-3xl" onClick={routeClick}>
                 Home
               </li>
             </Link>
