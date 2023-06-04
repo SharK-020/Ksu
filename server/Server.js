@@ -2,6 +2,7 @@ const express = require('express');
 const mongo = require('./db/mongo');
 const cors = require('cors');
 const authRoutes = require('./routes/authRoutes');
+const mainRoute = require('./routes/mainRoute');
 const bodyparser = require('body-parser');
 require('dotenv').config();
 const app = express();
@@ -16,6 +17,7 @@ app.get("/", (req, res) => {
 });
 
 app.use('/', authRoutes);
+app.use('/api', mainRoute);
 
 const run = async () => {
     try {
