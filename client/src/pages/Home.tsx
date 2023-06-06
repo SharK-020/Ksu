@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../components/Banner";
+import Mission from "../components/Mission";
 
 const Home = () => {
   return (
@@ -40,13 +41,9 @@ const Home = () => {
         </div>
       </section>
       {/* vison mission */}
-      <section className="flex justify-between">
-        <div>
-          Few links here
-
-        </div>
-        <div>
-          vision and mission box here
+      <section className="">
+        <div className="flex justify-center">
+          <Mission/>
         </div>
       </section>
       {/* Metrics and numbers */}
