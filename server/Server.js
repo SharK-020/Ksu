@@ -5,6 +5,7 @@ const authRoutes = require('./routes/authRoutes');
 const mainRoute = require('./routes/mainRoute');
 const bodyparser = require('body-parser');
 require('dotenv').config();
+const content = require('./models/contentSchema');
 const app = express();
 const port = process.env.port || 3000;
 
@@ -16,8 +17,18 @@ app.get("/", (req, res) => {
 
 });
 
-app.use('/', authRoutes);
-app.use('/api', mainRoute);
+/* app.use('/', authRoutes); */
+app.get('/contents', (req, res) => {
+    content.find({})
+        .then(contents => {
+            console.log(contents);
+            res.json({ contents });
+        })
+        .catch(error => {
+            console.log(error);
+            return res.status(500).json({ error: 'Server error' });
+        });
+});
 
 const run = async () => {
     try {

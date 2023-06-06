@@ -1,10 +1,13 @@
-const Content = require("../models/contentSchema.js");
+const content = require('../models/contentSchema')
 const UpcomingEvent = require("../models/upcomingEventSchema.js");
 const LatestNotification = require("../models/latestNotificatonSchema.js");
 
 exports.getContents = (req, res) => {
-  Content.find()
-    .then((contents) => res.json({ contents }))
+  content.find({})
+    .then((contents) => {
+      console.log(contents); // log fetched contents
+      res.json({ contents });
+    })
     .catch((err) => console.log(err));
 };
 
