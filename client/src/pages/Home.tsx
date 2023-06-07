@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "../components/Banner";
 import Mission from "../components/Mission";
 import imageToAdd from "./../assets/logo.webp";
+import Link from "../components/Link";
 
 const Home = () => {
   return (
@@ -53,10 +54,9 @@ const Home = () => {
         </div>
       </section>
       {/* vison mission */}
-      <section className="">
-        <div className="flex justify-center">
+      <section className=" flex flex-col justify-center md:flex md:flex-row md:justify-between md:px-16">
+          < Link/> 
           <Mission/>
-        </div>
       </section>
       {/* Metrics and numbers */}
       <section>
