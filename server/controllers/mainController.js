@@ -1,6 +1,8 @@
-const content = require('../models/contentSchema')
+const content = require('../models/contentSchema.js')
 const UpcomingEvent = require("../models/upcomingEventSchema.js");
 const LatestNotification = require("../models/latestNotificatonSchema.js");
+
+
 
 exports.getContents = (req, res) => {
   content.find({})
@@ -11,6 +13,11 @@ exports.getContents = (req, res) => {
     .catch((err) => console.log(err));
 };
 
+
+/* module.exports = {
+  getContents
+} */
+
 exports.getUpcomingEvents = (req, res) => {
   UpcomingEvent.find()
     .then((upcomingEvents) => res.json({ upcomingEvents }))
@@ -18,7 +25,7 @@ exports.getUpcomingEvents = (req, res) => {
 };
 
 exports.getLatestNotifications = (req, res) => {
-  LatestNotification.find()
+  LatestNotification.find({})
     .then((latestNotifications) => res.json({ latestNotifications }))
     .catch((err) => console.log(err));
-};
+}; 
