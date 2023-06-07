@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const FacultySchema = new Schema({
+const facultySchema = new Schema({
   Faculty_id: { type: String, required: true },
   Faculty_name: { type: String, required: true },
   Faculty_designation: { type: String, required: true },
@@ -11,6 +11,6 @@ const FacultySchema = new Schema({
 })
 
 
-const Faculty = mongoose.model('Faculty', FacultySchema);
+const faculty = mongoose.model('faculty', facultySchema);
 
-module.exports = Faculty;
+module.exports = faculty;

@@ -1,13 +1,13 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const FeesSchema = new Schema({
+const feesSchema = new Schema({
   Course: { type: String, required: true },
   Hostel: { type: String, required: true },
   Fees: { type: String, required: true }
 })
 
 
-const Fees = mongoose.model('Fees', FeesSchema);
+const fees = mongoose.model('fees', feesSchema);
 
-module.exports = Fees;
+module.exports = fees;
