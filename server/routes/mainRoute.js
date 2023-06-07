@@ -5,6 +5,7 @@ const mainController = require("../controllers/mainController.js");
 router.get("/content",mainController.getContents);
 router.get("/upcomingEvents",mainController.getUpcomingEvents);
 router.get("/latestNotifications",mainController.getLatestNotifications);
-
+router.get("/faculty",mainController.getFaculty);
+router.get("/fees",mainController.getFees);
 module.exports = router
 
