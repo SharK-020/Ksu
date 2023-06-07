@@ -12,19 +12,25 @@ const Home = () => {
         <Banner />
       </section>
       {/* about section */}
-      <section className="">
-        <div className="flex space-x-4">
+      <section className="flex flex-col md:w-[80%] mx-auto md:flex-row text-justify space-x-4">
+        <div
+          className="flex space-x-4 p-4 items-center justify-center
+        md:hidden"
+        >
           <img src={logo} alt="KSU_logo" width="100" height="100" />
           <div className="text-3xl font-extrabold">
-            <h1 className="">
-              About Kanchendzonga
-            </h1>
-            <h1 className="">
-              State University
-            </h1>
+            <h1 className="">About Kanchendzonga</h1>
+            <h1 className="">State University</h1>
           </div>
         </div>
-        <article className="">
+        <div className="hidden md:flex h-full justify-end w-full pt-6 ">
+          <img src={logo} alt="KSU_logo" width="100" height="100" />
+        </div>
+        <article className="space-y-2 font-medium p-6">
+          <div className="text-3xl font-extrabold hidden md:block">
+            <h1 className="">About Kanchendzonga</h1>
+            <h1 className="">State University</h1>
+          </div>
           <p className="">
             Khangchendzonga State University is a new government state
             university in Gangtok, Sikkim, India. The university was established
@@ -51,8 +57,8 @@ const Home = () => {
       </section>
       {/* vision mission */}
       <section className=" flex flex-col justify-center md:flex md:flex-row md:justify-between md:px-16">
-          < Link/> 
-          <Mission/>
+        <Link />
+        <Mission />
       </section>
       {/* Metrics and numbers */}
       <section>Few Statistics here</section>
