@@ -8,6 +8,6 @@ const feesSchema = new Schema({
 })
 
 
-const fees = mongoose.model('fees', feesSchema);
+const fees = mongoose.model('Fees', feesSchema);
 
 module.exports = fees;
