@@ -24,7 +24,17 @@ const Campus = () => {
         />
       </div>
       <div className="flex flex-col md:flex-row">
-        <article className="w-full md:w-half h-full">
+
+      <div className="flex w-full ">
+          <img
+            src={room}
+            height={500}
+            width={500}
+            alt="hall"
+            className=""
+          />
+        </div>
+        <article className="w-full">
           <p className="text-justify text-gray-900
            bg-[#ffe449] p-8 font-medium">
             The University is located at Samdur, Tadong, Gangtok, East Sikkim.
@@ -50,15 +60,6 @@ const Campus = () => {
           </div>
         </article>
 
-        <div className="w-full md:w-half">
-          <img
-            src={room}
-            height={500}
-            width={500}
-            alt="hall"
-            className="object-cover h-full w-full"
-          />
-        </div>
       </div>
     </div>
   );
