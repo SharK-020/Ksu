@@ -1,8 +1,10 @@
 import React from "react";
-import Banner from "../components/Banner";
-import Mission from "../components/Mission";
+import Banner from "../components/Home/Banner";
+import Mission from "../components/Home/Mission";
 import logo from "../assets/logo.webp";
-import Link from "../components/Link";
+import Link from "../components/Home/Link";
+import Stats from "../components/Home/Stats";
+import Campus from "../components/Home/Campus";
 
 const Home = () => {
   return (
@@ -61,9 +63,13 @@ const Home = () => {
         <Mission />
       </section>
       {/* Metrics and numbers */}
-      <section>Few Statistics here</section>
+      <section className="flex justify-center">
+        <Stats />
+      </section>
       {/* Campus Life and facilities overview */}
-      <section>Campus life images and stuff</section>
+      <section>
+        <Campus />
+      </section>
       {/* Overview of programs */}
       <section>Programs overview</section>
       {/* Faculty overview */}
