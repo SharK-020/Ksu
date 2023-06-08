@@ -29,7 +29,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="bg-[#00283f]">
+    <header className="bg-[#082F49]">
       <div className="relative  flex items-center justify-between md:space-x-6">
         {/* university Logo */}
         <div
