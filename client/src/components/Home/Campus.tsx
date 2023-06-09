@@ -25,16 +25,16 @@ const Campus = () => {
       </div>
       <div className="flex flex-col md:flex-row">
 
-      <div className="flex w-full ">
+      <div className="flex ">
           <img
             src={room}
-            height={500}
+            height={1000}
             width={500}
             alt="hall"
             className=""
           />
         </div>
-        <article className="w-full">
+        <article className="w-full flex-1">
           <p className="text-justify text-gray-900
            bg-[#ffe449] p-8 font-medium">
             The University is located at Samdur, Tadong, Gangtok, East Sikkim.
