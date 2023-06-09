@@ -5,6 +5,7 @@ import logo from "../assets/logo.webp";
 import Link from "../components/Home/Link";
 import Stats from "../components/Home/Stats";
 import Campus from "../components/Home/Campus";
+import Scholarships from "../components/Home/Scholarships";
 
 const Home = () => {
   return (
@@ -63,7 +64,7 @@ const Home = () => {
         <Mission />
       </section>
       {/* Metrics and numbers */}
-      <section className="flex justify-center">
+      <section className="flex justify-center py-10">
         <Stats />
       </section>
       {/* Campus Life and facilities overview */}
@@ -77,7 +78,9 @@ const Home = () => {
       {/* Admission application overview */}
       <section>Admission application overview</section>
       {/* Scholarship Programs */}
-      <section>Scholarship Programs</section>
+      <section>
+        <Scholarships />
+      </section>
     </main>
   );
 };
