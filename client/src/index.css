@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    html {
+        @apply scrollbar-thin scrollbar-thumb-[#006e88] scrollbar-track-transparent;
+    }
+}
+
 @layer components {
     .large-nav-item {
         @apply hover:bg-cyan-500/20 border-slate-100 border-b-2 lg:p-4
