@@ -4,12 +4,14 @@ import App from "./App.tsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header.tsx";
+import { Footer } from "./components/Home/Footer.tsx";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
       <Header/>
       <App />
+      <Footer />
     </BrowserRouter>
   </React.StrictMode>
 );
