@@ -19,7 +19,7 @@ app.use(bodyparser.json());
 
 }); */
 
-/* app.use('/', authRoutes); */
+app.use('/api', authRoutes);
 app.use('/api', mainRoute);
 
 const run = async () => {
