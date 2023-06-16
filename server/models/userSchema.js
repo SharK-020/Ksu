@@ -22,7 +22,8 @@ userSchema.pre('save', async function (next) {
 //validating password
 userSchema.methods.validatePassword = async function (password) {
   try {
-    const result = await bcrypt.compare(password, this.password);
+
+    const result = bcrypt.compare(password, this.password);
     return result;
   } catch (err) {
     throw new Error(err);

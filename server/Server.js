@@ -21,6 +21,7 @@ app.use(bodyparser.json());
 
 /* app.use('/', authRoutes); */
 app.use('/api', mainRoute);
+app.use('/auth', authRoutes)
 
 const run = async () => {
     try {
