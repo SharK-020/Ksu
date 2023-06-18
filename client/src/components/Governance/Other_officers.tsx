@@ -116,9 +116,9 @@ ssu.assistantregistrar@gmail.com</a></td>
                             <td className='p-3 text-sm text-gray-900 whitespace-nowrap'>1234567899</td>
                         </tr>
                         <tr className=''>
-                            <td className='p-3 text-sm text-gray-900  whitespace-nowrap'>1</td>
-                            <td className='p-3 text-sm text-gray-900  whitespace-nowrap'>John</td>
-                            <td className='p-3 text-sm text-gray-900  whitespace-nowrap'>Admin</td>
+                            <td className='p-3 text-sm text-gray-900  whitespace-nowrap'>2</td>
+                            <td className='p-3 text-sm text-gray-900  whitespace-nowrap'>Maiden</td>
+                            <td className='p-3 text-sm text-gray-900  whitespace-nowrap'>Finance</td>
                             <td className='p-3 text-sm text-gray-900  whitespace-nowrap'><a href="#" className='font-semibold text-blue-500 hover:underline'>name@gmail.com</a></td>
                             <td className='p-3 text-sm text-gray-900 whitespace-nowrap'>1234567899</td>
                         </tr>
@@ -179,7 +179,7 @@ ssu.assistantregistrar@gmail.com</a></td>
                             <td className='p-3 text-sm text-gray-900  whitespace-nowrap'>John</td>
                             <td className='p-3 text-sm text-gray-900  whitespace-nowrap'>Admin</td>
                             <td className='p-3 text-sm text-gray-900  whitespace-nowrap'><a href="#" className='font-semibold text-blue-500 hover:underline'>name@gmail.com</a></td>
-                            <td className='p-3 text-sm text-gray-900 whitespace-nowrap'>1234567899</td>
+                            <td className='p-3 text-sm text-gray-900 whitespace-nowrap '>1234567899</td>
                         </tr>
                     </tbody>
 
