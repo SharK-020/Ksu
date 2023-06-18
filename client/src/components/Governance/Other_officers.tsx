@@ -3,7 +3,7 @@ import React from 'react'
 const Other_officers = () => {
   return (
     <>
-    {/* Admin table */}
+    {/* Other Officers Table */}
     <main className='space-y-4 bg-slate-100 mx-2 md:mx-3'>
             <div className='flex justify-center align-bottom'>
                 <h1 className='text-lg font-bold '>Other Officers and Support Staff</h1>
