@@ -7,7 +7,7 @@ const Publication = () => {
                 <h1 className='text-2xl font-bold mt-6'>Publications</h1>
             </div>
         
-            <div className='p-1 py-2 overflow-auto rounded-lg shadow space-y-1 '>
+            <div className='p-1 py-2 overflow-auto rounded-lg shadow space-y-1'>
                 <table className='w-full'>
 
                     <tbody className='divide-y  divide-gray-200 bg-slate-50'>
