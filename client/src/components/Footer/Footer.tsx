@@ -4,8 +4,6 @@ import fb from '../../assets/icon-facebook.svg'
 import twt from '../../assets/icon-twitter.svg';
 import ins from '../../assets/icon-instagram.svg'
 import { Items } from './ItemContainer';
-import { Icons } from './Menus';
-import { Socialicons } from './Socialicons';
 
 
 export const Footer = () => {
