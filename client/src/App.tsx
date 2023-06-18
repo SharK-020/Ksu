@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router";
-import Departments from "./pages/Departments";
 import Governance from "./pages/Governance";
 import Schools from "./pages/Schools";
 import Know from "./pages/Know";
@@ -14,7 +13,6 @@ function App() {
 		<>
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/departments" element={<Departments />} />
 				<Route path="/governance" element={<Governance />} />
 				<Route path="/schools" element={<Schools />} />
 				<Route path="/know" element={<Know />} />

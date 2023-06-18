@@ -6,7 +6,7 @@ const Link = () => {
         <div className="links p-4 space-y-2 md:flex md:flex-col md:justify-center md:align-middle md:space-y-5">
     <h2 className="font-semibold hover:bg-gray-100 transition-all">
       Overview
-      <FaArrowRight />{" "}
+      <FaArrowRight />
     </h2>
     <h2 className="font-semibold hover:bg-gray-100 transition-all">
       Campus
