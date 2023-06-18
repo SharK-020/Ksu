@@ -3,6 +3,9 @@ import React from 'react'
 const Statutory = () => {
   return (
     <main className='bg-slate-100 mx-2 md:mx-3'>
+
+            {/* Statutory Table */}
+
            <div className='p-1 overflow-auto rounded-lg shadow space-y-1'>
                 <div className='flex justify-center'>
                     <h1 className='pt-2 font-bold text-lg'>SIKKIM STATE UNIVERSITY STATUTORY OFFICERS</h1>

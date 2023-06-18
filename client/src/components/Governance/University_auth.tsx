@@ -3,12 +3,14 @@ import React from 'react'
 const University_auth = () => {
   return (
     <>
-    {/* Admin table */}
+    {/* University AUthority Table */}
     <main className='space-y-4 bg-slate-100 mt-4 mx-2 md:mx-3'>
             <div className='flex justify-center align-middle'>
                 <h1 className='text-lg font-bold mt-6'>UNIVERSITY AUTHORITY</h1>
             </div>
         
+        {/* University Court Table */}
+
             <div className='p-1 py-2 overflow-auto rounded-lg shadow space-y-1 '>
                 <div className='flex justify-center'>
                     <h1 className='font-semibold'>UNIVERSITY COURT</h1>
@@ -124,6 +126,9 @@ const University_auth = () => {
                     <h1 className='font-bold'>ACADEMIC COURT</h1>
 
                 </div>
+
+            {/* Dept. of Nepali */}
+
             <div className='flex justify-center'>
                     <h1 className='font-semibold'>Department Of Nepali</h1>
 

@@ -4,7 +4,7 @@ const Publication = () => {
   return (
 <main className='space-y-4 bg-slate-100 mt-4 mx-2 md:mx-3 w-full'>
             <div className='flex justify-center align-middle'>
-                <h1 className='text-2xl font-bold mt-6'>Publications</h1>
+                <h1 className='text-2xl font-bold mt-6'>PUBLICATIONS</h1>
             </div>
         
             <div className='p-1 py-2 overflow-auto rounded-lg shadow space-y-1'>
