@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router";
-import Departments from "./pages/Departments";
 import Governance from "./pages/Governance";
 import Schools from "./pages/Schools";
 import Know from "./pages/Know";
