@@ -1,34 +1,11 @@
-import React from "react";
+
 
 const Programs = (props: {
 	img: string | undefined;
-	title:
-		| string
-		| number
-		| boolean
-		| React.ReactElement<any, string | React.JSXElementConstructor<any>>
-		| React.ReactFragment
-		| React.ReactPortal
-		| null
-		| undefined;
-	desc:
-		| string
-		| number
-		| boolean
-		| React.ReactElement<any, string | React.JSXElementConstructor<any>>
-		| React.ReactFragment
-		| React.ReactPortal
-		| null
-		| undefined;
-	type:
-		| string
-		| number
-		| boolean
-		| React.ReactElement<any, string | React.JSXElementConstructor<any>>
-		| React.ReactFragment
-		| React.ReactPortal
-		| null
-		| undefined;
+	title: string;
+	desc?: string;
+	type?: string;
+
 }) => {
 	return (
 		<div className="max-w-sm font-medium">
