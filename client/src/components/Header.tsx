@@ -55,7 +55,7 @@ const Header = () => {
         <nav className="relative place-self-end space-y-1">
           {/* Desktop nav */}
           <ul
-            className="hidden md:flex bg-slate-100 space-x-2 text-center
+            className="hidden md:flex bg-slate-100 text-center
           rounded-tl-3xl"
           >
             <Link to="/">
