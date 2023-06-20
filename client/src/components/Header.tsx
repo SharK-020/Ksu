@@ -29,33 +29,35 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="bg-[#082F49]">
+    <header className="bg-[#082F49] ">
       <div className="relative  flex items-center justify-between md:space-x-6">
-        {/* university Logo */}
-        <div
-          className="bg-white flex space-x-4 items-center rounded-full w-20 
+        <div className="flex ">
+          {/* university Logo */}
+          <div
+            className="bg-white flex space-x-4 items-center rounded-full w-20 
         md:w-auto m-2 md:m-2 lg:m-4 "
-        >
-          <img className="" src={logo} alt="logo" width={100} height={100} />
-        </div>
-        {/*Sikkim Govt Logo */}
-        <div
-          className="bg-white hidden md:flex  rounded-full w-20 
+          >
+            <img className="" src={logo} alt="logo" width={100} height={100} />
+          </div>
+          {/*Sikkim Govt Logo */}
+          <div
+            className="bg-white hidden md:flex  rounded-full w-20 
         md:w-auto m-2 md:m-2 lg:m-4 "
-        >
-          <img
-            className="rounded-full"
-            src={govtLogo}
-            alt="logo"
-            width={100}
-            height={100}
-          />
+          >
+            <img
+              className="rounded-full"
+              src={govtLogo}
+              alt="logo"
+              width={100}
+              height={100}
+            />
+          </div>
         </div>
 
         <nav className="relative place-self-end space-y-1">
           {/* Desktop nav */}
           <ul
-            className="hidden md:flex bg-slate-100 space-x-2 text-center
+            className="hidden md:flex bg-slate-100 text-center
           rounded-tl-3xl"
           >
             <Link to="/">
@@ -98,7 +100,8 @@ const Header = () => {
             </Link>
           </ul>
         </nav>
-        <h1 className="text-sm md:hidden font-semibold text-gray-100 lg:text-center ">
+        <h1 className="text-sm md:hidden font-semibold text-gray-100
+         mx-auto">
           Kanchendzonga State University
         </h1>
         {/* Nav button */}
