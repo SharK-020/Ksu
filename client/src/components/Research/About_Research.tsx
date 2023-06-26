@@ -5,12 +5,12 @@ import logo from "../../assets/logo.webp";
 const About_Research = () => {
   return (
     <div className="bg-slate-50 w-[95vw] py-4 flex flex-col justify-center align-middle space-y-3 shadow-md md:w-[85vw]">
-      <div className="flex justify-center align-middle space-x-3">
-        <img src={logo} alt="img" className="w-[20vw] h-[15vh] pt-4" />
+      <div className="flex justify-center space-x-3">
+        <img src={logo} alt="img" className="w-[20vw]" />
         <h1 className="text-3xl font-bold pt-12">Research in KSu</h1>
       </div>
       <div className="space-y-1">
-        <p className="text-md text-justify tracking-tight leading-5 p-3 font-norma md:text-xl">
+        <p className="text-md text-justify tracking-tight p-6 font-norma md:text-xl">
           Kanchenjunga State University stands as a beacon of academic
           excellence, renowned for its outstanding research contributions and
           myriad benefits it provides to its students. The university's
@@ -23,7 +23,7 @@ const About_Research = () => {
           research aspirations.
           
         </p>
-        <p className="text-sm text-justify tracking-tight leading-5 p-3 font-normal md:text-xl">
+        <p className="text-md text-justify tracking-tight  p-6 font-normal md:text-xl">
         Moreover, the university's state-of-the-art
           research equipment and facilities enhance the learning experience and
           facilitate groundbreaking investigations across various disciplines.

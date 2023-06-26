@@ -13,7 +13,7 @@ const Research = () => {
 
       </section>
 
-      <section className='flex justify-center align-middle h-auto'>
+      <section className='flex justify-center h-auto'>
         {/* About REsearch */}
         <About_Research/>
       </section>

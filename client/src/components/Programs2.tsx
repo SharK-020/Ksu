@@ -14,7 +14,7 @@ const Programs2 = ({ url, title, desc }: Programs2Props) => {
       {/* image */}
       <div className="space-y-2">
         <div className="w-32 md:w-full">
-          <img src={url} height={300} width={300} alt={title} />
+          <img src={url} height={300} width={300} alt={title} loading="lazy" />
         </div>
 
         <h1 className="text-xl font-bold">{title}</h1>
