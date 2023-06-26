@@ -90,6 +90,7 @@ const Schools = () => {
             <img className="w-32 h-32 rounded-full object-cover "
             src={fac.pic}
             alt="faculty"
+            loading="lazy"
             />
             <h1 className="text-xl font-semibold">{fac.name}</h1>
             <h2 className="text-md font-medium">{fac.desg}</h2>
