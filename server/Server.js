@@ -5,9 +5,6 @@ const authRoutes = require('./routes/authRoutes');
 const mainRoute = require('../server/routes/mainRoute')
 const bodyparser = require('body-parser');
 require('dotenv').config();
-const content = require('./models/contentSchema');
-const { get } = require('mongoose');
-const { getContents } = require('./controllers/mainController');
 const app = express();
 const port = process.env.port || 3000;
 
