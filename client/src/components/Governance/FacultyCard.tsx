@@ -15,7 +15,8 @@ const FacultyCard = ({
 }: FacultyCardProps) => {
   return (
     <div className="flex flex-col items-center p-4 space-y-2
-    bg-slate-400/20 rounded-3xl w-48">
+    bg-slate-400/20 rounded-3xl w-48 hover:bg-teal-500/10
+    transition duration-500">
       <div className="">
       <img className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover "
             src={image}
