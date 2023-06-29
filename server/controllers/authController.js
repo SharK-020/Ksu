@@ -27,7 +27,7 @@ exports.login = async (req, res, next) => {
 		const token = jwtUtils.createToken(user._id);
 		const userObj = user.toObject();
 		delete userObj.password;
-
+		res.setHeader('Authorization', `Bearer ${token}`);
 		res.status(200).json({ user: userObj, token });
 	} catch (err) {
 		res.status(500).json({ error: err.message });
