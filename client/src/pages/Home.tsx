@@ -7,6 +7,7 @@ import Stats from "../components/Home/Stats";
 import Campus from "../components/Home/Campus";
 import Scholarships from "../components/Home/Scholarships";
 import Programs from "../components/Home/Programs";
+import Admission from "../components/Home/Admission";
 const Home = () => {
   return (
     <main className="">
@@ -113,10 +114,14 @@ const Home = () => {
       </section>
       {/* Faculty overview */}
       <section>Faculty overview</section>
+
       {/* Admission application overview */}
-      <section>Admission application overview</section>
+      <section className=" flex flex-col justify-center md:flex md:flex-row md:justify-between md:px-16">
+        <Admission/>
+      </section>
+
       {/* Scholarship Programs */}
-      <section>
+      <section >
         <Scholarships />
       </section>
     </main>
