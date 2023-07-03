@@ -1,12 +1,42 @@
 import React, { useState, useEffect } from "react";
+import banner from "../../assets/Banner/banner.webp";
+import banner1 from "../../assets/Banner/banner1.webp";
+import banner2 from "../../assets/Banner/banner2.webp";
+import banner3 from "../../assets/Banner/banner3.webp";
+import banner4 from "../../assets/Banner/banner4.webp";
+import banner5 from "../../assets/Banner/banner5.webp";
+import banner6 from "../../assets/Banner/banner6.webp";
+import banner7 from "../../assets/Banner/banner7.webp";
+import banner8 from "../../assets/Banner/banner8.webp";
 
 const images = [
   {
-    url: "https://cmsapi.ksus.ac.in/assets/MediaLibrary/7ae131d2-9eb6-4021-9554-0fceca278c56_blob.webp",
+    url: banner,
   },
   {
-    url: "https://cmsapi.ksus.ac.in/assets/MediaLibrary/7ae131d2-9eb6-4021-9554-0fceca278c56_blob.webp",
+    url: banner1,
   },
+  {
+    url: banner2,
+  },
+  {
+    url: banner3,
+  },
+  {
+    url: banner4,
+  },
+  {
+    url: banner5,
+  },
+  {
+    url: banner6,
+  },
+  {
+    url: banner7,
+  },
+  {
+    url: banner8,
+  }
 ];
 
 const Banner = () => {
@@ -23,13 +53,19 @@ const Banner = () => {
   }, []);
 
   const currentImage = images[currentImageIndex];
+  const nextImageIndex = (currentImageIndex + 1) % images.length;
+  const nextImage = images[nextImageIndex];
+  //for preloading the next image
+  useEffect(() => {
+    const preloadImage = new Image();
+    preloadImage.src = nextImage.url;
+  }, [nextImage]);
 
   return (
     <div
-      className="h-[250px] md:h-[400px] lg:h-[500px]  bg-cover bg-center"
+      className="h-[250px] md:h-[400px] lg:h-[500px] bg-cover bg-center"
       style={{
         backgroundImage: `url(${currentImage.url})`,
-
         transition: "background-image 1s ease-in",
       }}
     >
