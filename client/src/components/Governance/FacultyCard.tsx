@@ -26,7 +26,7 @@ const FacultyCard = ({
       </div>
       <div className="text-center leading-snug block">
         <h3 className="font-medium">{name}</h3>
-        <h4 className="text-md">{designation}</h4>
+        <h4 className="text-sm">{designation}</h4>
         <h4 className="text-xs text-blue-600">{contact}</h4>
       </div>
     </div>
