@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import banner from "../../assets/Banner/banner.webp";
-import banner1 from "../../assets/Banner/banner1.png";
-import banner2 from "../../assets/Banner/banner2.png";
-import banner3 from "../../assets/Banner/banner3.png";
-import banner4 from "../../assets/Banner/banner4.png";
-import banner5 from "../../assets/Banner/banner5.png";
-import banner7 from "../../assets/Banner/banner7.png";
-import banner9 from "../../assets/Banner/banner9.png";
-import banner10 from "../../assets/Banner/banner10.png";
+import banner1 from "../../assets/Banner/banner1.webp";
+import banner2 from "../../assets/Banner/banner2.webp";
+import banner3 from "../../assets/Banner/banner3.webp";
+import banner4 from "../../assets/Banner/banner4.webp";
+import banner5 from "../../assets/Banner/banner5.webp";
+import banner6 from "../../assets/Banner/banner6.webp";
+import banner7 from "../../assets/Banner/banner7.webp";
+import banner8 from "../../assets/Banner/banner8.webp"
+
 
 
 const images = [
@@ -30,13 +31,13 @@ const images = [
     url: banner5,
   },
   {
+    url: banner6,
+  },
+  {
     url: banner7,
   },
   {
-    url: banner9,
-  },
-  {
-    url: banner10,
+    url: banner8,
 
   }
 ];
@@ -61,8 +62,7 @@ const Banner = () => {
       className="h-[250px] md:h-[400px] lg:h-[500px]  bg-cover bg-center"
       style={{
         backgroundImage: `url(${currentImage.url})`,
-
-        transition: "background-image 1s ease-in",
+        transition: "background-image 0.5s ease-in",
       }}
     >
       {/* Additional content for the banner */}
