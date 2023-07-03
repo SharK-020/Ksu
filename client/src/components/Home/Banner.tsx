@@ -7,9 +7,7 @@ import banner4 from "../../assets/Banner/banner4.webp";
 import banner5 from "../../assets/Banner/banner5.webp";
 import banner6 from "../../assets/Banner/banner6.webp";
 import banner7 from "../../assets/Banner/banner7.webp";
-import banner8 from "../../assets/Banner/banner8.webp"
-
-
+import banner8 from "../../assets/Banner/banner8.webp";
 
 const images = [
   {
@@ -38,7 +36,6 @@ const images = [
   },
   {
     url: banner8,
-
   }
 ];
 
@@ -56,13 +53,20 @@ const Banner = () => {
   }, []);
 
   const currentImage = images[currentImageIndex];
+  const nextImageIndex = (currentImageIndex + 1) % images.length;
+  const nextImage = images[nextImageIndex];
+  //for preloading the next image
+  useEffect(() => {
+    const preloadImage = new Image();
+    preloadImage.src = nextImage.url;
+  }, [nextImage]);
 
   return (
     <div
-      className="h-[250px] md:h-[400px] lg:h-[500px]  bg-cover bg-center"
+      className="h-[250px] md:h-[400px] lg:h-[500px] bg-cover bg-center"
       style={{
         backgroundImage: `url(${currentImage.url})`,
-        transition: "background-image 0.5s ease-in",
+        transition: "background-image 1s ease-in",
       }}
     >
       {/* Additional content for the banner */}
