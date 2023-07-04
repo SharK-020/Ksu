@@ -1,4 +1,3 @@
-import React from "react";
 import Banner from "../components/Home/Banner";
 import Mission from "../components/Home/Mission";
 import logo from "../assets/logo.webp";
@@ -116,25 +115,25 @@ const Home = () => {
 
       {/* Admission application overview */}
       <section className="px-20 mb-5 mt-5">
-      <div className="links p-4 space-y-2 md:justify-center md:align-middle md:space-y-5">
-                <div className="">
-                        <h1 className="underline text-5xl font-extrabold ">
-                                How to Apply
-                        </h1>  
-                </div>     
+        <div className="links p-4 space-y-2 md:justify-center md:align-middle md:space-y-5">
+          <div className="">
+            <h1 className="underline text-5xl font-extrabold ">
+              How to Apply
+            </h1>
+          </div>
         </div>
-        </section>
+      </section>
       <div className="mx-48 justify-center grid grid-cols-3 gap-4">
         <div className="px-6">
           <img src="https://s40424.pcdn.co/in/wp-content/uploads/2022/10/9-Things-to-Keep-in-Mind-When-Applying-for-Job.jpg.optimal.jpg" alt="Image Alt Text" style={{ width: '400px', height: '270px' }} className="w-24" />
         </div>
         <div className="px-6">
-          <img src="https://thumbs.dreamstime.com/b/connect-complex-like-puzzle-pictured-as-word-connect-puzzle-pieces-to-show-connect-can-be-difficult-needs-164222379.jpg" 
-          alt="Image Alt Text" style={{ width: '400px', height:'270px' }} className="w-24" />
+          <img src="https://thumbs.dreamstime.com/b/connect-complex-like-puzzle-pictured-as-word-connect-puzzle-pieces-to-show-connect-can-be-difficult-needs-164222379.jpg"
+            alt="Image Alt Text" style={{ width: '400px', height: '270px' }} className="w-24" />
         </div>
         <div className="px-6">
-        <img src="https://i.ytimg.com/vi/fkH24DQEDpA/mqdefault.jpg" 
-          alt="Image Alt Text" style={{ width: '400px', height: '270px' }} className="w-24" />
+          <img src="https://i.ytimg.com/vi/fkH24DQEDpA/mqdefault.jpg"
+            alt="Image Alt Text" style={{ width: '400px', height: '270px' }} className="w-24" />
         </div>
         <div >
           <h1 className="px-32 mt-5 text-3xl">
@@ -156,18 +155,18 @@ const Home = () => {
         </div>
         <div className="text-justify px-6 mt-5 text-lg">
           After you submit your application, an admissions representative will contact you and will help you to complete the process.
-        </div>    
+        </div>
         <div className="text-justify px-6 mt-5 text-lg">
-        Once you have completed your application and connected with an admissions representative, you are ready to create your schedule.
+          Once you have completed your application and connected with an admissions representative, you are ready to create your schedule.
         </div>
       </div>
       <section className="px-20 mb-5 mt-5">
-      <div className="links p-4 space-y-2 md:justify-center md:align-middle md:space-y-5">
-                <div className="text-xl font-bold ">
-                  <a href= "/Home/Admission.tsx" target="_blank" rel="noopener noreferrer"> 
-                  READ MORE 
-                  </a>
-                </div>     
+        <div className="links p-4 space-y-2 md:justify-center md:align-middle md:space-y-5">
+          <div className="text-xl font-bold ">
+            <a href="/Home/Admission.tsx" target="_blank" rel="noopener noreferrer">
+              READ MORE
+            </a>
+          </div>
         </div>
       </section>
       {/* Scholarship Programs */}
