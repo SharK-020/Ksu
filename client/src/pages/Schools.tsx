@@ -77,28 +77,6 @@ const Schools = () => {
           </div>
         </div>
       </section>
-
-      {/* Faculty */}
-
-      <section className="p-10 space-y-4">
-        <h1 className="text-3xl font-bold">Faculty</h1>
-        <div className=" grid grid-cols-2 gap-2 md:gap-4 md:grid-cols-4 lg:grid-cols-5">
-          {/* sample faculty */}
-          {faculty.map((fac, index) => (
-          <div key={index}
-          className="flex flex-col items-center ">
-            <img className="w-32 h-32 rounded-full object-cover "
-            src={fac.pic}
-            alt="faculty"
-            loading="lazy"
-            />
-            <h1 className="text-xl font-semibold">{fac.name}</h1>
-            <h2 className="text-md font-medium">{fac.desg}</h2>
-          </div>
-          ))}
-          
-        </div>
-      </section>
     </div>
   );
 };
