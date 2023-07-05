@@ -72,7 +72,8 @@ const Banner = () => {
       {/* Additional content for the banner */}
 
       <div>
-        <div className=" w-full h-auto flex items-center px-8 md:px-10 py-20 md:py-32 lg:py-44">
+        <div className=" w-full h-auto flex items-center px-8 md:px-10 py-20 md:py-32 lg:py-44
+        bg-gradient-to-r from-black/30 via-transparent">
           <div className="relative space-y-4 z-50">
 
             <div className="space-y-2 z-50">
