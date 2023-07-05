@@ -63,13 +63,36 @@ const Banner = () => {
 
   return (
     <div
-      className="h-[250px] md:h-[400px] lg:h-[500px] bg-cover bg-center"
+      className="bg-cover bg-center"
       style={{
         backgroundImage: `url(${currentImage.url})`,
         transition: "background-image 1s ease-in",
       }}
     >
       {/* Additional content for the banner */}
+
+      <div>
+        <div className=" w-full h-auto flex items-center px-8 md:px-10 py-20 md:py-32 lg:py-44
+        bg-gradient-to-r from-black/30 via-transparent">
+          <div className="relative space-y-4 z-50">
+
+            <div className="space-y-2 z-50">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white">
+              Kanchenjunga
+            </h1>
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white">
+              State
+            </h1>
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white">
+              University
+            </h1>
+            </div>
+            <h2 className="text-2xl lg:text-4xl font-bold text-white"> 
+              The University of Opportunities
+            </h2>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
