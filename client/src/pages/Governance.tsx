@@ -8,17 +8,18 @@ import { UniAuth } from "../components/Governance/facultyData";
 const Governance = () => {
   return (
     <div className="space-y-4 mb-4 md:space-y-16 md:mb-8 p-10">
+      <Statutory />
       {/*uni authority*/}
       <section>
         <University_auth />
       </section>
 
-            {/*Academic Court */}
+      {/*Academic Court */}
       <section>
-            <Academic />
+        <Academic />
       </section>
-      <Statutory />
-      <Other_officers/>
+
+      <Other_officers />
     </div>
   );
 };

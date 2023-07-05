@@ -7,7 +7,7 @@ const About_Research = () => {
     <div className="bg-slate-50 w-[95vw] py-4 flex flex-col justify-center align-middle space-y-3 shadow-md md:w-[85vw]">
       <div className="flex justify-center space-x-3">
         <img src={logo} alt="img" className="w-[20vw]" />
-        <h1 className="text-3xl font-bold pt-12">Research in KSu</h1>
+        <h1 className="text-3xl font-bold pt-12">Research in KSU</h1>
       </div>
       <div className="space-y-1">
         <p className="text-md text-justify tracking-tight p-6 font-norma md:text-xl">
