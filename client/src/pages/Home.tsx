@@ -142,6 +142,7 @@ const Home = () => {
           />
           </div>
       </section>
+      
       <section className="px-20 mb-5 mt-5">
         <div className="links p-4 space-y-2 md:justify-center md:align-middle md:space-y-5">
           <div className="text-xl font-bold ">
