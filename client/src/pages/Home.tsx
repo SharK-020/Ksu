@@ -1,4 +1,3 @@
-import React from "react";
 import Banner from "../components/Home/Banner";
 import Mission from "../components/Home/Mission";
 import logo from "../assets/logo.webp";
@@ -116,6 +115,7 @@ const Home = () => {
       <section>Faculty overview</section>
 
       {/* Admission application overview */}
+
       <section className="px-8 py-10 md:px-10 lg:px-16">
         <div className="links p-4 space-y-2 md:justify-center md:align-middle md:space-y-5">
                   <div className="">
@@ -140,15 +140,15 @@ const Home = () => {
           title="You get ready"
           desc="Once you have completed your application and connected with an admissions representative, you are ready to create your schedule."
           />
-        </div>
+          </div>
       </section>
       <section className="px-20 mb-5 mt-5">
-      <div className="links p-4 space-y-2 md:justify-center md:align-middle md:space-y-5">
-                <div className="text-xl font-bold ">
-                  <a href= "/Home/Admission.tsx" target="_blank" rel="noopener noreferrer"> 
-                  READ MORE 
-                  </a>
-                </div>     
+        <div className="links p-4 space-y-2 md:justify-center md:align-middle md:space-y-5">
+          <div className="text-xl font-bold ">
+            <a href="/Home/Admission.tsx" target="_blank" rel="noopener noreferrer">
+              READ MORE
+            </a>
+          </div>
         </div>
       </section>
 
