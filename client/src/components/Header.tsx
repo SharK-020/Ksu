@@ -102,7 +102,7 @@ const Header = () => {
         </nav>
         <h1 className="text-sm md:hidden font-semibold text-gray-100
          mx-auto">
-          Kanchendzonga State University
+          Khangchenzonga State University
         </h1>
         {/* Nav button */}
         <div

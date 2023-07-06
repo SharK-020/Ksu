@@ -21,7 +21,7 @@ const Home = () => {
         >
           <img src={logo} alt="KSU_logo" width="100" height="100" />
           <div className="text-3xl font-extrabold">
-            <h1 className="">About Kanchendzonga</h1>
+            <h1 className="">About Khangchenzonga</h1>
             <h1 className="">State University</h1>
           </div>
         </div>
@@ -58,8 +58,7 @@ const Home = () => {
         <div></div>
       </section>
       {/* vision mission */}
-      <section className=" flex flex-col justify-center md:flex md:flex-row md:justify-between md:px-16">
-        <Link />
+      <section className="md:px-16">
         <Mission />
       </section>
       {/* Metrics and numbers */}
