@@ -6,6 +6,7 @@ import Stats from "../components/Home/Stats";
 import Campus from "../components/Home/Campus";
 import Scholarships from "../components/Home/Scholarships";
 import Programs from "../components/Home/Programs";
+import Apply from "../components/Home/Apply";
 const Home = () => {
   return (
     <main className="">
@@ -113,52 +114,34 @@ const Home = () => {
       <section>Faculty overview</section>
 
       {/* Admission application overview */}
-      <section className="px-20 mb-5 mt-5">
+
+      <section className="px-8 py-10 md:px-10 lg:px-16">
         <div className="links p-4 space-y-2 md:justify-center md:align-middle md:space-y-5">
-          <div className="">
-            <h1 className="underline text-5xl font-extrabold ">
-              How to Apply
-            </h1>
+                  <div className="">
+                          <h1 className="underline text-5xl font-extrabold ">
+                                  How to Apply
+                          </h1>  
+                  </div>     
           </div>
-        </div>
+        <div className=" mx-auto gap-2 flex md:flex-row flex-col justify-evenly">
+          <Apply
+          img="https://s40424.pcdn.co/in/wp-content/uploads/2022/10/9-Things-to-Keep-in-Mind-When-Applying-for-Job.jpg.optimal.jpg"
+          title="You Apply"
+          desc="Tell us a little about yourself and we will help with the rest. Our convenient online application tool only takes 10 minutes to complete."
+          />
+          <Apply
+          img="https://thumbs.dreamstime.com/b/connect-complex-like-puzzle-pictured-as-word-connect-puzzle-pieces-to-show-connect-can-be-difficult-needs-164222379.jpg"
+          title="We Connect"
+          desc="After you submit your application, an admissions representative will contact you and will help you to complete the process."
+          />
+          <Apply
+          img="https://www.shutterstock.com/image-photo/man-getting-ready-work-260nw-373931122.jpg"
+          title="You get ready"
+          desc="Once you have completed your application and connected with an admissions representative, you are ready to create your schedule."
+          />
+          </div>
       </section>
-      <div className="mx-48 justify-center grid grid-cols-3 gap-4">
-        <div className="px-6">
-          <img src="https://s40424.pcdn.co/in/wp-content/uploads/2022/10/9-Things-to-Keep-in-Mind-When-Applying-for-Job.jpg.optimal.jpg" alt="Image Alt Text" style={{ width: '400px', height: '270px' }} className="w-24" />
-        </div>
-        <div className="px-6">
-          <img src="https://thumbs.dreamstime.com/b/connect-complex-like-puzzle-pictured-as-word-connect-puzzle-pieces-to-show-connect-can-be-difficult-needs-164222379.jpg"
-            alt="Image Alt Text" style={{ width: '400px', height: '270px' }} className="w-24" />
-        </div>
-        <div className="px-6">
-          <img src="https://i.ytimg.com/vi/fkH24DQEDpA/mqdefault.jpg"
-            alt="Image Alt Text" style={{ width: '400px', height: '270px' }} className="w-24" />
-        </div>
-        <div >
-          <h1 className="px-32 mt-5 text-3xl">
-            You Apply
-          </h1>
-        </div>
-        <div >
-          <h1 className="mx-28 mt-5 text-3xl">
-            We Connect
-          </h1>
-        </div>
-        <div>
-          <h1 className="mx-24 mt-5 text-3xl">
-            You get ready
-          </h1>
-        </div>
-        <div className="text-justify mx-6 mt-5 text-lg">
-          Tell us a little about yourself and we will help with the rest. Our convenient online application tool only takes 10 minutes to complete.
-        </div>
-        <div className="text-justify px-6 mt-5 text-lg">
-          After you submit your application, an admissions representative will contact you and will help you to complete the process.
-        </div>
-        <div className="text-justify px-6 mt-5 text-lg">
-          Once you have completed your application and connected with an admissions representative, you are ready to create your schedule.
-        </div>
-      </div>
+      
       <section className="px-20 mb-5 mt-5">
         <div className="links p-4 space-y-2 md:justify-center md:align-middle md:space-y-5">
           <div className="text-xl font-bold ">
@@ -168,6 +151,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       {/* Scholarship Programs */}
       <section >
         <Scholarships />
