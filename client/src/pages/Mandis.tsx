@@ -1,5 +1,5 @@
 import React from "react";
-import Content from "../components/Mandis/content";
+import Content from "../components/Mandis/Content";
 
 const data = [
 	{ name: "INTERAL QUALITY ASSURANCE CELL", date: "May 3,2022" },

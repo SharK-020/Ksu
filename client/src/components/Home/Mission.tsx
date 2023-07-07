@@ -17,7 +17,7 @@ const Mission = () => {
               Vision and Mission
             </p>
           </div>
-          <div className="font-sanserif w-[80%] text-justify md:text-md lg:text-lg font-medium">
+          <div className="font-sanserif flex justify-center w-[80%] text-justify md:text-md lg:text-lg font-medium">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt,
             veniam! A magnam amet sunt esse nostrum minima perferendis qui in.
           </div>
