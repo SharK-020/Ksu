@@ -78,7 +78,7 @@ const Banner = () => {
 
             <div className="space-y-2 z-50">
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white">
-              Kanchenjunga
+              Khangchenzonga
             </h1>
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white">
               State
@@ -87,7 +87,7 @@ const Banner = () => {
               University
             </h1>
             </div>
-            <h2 className="text-2xl lg:text-4xl font-bold text-white"> 
+            <h2 className="text-2xl lg:text-4xl font-bold text-cyan-200"> 
               The University of Opportunities
             </h2>
           </div>
