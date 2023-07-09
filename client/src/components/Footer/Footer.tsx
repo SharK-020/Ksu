@@ -1,8 +1,6 @@
 import React from 'react'
+import { FaTwitter,FaFacebook,FaInstagram } from "react-icons/fa";
 
-import fb from '../../assets/icon-facebook.svg'
-import twt from '../../assets/icon-twitter.svg';
-import ins from '../../assets/icon-instagram.svg'
 import { Items } from './ItemContainer';
 
 
@@ -30,25 +28,20 @@ export const Footer = () => {
         {/* items container */}
         <Items/>
         {/* last bit */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center pt-2 text-gray-400 text-sm pb-8'>
+        
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 text-center pt-2 text-gray-400 text-sm pb-8'>
             <span>Copyright &copy; 2023 All rights reserved</span>
             <span>Terms . Conditions . Privacy Policy </span>
-            <div className='container md:flex md:flex-row flex-row '>
-                <div>
-                <a href="www.facebook.com">
-                <img className="" src={fb} alt="logo" width={30} height={20} />
+            <div className='flex flex-row justify-center space-x-10'>
+                <a href='https://www.facebook.com/' >
+                  <FaFacebook size='70'/>
                 </a>
-                </div>
-                <div>
-                <a href="www.twitter.com">
-                <img className="" src={twt} alt="logo" width={30} height={20} />
+                <a href='https://www.twitter.com/'>
+                  <FaTwitter size='70'/>
                 </a>
-                </div>
-                <div>
-                <a href="www.instagram.com">
-                <img className="" src={ins} alt="logo" width={30} height={20} />
+                <a href='https://www.instagram.com/'>
+                <FaInstagram size='70'/>
                 </a>
-                </div>
             </div>
 
         </div>
