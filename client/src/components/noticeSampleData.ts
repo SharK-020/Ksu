@@ -1,5 +1,5 @@
 //sample data for notice
-
+//The time should come from createdAt field of the notice object ist
 type Notice = {
     id: number;
     title: string;
