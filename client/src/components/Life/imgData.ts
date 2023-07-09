@@ -10,7 +10,13 @@ import exec2 from "../../assets/life/EXECUTIVE COUNCIL MEETING/vc in pre fc meet
 import exec3 from "../../assets/life/EXECUTIVE COUNCIL MEETING/3rd ec meeting.webp";
 import exec4 from "../../assets/life/EXECUTIVE COUNCIL MEETING/staff n officials.webp"
 
-const AikidoData = [
+export type carouselImgData = {
+    id: number,
+    title: string,
+    link: string
+}
+
+const AikidoData: carouselImgData[] = [
     {
         id: 1,
         title: "Akido",
@@ -43,7 +49,7 @@ const AikidoData = [
     }
 ]
 
-const execMeetingData = [
+const execMeetingData: carouselImgData[] = [
     {
         id: 1,
         title: "Exec Meeting",

@@ -1,3 +1,4 @@
+import Carousel from "./Carousel.js";
 import CarouselCard from "./CarouselCard";
 import { AikidoData, execMeetingData } from "./imgData.js";
 
@@ -13,31 +14,11 @@ const Events = () => {
       <div>
         <div>
           <h1>Akido</h1>
-          <div className="flex space-x-2 overflow-x-scroll scrollbar-none">
-            {AikidoData.map((aikido) => (
-              <div key={aikido.id}>
-                <CarouselCard
-                  image={aikido.link}
-                  altData={aikido.title}
-                />
-              </div>
-            ))}
-          </div>
+          <Carousel images={AikidoData} />
         </div>
         <div className="">
           <h1 className="">Executive Council Meeting</h1>
-          <div className="flex space-x-2 overflow-x-scroll scrollbar-none">
-              {
-                execMeetingData.map((execMeeting) => (
-                  <div key={execMeeting.id}>
-                    <CarouselCard
-                      image={execMeeting.link}
-                      altData={execMeeting.title}
-                    />
-                  </div>
-                ))
-              }
-          </div>
+          <Carousel images={execMeetingData} />
         </div>
       </div>
     </div>
