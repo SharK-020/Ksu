@@ -1,38 +1,35 @@
-const jwtUtils = require('../utils/jwtUtils.js');
-const User = require('../models/userSchema.js');
+const jwtUtils = require("../utils/jwtUtils.js");
+const User = require("../models/userSchema.js");
 
 //not yet tested
 
-exports.login = async (req, res) => {
+exports.login = async (req, res, next) => {
+	try {
+		const { username, password } = req.body;
 
-    const { username, password } = req.body;
+		const user = await User.findOne({ username: username }).select(
+			"+password"
+		);
+		if (!user) {
+			return res
+				.status(401)
+				.json({ error: "Invalid username or password" });
+		}
 
-    try {
-        const user = await User.findOne({ "username": username });
+		const isMatch = await user.validatePassword(password);
 
-        if (!user) {
-            console.log(user)
-            return res.status(404).json({ message: 'User not found' });
-        }
+		if (!isMatch) {
+			return res
+				.status(401)
+				.json({ error: "Invalid username or password" });
+		}
 
-        const isPasswordValid = await user.validatePassword(password);
-        if (!isPasswordValid) {
-            return res.status(401).json({ message: 'Invalid credentials' });
-        }
-
-        const token = jwtUtils.createToken(user.id);
-        res.json({ token });
-
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ message: 'Server error' });
-    }
-};
-
-
-
-exports.logout = (req, res) => {
-    // Clear the JWT cookie
-    res.clearCookie('jwt');
-    res.send('Logged out');
+		const token = jwtUtils.createToken(user._id);
+		const userObj = user.toObject();
+		delete userObj.password;
+		res.setHeader('Authorization', `Bearer ${token}`);
+		res.status(200).json({ user: userObj, token });
+	} catch (err) {
+		res.status(500).json({ error: err.message });
+	}
 };

@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
 
-
 const images = [
   {
-    url: "https://cmsapi.ksus.ac.in/assets/MediaLibrary/7ae131d2-9eb6-4021-9554-0fceca278c56_blob.webp",
+    url: "https://images.pexels.com/photos/941555/pexels-photo-941555.jpeg",
   },
   {
-    url: "https://curlytales.com/wp-content/uploads/2020/09/Forest-Research-Institute.jpg",
-  }
+    url: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
 ];
 
-const Banner = () => {
+const Banner2 = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -30,14 +29,13 @@ const Banner = () => {
       className="h-[500px]  bg-cover bg-center"
       style={{
         backgroundImage: `url(${currentImage.url})`,
-        
+
         transition: "background-image 1s ease-in",
       }}
     >
-      
       {/* Additional content for the banner */}
     </div>
   );
 };
 
-export default Banner;
+export default Banner2;
