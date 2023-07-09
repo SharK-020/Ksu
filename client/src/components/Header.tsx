@@ -107,7 +107,7 @@ const Header = () => {
         {/* Nav button */}
         <div
           className={`z-50 flex items-center right-0 text-sm font-medium 
-          md:hidden  ${isOpen ? "" : ""}`}
+          md:hidden select-none  ${isOpen ? "" : ""}`}
         >
           <div
             className="bg-white flex  rounded-full w-20 

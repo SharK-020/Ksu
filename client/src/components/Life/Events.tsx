@@ -1,5 +1,4 @@
 import CarouselCard from "./CarouselCard";
-import councilImg from "../../assets/life/EXECUTIVE COUNCIL MEETING/3rd ec meeting.webp";
 import { AikidoData, execMeetingData } from "./imgData.js";
 
 const Events = () => {
