@@ -134,7 +134,7 @@ const Header = () => {
         className={`${
           isOpen ? "right-0" : "right-[-100%]"
         } duration-[.5s] h-[100vh] bg-slate-200/70 w-[40vw] right-0 fixed tracking-tight
-        md:hidden flex backdrop-blur-md z-50`}
+        md:hidden flex backdrop-blur-md z-[100]`}
       >
         {/* Mobile nav */}
         <ul className="space-y-2 pt-4 text-center w-full">
