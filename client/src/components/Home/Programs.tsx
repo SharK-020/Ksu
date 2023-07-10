@@ -8,14 +8,14 @@ const Programs = (props: {
 
 }) => {
 	return (
-		<div className="max-w-sm font-medium">
+		<div className="max-w-sm font-medium space-y-4">
 			<img
 				src={props.img}
 				alt={`${props.title} image`}
 				className="h-72 object-cover w-full"
 			/>
 			<h1 className="font-bold text-2xl pt-4">{props.title}</h1>
-			<div className="h-1 bg-amber-800 w-[30%] my-6"></div>
+			<div className="h-1 bg-amber-800 w-[30%]"></div>
 
 			<p>{props.desc}</p>
 			<div className=" flex gap-6">

@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect } from "react";
+import { useCallback, useState, useEffect } from "react";
 import logo from "../assets/logo.webp";
 import govtLogo from "../assets/govtLogo.webp";
 import { Bars3Icon } from "@heroicons/react/24/solid";

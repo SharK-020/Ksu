@@ -1,8 +1,7 @@
-import React from "react";
 
 const Scholarships = () => {
   return (
-    <div className="text-gray-950 w-full space-y-4 p-20 bg-[#79fac5]">
+    <div className="text-gray-950 w-full space-y-4 p-10 md:p-20 bg-[#79fac5]">
       <h1 className="font-bold text-xl md:text-3xl">Scholarships</h1>
       <p className="font-medium">
         Kanchenjunga State University offers a range of financial aid options

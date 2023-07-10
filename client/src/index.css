@@ -5,7 +5,11 @@
 
 @layer base {
     html {
-        @apply scrollbar-thin scrollbar-thumb-[#006e88] scrollbar-track-transparent;
+        @apply scrollbar-thin scrollbar-thumb-[#006e88] scrollbar-track-transparent
+        scroll-smooth;
+    }
+    body{
+        @apply text-slate-900;
     }
 }
 

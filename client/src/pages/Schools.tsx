@@ -1,56 +1,5 @@
 import Programs2 from "../components/Programs2";
 
-const faculty = [
-  {
-    pic: "https://www.koimoi.com/wp-content/new-galleries/2020/04/alvaro-morte-reveals-of-taking-inspiration-from-superheroes-for-his-role-in-money-heist-001.jpg",
-    name: "Dr. Sample",
-    desg: "Professor",
-  },
-  {
-    pic: "https://www.koimoi.com/wp-content/new-galleries/2020/04/alvaro-morte-reveals-of-taking-inspiration-from-superheroes-for-his-role-in-money-heist-001.jpg",
-    name: "Dr. Sample",
-    desg: "Assistant Professor",
-  },
-  {
-    pic: "https://www.koimoi.com/wp-content/new-galleries/2020/04/alvaro-morte-reveals-of-taking-inspiration-from-superheroes-for-his-role-in-money-heist-001.jpg",
-    name: "Dr. Sample",
-    desg: "Professor",
-  },
-  {
-    pic: "https://www.koimoi.com/wp-content/new-galleries/2020/04/alvaro-morte-reveals-of-taking-inspiration-from-superheroes-for-his-role-in-money-heist-001.jpg",
-    name: "Dr. Sample",
-    desg: "HOD, Professor",
-  },
-  {
-    pic: "https://www.koimoi.com/wp-content/new-galleries/2020/04/alvaro-morte-reveals-of-taking-inspiration-from-superheroes-for-his-role-in-money-heist-001.jpg",
-    name: "Dr. Sample",
-    desg: "Professor",
-  },
-  {
-    pic: "https://www.koimoi.com/wp-content/new-galleries/2020/04/alvaro-morte-reveals-of-taking-inspiration-from-superheroes-for-his-role-in-money-heist-001.jpg",
-    name: "Dr. Sample",
-    desg: "Professor",
-  },
-  {
-    pic: "https://www.koimoi.com/wp-content/new-galleries/2020/04/alvaro-morte-reveals-of-taking-inspiration-from-superheroes-for-his-role-in-money-heist-001.jpg",
-    name: "Dr. Sample",
-    desg: "Professor",
-  },
-  {
-    pic: "https://www.koimoi.com/wp-content/new-galleries/2020/04/alvaro-morte-reveals-of-taking-inspiration-from-superheroes-for-his-role-in-money-heist-001.jpg",
-    name: "Dr. Sample",
-    desg: "Professor",
-  },
-  {
-    pic: "https://www.koimoi.com/wp-content/new-galleries/2020/04/alvaro-morte-reveals-of-taking-inspiration-from-superheroes-for-his-role-in-money-heist-001.jpg",
-    name: "Dr. Sample",
-    desg: "Professor",
-  },
-];
-
-    
-
-
 const Schools = () => {
   return (
     <div>

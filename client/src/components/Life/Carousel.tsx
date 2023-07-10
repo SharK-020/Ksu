@@ -31,7 +31,8 @@ const Carousel = ({ images }: Props) => {
       <div className="group relative md:-ml-2">
         <ChevronLeftIcon
           className={`absolute fill-slate-200 top-0 bottom-0 left-2 z-40
-        m-auto h-9 w-9 cursor-pointer opacity-0 transition hover:scale-125 group-hover:opacity-100
+        m-auto w-7 h-7 md:h-9 md:w-9 cursor-pointer opacity-0 transition hover:scale-125
+         group-hover:opacity-100 bg-black/80 rounded-full
         ${!isMoved && "hidden"}`}
           onClick={() => handleClick("left")}
         />
@@ -55,7 +56,8 @@ const Carousel = ({ images }: Props) => {
 
         <ChevronRightIcon
           className={`absolute fill-slate-200 top-0 bottom-0 right-2 z-40
-        m-auto h-9 w-9 cursor-pointer opacity-0 transition hover:scale-125 group-hover:opacity-100`}
+        m-auto w-7 h-7 md:h-9 md:w-9 cursor-pointer opacity-0 transition hover:scale-125 group-hover:opacity-100
+        bg-black/80 rounded-full`}
           onClick={() => handleClick("right")}
         />
       </div>

@@ -1,55 +1,55 @@
-import React from 'react'
-import { FaTwitter,FaFacebook,FaInstagram } from "react-icons/fa";
-
-import { Items } from './ItemContainer';
-
+import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
+import { Items } from "./ItemContainer";
+import { useNavigate } from "react-router";
 
 export const Footer = () => {
+  const navigate = useNavigate();
+  // routing to admission details page
+  const handleClick = () => {
+    navigate("/admission");
+    window.scrollTo(0, 0);
+  };
+
   return (
-    <footer className='bg-blue-950 text-white mt-28 '>
-        <div className="md:flex md:justify-between md:items-center sm:px-12 px-4 md:py-2  lg:py-6 bg-[#ffffff19] py-4">
-            <h1 className='className="lg:text-4xl text-3xl md:mb-0 mb-6 lg:leading-normal  text-center font-semibold
-         md:w-2/5"'>
-                Don't miss the opportunity 
-            </h1>
-        <h1
-          className="lg:text-4xl text-3xl md:mb-0 mb-6 lg:leading-normal  text-left font-semibold
-         md:w-2/5"
-        >
-          <span className="text-teal-400 ">ENROLL today</span> 
+    <footer className="bg-blue-950 text-white flex flex-col justify-center">
+      <div
+        className="md:flex md:space-x-6 md:items-center px-4 md:px-10 md:py-2 lg:py-6 bg-[#ffffff19] py-4
+      space-y-4"
+      >
+        <h1 className="text-slate-200 text-xl md:text-2xl lg:text-4xl font-extrabold">
+          Don't miss the opportunity!
         </h1>
-         <div>
-            <input type="text" placeholder='Enter Ph.Number' className='text-gray-800 sm:w-72 w-full sm:mr-5 mr-1 lg:mb-0 mb-4 py-2.5 rounded px-2 focus:outline-none' />
-            <button className='bg-teal-400 hover:bg-blue-500 duration-300 px-5 py-2.5 font-[Poppins] rounded-md text-white'>
-                Submit
-            </button>
-         </div>
-        </div>
-        {/* items container */}
-        <Items/>
-        {/* last bit */}
-        
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 text-center pt-2 text-gray-400 text-sm pb-3'>
-            <span>Copyright &copy; 2023 All rights reserved</span>
-            <span>Terms . Conditions . Privacy Policy </span>
-            <div className='flex flex-row justify-center space-x-10'>
-                <a href='https://www.facebook.com/' >
-                  <FaFacebook size='35'/>
-                </a>
-                <a href='https://www.twitter.com/'>
-                  <FaTwitter size='35'/>
-                </a>
-                <a href='https://www.instagram.com/'>
-                <FaInstagram size='35'/>
-                </a>
-            </div>
+        <button
+          className="text-xl md:text-2xl font-extrabold text-teal-400 p-2 md:p-4 rounded-md
+        cursor-pointer bg-blue-950 hover:scale-105 transition duration-300 hover:text-teal-200"
+        onClick={handleClick}>
+          Enroll today
+        </button>
+      </div>
+      {/* items container */}
+      <div className="">
+        <Items />
+      </div>
+      {/* last bit */}
 
+      <div className="py-3 space-y-4 text-gray-400 text-sm">
+        <div className=" flex flex-col md:flex-row items-center justify-center
+        gap-2 md:space-x-10">
+          <span>Copyright &copy; 2023 All rights reserved</span>
+          <span>Terms . Conditions . Privacy Policy </span>
         </div>
-       
-      
-    
-
+        <div className="flex justify-center space-x-10">
+          <a href="https://www.facebook.com/">
+            <FaFacebook size="35" />
+          </a>
+          <a href="https://www.twitter.com/">
+            <FaTwitter size="35" />
+          </a>
+          <a href="https://www.instagram.com/">
+            <FaInstagram size="35" />
+          </a>
+        </div>
+      </div>
     </footer>
-    
-  )
-}
+  );
+};
