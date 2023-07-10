@@ -1,11 +1,17 @@
+import { useNavigate } from "react-router";
 import Apply from "./Apply";
-import { Link } from "react-router-dom";
 
 const HowToApply = () => {
+    //routing to admission on read more click
+    const navigate = useNavigate();
+    const routeClick = () => {
+        navigate("/admission");
+        window.scrollTo(0, 0);
+      };
   return (
     <div
       className="space-y-10 flex flex-col justify-center items-center
-      bg-indigo-400/5 p-5 md:p-8"
+      bg-indigo-400/10 p-5 md:p-8 rounded-2xl backdrop-blur-md"
     >
       <div className="place-self-start">
         <h1 className="text-5xl font-extrabold bg-green-200 p-4 rounded-lg">
@@ -29,12 +35,13 @@ const HowToApply = () => {
           desc="Once you have completed your application and connected with an admissions representative, you are ready to create your schedule."
         />
       </div>
-      <div
+      <button
         className="place-self-start text-xl font-bold 
         hover:text-blue-800 transition duration-300"
+        onClick={routeClick}
       >
-        <Link to="/admission">Read More</Link>
-      </div>
+        Read More
+      </button>
     </div>
   );
 };

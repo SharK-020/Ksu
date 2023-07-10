@@ -66,13 +66,13 @@ const Home = () => {
         </div>
         <div className=" mx-auto gap-4 flex md:flex-row flex-col justify-evenly">
           <Programs
-            img="https://estudiar.vamtam.com/wp-content/uploads/2021/01/amplitude-magazin-srXbJ1TAdhI-unsplash.jpg"
+            img="https://media.istockphoto.com/id/810233162/photo/definition-of-nepali.jpg?s=612x612&w=0&k=20&c=0RGHoOGtCVGW94Fyqzs30ioOEg4jnCApDhy-s0O9IdE="
             title="Nepali"
             type="Literature"
             desc="Laboris nostrud qui pariatur tempor velit nisi in consectetur. Ipsum nostrud nulla adipisicing non ullamco consequat aliqua nostrud fugiat consectetur qui ad labore do. Nisi id aliquip ut non minim mollit irure minim anim ea laborum dolor eiusmod. Non esse Lorem ex ex elit sunt cupidatat eu dolore ea laborum culpa ut minim. Minim commodo qui excepteur nulla fugiat laborum anim dolore dolore ex."
           />
           <Programs
-            img="https://estudiar.vamtam.com/wp-content/uploads/2021/01/amplitude-magazin-srXbJ1TAdhI-unsplash.jpg"
+            img="https://filose.com/wp-content/uploads/2022/04/sanskrit-calligraphy.png"
             title="Sanskrit"
             type="Literature"
             desc="Laboris nostrud qui pariatur tempor velit nisi in consectetur. Ipsum nostrud nulla adipisicing non ullamco consequat aliqua nostrud fugiat consectetur qui ad labore do. Nisi id aliquip ut non minim mollit irure minim anim ea laborum dolor eiusmod. Non esse Lorem ex ex elit sunt cupidatat eu dolore ea laborum culpa ut minim. Minim commodo qui excepteur nulla fugiat laborum anim dolore dolore ex."
@@ -85,7 +85,7 @@ const Home = () => {
       {/* Admission application overview */}
 
       <section
-        className="px-8 py-10 md:px-10 lg:px-16 "
+        className="px-8 py-10"
       >
        <HowToApply />
       </section>

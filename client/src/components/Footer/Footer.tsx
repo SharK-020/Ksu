@@ -1,7 +1,15 @@
 import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 import { Items } from "./ItemContainer";
+import { useNavigate } from "react-router";
 
 export const Footer = () => {
+  const navigate = useNavigate();
+  // routing to admission details page
+  const handleClick = () => {
+    navigate("/admission");
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer className="bg-blue-950 text-white flex flex-col justify-center">
       <div
@@ -14,7 +22,7 @@ export const Footer = () => {
         <button
           className="text-xl md:text-2xl font-extrabold text-teal-400 p-2 md:p-4 rounded-md
         cursor-pointer bg-blue-950 hover:scale-105 transition duration-300 hover:text-teal-200"
-        >
+        onClick={handleClick}>
           Enroll today
         </button>
       </div>

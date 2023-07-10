@@ -2,8 +2,15 @@ import React from "react";
 import promo from "../../assets/promo1.webp";
 import room from "../../assets/hall1.jpg";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import { useNavigate } from "react-router";
 
 const Campus = () => {
+  //routing to life@ksu
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/life");
+    window.scrollTo(0, 0);
+  };
   return (
     <div>
       <div className="bg-[#082F49] grid grid-cols-2">
@@ -48,7 +55,9 @@ const Campus = () => {
             <span className="flex cursor-pointer space-x-2 justify-start
              items-center font-semibold text-xl hover:-translate-y-2 transition-transform
              duration-500">
-            <h2 className="">Explore all facilities</h2>
+            <button className=""
+            onClick={handleClick}
+            >Explore all facilities</button>
             <ArrowRightIcon className="h-5 w-5 " />
             </span>
 
