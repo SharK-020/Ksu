@@ -44,19 +44,14 @@ const Campus = () => {
             canteen, and other facilities
           </p>
           <div className="bg-[#00b3b4] text-white flex flex-col
-           items-center space-y-4 p-8 h-full">
-            <span className="flex cursor-pointer space-x-2 justify-start items-center font-semibold">
-            <h2 className="">University library</h2>
+           items-center justify-center p-8 h-full">
+            <span className="flex cursor-pointer space-x-2 justify-start
+             items-center font-semibold text-xl hover:-translate-y-2 transition-transform
+             duration-500">
+            <h2 className="">Explore all facilities</h2>
             <ArrowRightIcon className="h-5 w-5 " />
             </span>
-            <span className="flex cursor-pointer space-x-2 justify-start items-center font-semibold">
-            <h2 className="">Sports and Gym</h2>
-            <ArrowRightIcon className="h-5 w-5 " />
-            </span>
-            <span className="flex cursor-pointer space-x-2 justify-start items-center font-semibold">
-            <h2 className="">Lecture Halls</h2>
-            <ArrowRightIcon className="h-5 w-5 " />
-            </span>
+
           </div>
         </article>
 

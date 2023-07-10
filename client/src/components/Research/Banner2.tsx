@@ -26,7 +26,7 @@ const Banner2 = () => {
 
   return (
     <div
-      className="h-[500px]  bg-cover bg-center"
+      className="h-[200px] md:h-[300px] lg:h-[400px] bg-cover bg-center"
       style={{
         backgroundImage: `url(${currentImage.url})`,
 
