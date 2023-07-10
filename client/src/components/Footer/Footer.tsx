@@ -3,9 +3,9 @@ import { Items } from "./ItemContainer";
 
 export const Footer = () => {
   return (
-    <footer className="bg-blue-950 text-white flex flex-col">
+    <footer className="bg-blue-950 text-white flex flex-col justify-center">
       <div
-        className="md:flex md:justify-between md:items-center px-4 md:px-10 md:py-2 lg:py-6 bg-[#ffffff19] py-4
+        className="md:flex md:space-x-6 md:items-center px-4 md:px-10 md:py-2 lg:py-6 bg-[#ffffff19] py-4
       space-y-4"
       >
         <h1 className="text-slate-200 text-xl md:text-2xl lg:text-4xl font-extrabold">
