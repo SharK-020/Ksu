@@ -2,8 +2,15 @@ import React from "react";
 import promo from "../../assets/promo1.webp";
 import room from "../../assets/hall1.jpg";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import { useNavigate } from "react-router";
 
 const Campus = () => {
+  //routing to life@ksu
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/life");
+    window.scrollTo(0, 0);
+  };
   return (
     <div>
       <div className="bg-[#082F49] grid grid-cols-2">
@@ -44,19 +51,16 @@ const Campus = () => {
             canteen, and other facilities
           </p>
           <div className="bg-[#00b3b4] text-white flex flex-col
-           items-center space-y-4 p-8 h-full">
-            <span className="flex cursor-pointer space-x-2 justify-start items-center font-semibold">
-            <h2 className="">University library</h2>
+           items-center justify-center p-8 h-full">
+            <span className="flex cursor-pointer space-x-2 justify-start
+             items-center font-semibold text-xl hover:-translate-y-2 transition-transform
+             duration-500">
+            <button className=""
+            onClick={handleClick}
+            >Explore all facilities</button>
             <ArrowRightIcon className="h-5 w-5 " />
             </span>
-            <span className="flex cursor-pointer space-x-2 justify-start items-center font-semibold">
-            <h2 className="">Sports and Gym</h2>
-            <ArrowRightIcon className="h-5 w-5 " />
-            </span>
-            <span className="flex cursor-pointer space-x-2 justify-start items-center font-semibold">
-            <h2 className="">Lecture Halls</h2>
-            <ArrowRightIcon className="h-5 w-5 " />
-            </span>
+
           </div>
         </article>
 

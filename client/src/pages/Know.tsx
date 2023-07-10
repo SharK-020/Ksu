@@ -1,10 +1,9 @@
-import React from "react";
 import Banner from "../components/Home/Banner";
 import Programs from "../components/Home/Programs";
 
 const Know = () => {
   return (
-    <main className="">
+    <main className="pb-6">
       {/* Banner */}
       <section className="">
         <Banner />

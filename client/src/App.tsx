@@ -7,6 +7,7 @@ import Mandis from "./pages/Mandis";
 import Research from "./pages/Research";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Admission from "./components/Home/Admission";
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 				<Route path="/mandis" element={<Mandis />} />
 				<Route path="/research" element={<Research />} />
 				<Route path="/login" element={<Login />} />
+				<Route path="/admission" element={<Admission />} />
 				<Route path="*" element={<Home />} />
 			</Routes>
 		</>
