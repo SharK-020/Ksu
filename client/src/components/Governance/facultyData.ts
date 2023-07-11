@@ -156,21 +156,27 @@ const SanskritDept = [
 const StatutoryOfficers = [
 	{
 		id: 1,
-		name: "Dr. Ashish Sharma",
+		name: "Dr. Ashis Sharma",
 		designation: "Vice-Chancellor",
 		contact: "pemadorjee@gmail.com",
 	},
 	{
 		id: 2,
-		name: "Mr. Tashi Wangdi",
+		name: "Shri Karma Sonam Bhutia",
 		designation: "Registrar",
 		contact: "tashiwangdi@example.com",
 	},
 	{
 		id: 3,
-		name: "Ms. Sonam Lepcha",
+		name: "Shri Rohit Kumar Pradhan",
 		designation: "Finance Officer",
 		contact: "sonamplepcha@example.com",
+	},
+	{
+		id: 4,
+		name: "Dr. Jigme Wangchuk Bhutia",
+		designation: "Controller of Examinations",
+		contact: "ssu.coexam@gmail.com",
 	},
 ];
 
