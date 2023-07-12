@@ -83,6 +83,11 @@ const Header = () => {
                 Schools
               </li>
             </Link>
+            <Link to="/admission">
+              <li className="large-nav-item" onClick={routeClick}>
+                Admission
+              </li>
+            </Link>
             <Link to="/life">
               <li className="large-nav-item" onClick={routeClick}>
                 Life at KSU
@@ -156,6 +161,11 @@ const Header = () => {
           <Link to="/schools">
             <li className="small-nav-items" onClick={routeClick}>
               Schools
+            </li>
+          </Link>
+          <Link to="/admission">
+            <li className="small-nav-items" onClick={routeClick}>
+              Admission
             </li>
           </Link>
           <Link to="/life">

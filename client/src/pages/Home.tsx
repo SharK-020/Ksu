@@ -17,18 +17,20 @@ const Home = () => {
       </section>
       {/* about section */}
       <section className=" py-5 px-5 lg:px-16">
-        <div className="">
+        <div className="lg:w-[70%] mx-auto">
           <About />
         </div>
       </section>
 
       {/* Notice section */}
       <section className="px-5 py-5 md:px-10 lg:px-16">
-        <div className="flex flex-col md:flex-row justify-center gap-6 lg:gap-20 ">
-          <Notice noticeData={noticeSampleData} noticeTitle="Latest Notifications" />
-          <div className="md:w-[40%]">
-            <Notice noticeData={noticeSampleData} noticeTitle="Quick Links" />
-          </div>
+        <div className="relative flex flex-col md:flex-row justify-center gap-6 lg:gap-20 ">
+          <Notice
+            noticeData={noticeSampleData}
+            noticeTitle="Latest Notifications"
+          />
+
+          <Notice noticeData={noticeSampleData} noticeTitle="Quick Links" />
         </div>
       </section>
       {/* vision mission */}
@@ -86,11 +88,6 @@ const Home = () => {
       {/* Faculty overview */}
       {/*       <section>Faculty overview</section> */}
 
-      {/* Admission application overview */}
-
-      <section className="px-8 py-10">
-        <HowToApply />
-      </section>
 
       {/* Scholarship Programs */}
       <section>
