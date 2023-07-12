@@ -4,11 +4,10 @@ import Stats from "../components/Home/Stats";
 import Campus from "../components/Home/Campus";
 import Scholarships from "../components/Home/Scholarships";
 import Programs from "../components/Home/Programs";
-import Apply from "../components/Home/Apply";
 import Notice from "../components/Notice";
 import About from "../components/Home/About";
-import { Link } from "react-router-dom";
 import HowToApply from "../components/Home/HowToApply";
+import { noticeSampleData } from "../components/noticeSampleData";
 const Home = () => {
   return (
     <main className="">
@@ -17,14 +16,19 @@ const Home = () => {
         <Banner />
       </section>
       {/* about section */}
-      <section className="flex flex-col lg:flex-row py-5 px-5 lg:px-16">
-        <div className="flex-1">
+      <section className=" py-5 px-5 lg:px-16">
+        <div className="">
           <About />
         </div>
+      </section>
 
-        {/*Latest news Component here */}
-        <div className="flex lg:w-[40%]  justify-center">
-          <Notice />
+      {/* Notice section */}
+      <section className="px-5 py-5 md:px-10 lg:px-16">
+        <div className="flex flex-col md:flex-row justify-center gap-6 lg:gap-20 ">
+          <Notice noticeData={noticeSampleData} noticeTitle="Latest Notifications" />
+          <div className="md:w-[40%]">
+            <Notice noticeData={noticeSampleData} noticeTitle="Quick Links" />
+          </div>
         </div>
       </section>
       {/* vision mission */}
@@ -84,10 +88,8 @@ const Home = () => {
 
       {/* Admission application overview */}
 
-      <section
-        className="px-8 py-10"
-      >
-       <HowToApply />
+      <section className="px-8 py-10">
+        <HowToApply />
       </section>
 
       {/* Scholarship Programs */}
