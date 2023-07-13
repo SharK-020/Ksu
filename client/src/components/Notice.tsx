@@ -1,17 +1,24 @@
-import React from "react";
-import { noticeSampleData } from "./noticeSampleData";
+import { NoticeType } from "./noticeSampleData";
 
-const Notice = () => {
+type NoticeProps = {
+  noticeData : NoticeType[];
+  noticeTitle : string;
+}
+
+const Notice = ({
+  noticeData,
+  noticeTitle
+} : NoticeProps) => {
   return (
     <div className="flex flex-col">
       <div
         className=" border-b-2 border-gray-300 bg-[#082F49] rounded-t-3xl
         p-2"
       >
-        <h1 className="text-center text-gray-100 text-2xl">Notice</h1>
+        <h1 className="text-center font-semibold text-gray-100 text-2xl">{noticeTitle}</h1>
       </div>
-      <div className="bg-sky-100 max-h-[400px] overflow-y-scroll scrollbar-thin">
-        {noticeSampleData.map((notice) => {
+      <div className="bg-sky-100 max-h-[250px] md:max-h-[400px] overflow-y-scroll scrollbar-thin">
+        {noticeData.map((notice) => {
           return (
             <div
               key={notice.id}

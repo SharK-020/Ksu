@@ -87,7 +87,7 @@ const Banner = () => {
               University
             </h1>
             </div>
-            <h2 className="text-2xl lg:text-4xl font-bold text-cyan-200"> 
+            <h2 className="text-2xl lg:text-4xl font-bold text-cyan-200 "> 
               The University of Opportunities
             </h2>
           </div>

@@ -1,13 +1,13 @@
 //sample data for notice
 //The time should come from createdAt field of the notice object ist
-type Notice = {
+export type NoticeType = {
     id: number;
     title: string;
     link?: string;
-    date: string;
+    date?: string;
 };
 
-export const noticeSampleData = [
+export const noticeSampleData: NoticeType[] = [
     {
         id: 1,
         title: "Admission for 2023 started!",

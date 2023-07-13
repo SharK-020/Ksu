@@ -7,7 +7,7 @@ import Mandis from "./pages/Mandis";
 import Research from "./pages/Research";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Admission from "./components/Home/Admission";
+import Admission from "./pages/Admission";
 
 function App() {
 	return (
