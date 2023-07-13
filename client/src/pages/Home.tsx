@@ -6,8 +6,10 @@ import Scholarships from "../components/Home/Scholarships";
 import Programs from "../components/Home/Programs";
 import Notice from "../components/Notice";
 import About from "../components/Home/About";
-import HowToApply from "../components/Home/HowToApply";
 import { noticeSampleData } from "../components/noticeSampleData";
+import { motion } from "framer-motion";
+import animVariants from "../utils/variants";
+
 const Home = () => {
   return (
     <main className="">
@@ -15,15 +17,28 @@ const Home = () => {
       <section className="">
         <Banner />
       </section>
+
       {/* about section */}
-      <section className=" py-5 px-5 lg:px-16">
+      <motion.section 
+      className=" py-5 px-5 lg:px-16"
+      variants={animVariants.baseCard}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true }}
+      >
         <div className="lg:w-[70%] mx-auto">
           <About />
         </div>
-      </section>
+      </motion.section>
 
       {/* Notice section */}
-      <section className="px-5 py-5 md:px-10 lg:px-16">
+      <motion.section 
+      className="px-5 py-5 md:px-10 lg:px-16"
+      variants={animVariants.section}
+      initial="offscreen"
+      whileInView="onscreen"
+      
+      >
         <div className="relative flex flex-col md:flex-row justify-center gap-6 lg:gap-20 ">
           <Notice
             noticeData={noticeSampleData}
@@ -32,7 +47,8 @@ const Home = () => {
 
           <Notice noticeData={noticeSampleData} noticeTitle="Quick Links" />
         </div>
-      </section>
+      </motion.section>
+
       {/* vision mission */}
       <section className="md:px-16">
         <Mission />
