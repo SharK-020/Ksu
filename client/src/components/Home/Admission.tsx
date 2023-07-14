@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const Admission = () => {
 	return (
@@ -30,10 +30,10 @@ const Admission = () => {
 						consider personal qualities, as revealed in community
 						involvement, leadership and achievements.
 					</p>
-					<p className="mt-2 text-xl text-blue-600 ">
-						<button className="rounded-none ">
-							<a href=""> READ MORE </a>
-						</button>
+					<p className="mt-2 text-xl py-3 bg-teal-400 max-w-[150px] text-center rounded-lg">
+						<a href="https://ksus.in/app/public/index.php/admission/">
+							Apply Now
+						</a>
 					</p>
 				</article>
 				<div>

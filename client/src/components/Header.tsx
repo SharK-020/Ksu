@@ -9,6 +9,7 @@ const Header = () => {
   //funtion for route changing
   const routeClick = () => {
     window.scrollTo(0, 0);
+    setIsOpen(false);
   };
 
   // Function for menu button in small screens
@@ -81,6 +82,11 @@ const Header = () => {
             <Link to="/schools">
               <li className="large-nav-item" onClick={routeClick}>
                 Schools
+              </li>
+            </Link>
+            <Link to="/admission">
+              <li className="large-nav-item" onClick={routeClick}>
+                Admission
               </li>
             </Link>
             <Link to="/life">
@@ -156,6 +162,11 @@ const Header = () => {
           <Link to="/schools">
             <li className="small-nav-items" onClick={routeClick}>
               Schools
+            </li>
+          </Link>
+          <Link to="/admission">
+            <li className="small-nav-items" onClick={routeClick}>
+              Admission
             </li>
           </Link>
           <Link to="/life">

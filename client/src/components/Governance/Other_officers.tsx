@@ -1,4 +1,4 @@
-import React from "react";
+
 import { ExaminationDivision, FinanceAccountsDivision, OtherOfficersAdmin } from "./facultyData";
 import FacultyCard from "./FacultyCard";
 

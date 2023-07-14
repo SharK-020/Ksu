@@ -44,7 +44,9 @@ const Carousel = ({ images }: Props) => {
         >
               {
                 images.map((image) => (
-                  <div key={image.id}>
+                  <div key={image.id}
+                  className="cursor-pointer hover:brightness-75 transition-all 
+                  duration-500 select-none">
                     <CarouselCard
                       image={image.link}
                       altData={image.title}

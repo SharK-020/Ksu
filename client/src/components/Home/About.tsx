@@ -1,4 +1,4 @@
-import React from "react";
+
 import logo from "../../assets/logo.webp";
 
 const About = () => {
@@ -20,7 +20,7 @@ const About = () => {
       <div className="hidden md:block pt-6 ">
         <img src={logo} alt="KSU_logo" width="100" height="100" />
       </div>
-      <article className="space-y-2 font-medium p-6 flex-1">
+      <article className="space-y-2 font-medium p-6 flex-1  text-justify">
         <div className="text-3xl font-extrabold hidden md:block">
           <h1 className="">About Kanchendzonga</h1>
           <h1 className="">State University</h1>

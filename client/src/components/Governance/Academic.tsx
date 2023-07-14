@@ -1,4 +1,3 @@
-import React from "react";
 import FacultyCard from "./FacultyCard";
 import { NepaliDept, SanskritDept } from "./facultyData";
 

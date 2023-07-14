@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaDownload } from "react-icons/fa";
 const Publication = () => {
   return (
