@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import banner from "../../assets/Banner/banner.webp";
 import banner1 from "../../assets/Banner/banner1.webp";
 import banner2 from "../../assets/Banner/banner2.webp";

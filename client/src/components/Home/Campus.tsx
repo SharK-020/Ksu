@@ -1,4 +1,3 @@
-import React from "react";
 import promo from "../../assets/promo1.webp";
 import room from "../../assets/hall1.jpg";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";

@@ -1,4 +1,3 @@
-import React from "react";
 import { StatutoryOfficers } from "./facultyData";
 import FacultyCard from "./FacultyCard";
 

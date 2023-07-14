@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FaDownload } from "react-icons/fa";
 const Content = (props: { name: string; date: string }) => {
 	return (
