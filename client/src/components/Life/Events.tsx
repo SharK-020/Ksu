@@ -1,5 +1,5 @@
 import Carousel from "./Carousel.js";
-import { AikidoData, execMeetingData } from "./imgData.js";
+import { AikidoData, deptData, execMeetingData, swachData } from "./imgData.js";
 
 const Events = () => {
   return (
@@ -21,7 +21,14 @@ const Events = () => {
           <h1 className="">Executive Council Meeting</h1>
           <Carousel images={execMeetingData} />
         </div>
-
+        <div className="space-y-2">
+          <h1 className="">M.A. Sanskrit Farewell</h1>
+          <Carousel images={deptData} />
+        </div>
+        <div className="space-y-2">
+          <h1 className="">Swachh Bharat</h1>
+          <Carousel images={swachData} />
+        </div>
       </div>
     </div>
   );
