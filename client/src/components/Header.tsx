@@ -107,13 +107,13 @@ const Header = () => {
           </ul>
         </nav>
         <h1 className="text-sm md:hidden font-semibold text-gray-100
-         mx-auto">
+         mx-auto text-center">
           Khangchenzonga State University
         </h1>
         {/* Nav button */}
         <div
           className={`z-50 flex items-center right-0 text-sm font-medium 
-          md:hidden select-none  ${isOpen ? "" : ""}`}
+          md:hidden select-none touch-none  ${isOpen ? "" : ""}`}
         >
           <div
             className="bg-white flex  rounded-full w-20 
