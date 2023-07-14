@@ -9,6 +9,11 @@ import exec1 from "../../assets/life/EXECUTIVE COUNCIL MEETING/firstecmeeting.we
 import exec2 from "../../assets/life/EXECUTIVE COUNCIL MEETING/vc in pre fc meet with gp upadhya.webp"
 import exec3 from "../../assets/life/EXECUTIVE COUNCIL MEETING/3rd ec meeting.webp";
 import exec4 from "../../assets/life/EXECUTIVE COUNCIL MEETING/staff n officials.webp"
+import dept1 from "../../assets/life/M.A. SANSKRIT FAREWELL/dept1.webp";
+import dept2 from "../../assets/life/M.A. SANSKRIT FAREWELL/dept2.webp";
+import dept3 from "../../assets/life/M.A. SANSKRIT FAREWELL/dept3.webp";
+import swach1 from "../../assets/life/Swach Bharat Abhiyan1/img1.webp";
+import swach2 from "../../assets/life/Swach Bharat Abhiyan1/img2.webp";
 
 export type carouselImgData = {
     id: number,
@@ -72,7 +77,40 @@ const execMeetingData: carouselImgData[] = [
     }
 ]
 
+const deptData: carouselImgData[] = [
+    {
+        id: 1,
+        title: "Dept",
+        link: dept1
+    },
+    {
+        id: 2,
+        title: "Dept",
+        link: dept2
+    },
+    {
+        id: 3,
+        title: "Dept",
+        link: dept3
+    }
+]
+
+const swachData: carouselImgData[] = [
+    {
+        id: 1,
+        title: "Swach",
+        link: swach1
+    },
+    {
+        id: 2,
+        title: "Swach",
+        link: swach2
+    }
+]
+
 export {
     AikidoData,
-    execMeetingData
+    execMeetingData,
+    deptData,
+    swachData
 }
