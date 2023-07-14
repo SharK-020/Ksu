@@ -9,6 +9,7 @@ const Header = () => {
   //funtion for route changing
   const routeClick = () => {
     window.scrollTo(0, 0);
+    setIsOpen(false);
   };
 
   // Function for menu button in small screens

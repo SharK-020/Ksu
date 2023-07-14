@@ -53,10 +53,12 @@ const Home = () => {
       <section className="md:px-16">
         <Mission />
       </section>
+
       {/* Metrics and numbers */}
       <section className="flex justify-center py-10">
         <Stats />
       </section>
+      
       {/* Campus Life and facilities overview */}
       <section>
         <Campus />

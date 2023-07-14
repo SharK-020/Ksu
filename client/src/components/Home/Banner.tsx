@@ -8,6 +8,7 @@ import banner5 from "../../assets/Banner/banner5.webp";
 import banner6 from "../../assets/Banner/banner6.webp";
 import banner7 from "../../assets/Banner/banner7.webp";
 import banner8 from "../../assets/Banner/banner8.webp";
+import { motion } from "framer-motion";
 
 const images = [
   {
@@ -38,6 +39,18 @@ const images = [
     url: banner8,
   }
 ];
+
+const textAnim = {
+  offscreen: {
+    opacity: 0,
+    pathLength: 0,
+
+  },
+  onscreen: {
+    opacity: 1,
+    pathLength: 1,
+  }
+};
 
 const Banner = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -87,9 +100,18 @@ const Banner = () => {
               University
             </h1>
             </div>
-            <h2 className="text-2xl lg:text-4xl font-bold text-cyan-200 "> 
+            <motion.h2 
+            className="text-2xl lg:text-4xl font-bold text-cyan-200 "
+            variants={textAnim}
+            initial="offscreen"
+            animate="onscreen"
+            transition={{
+              duration: 2,
+              ease: "easeInOut"
+            }}
+            > 
               The University of Opportunities
-            </h2>
+            </motion.h2>
           </div>
         </div>
       </div>
