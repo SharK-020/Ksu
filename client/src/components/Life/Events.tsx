@@ -14,19 +14,19 @@ const Events = () => {
       </div>
       <div className="font-medium text-xl space-y-4">
         <div className="space-y-2">
-          <h1>Akido</h1>
+          <h1 className="carousel-text ">Akido</h1>
           <Carousel images={AikidoData} />
         </div>
         <div className="space-y-2">
-          <h1 className="">Executive Council Meeting</h1>
+          <h1 className="carousel-text">Executive Council Meeting</h1>
           <Carousel images={execMeetingData} />
         </div>
         <div className="space-y-2">
-          <h1 className="">M.A. Sanskrit Farewell</h1>
+          <h1 className="carousel-text">M.A. Sanskrit Farewell</h1>
           <Carousel images={deptData} />
         </div>
         <div className="space-y-2">
-          <h1 className="">Swachh Bharat</h1>
+          <h1 className="carousel-text">Swachh Bharat</h1>
           <Carousel images={swachData} />
         </div>
       </div>
