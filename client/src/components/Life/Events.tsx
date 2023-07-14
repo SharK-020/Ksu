@@ -1,5 +1,37 @@
+import animVariants from "../../utils/variants.js";
 import Carousel from "./Carousel.js";
-import { AikidoData, deptData, execMeetingData, swachData } from "./imgData.js";
+import {
+  AikidoData,
+  carouselImgData,
+  deptData,
+  execMeetingData,
+  swachData,
+} from "./imgData.js";
+import { motion } from "framer-motion";
+
+// Data for the carousel
+type EventImg = {
+  name: string;
+  data: carouselImgData[];
+};
+const EventsImg: EventImg[] = [
+  {
+    name: "Aikido",
+    data: AikidoData,
+  },
+  {
+    name: "Executive Council Meeting",
+    data: execMeetingData,
+  },
+  {
+    name: "M.A. Sanskrit Farewell",
+    data: deptData,
+  },
+  {
+    name: "Swachh Bharat",
+    data: swachData,
+  },
+];
 
 const Events = () => {
   return (
@@ -12,24 +44,26 @@ const Events = () => {
           A collection of photos from our events and activities.
         </p>
       </div>
-      <div className="font-medium text-xl space-y-4">
-        <div className="space-y-2">
-          <h1 className="carousel-text ">Akido</h1>
-          <Carousel images={AikidoData} />
-        </div>
-        <div className="space-y-2">
-          <h1 className="carousel-text">Executive Council Meeting</h1>
-          <Carousel images={execMeetingData} />
-        </div>
-        <div className="space-y-2">
-          <h1 className="carousel-text">M.A. Sanskrit Farewell</h1>
-          <Carousel images={deptData} />
-        </div>
-        <div className="space-y-2">
-          <h1 className="carousel-text">Swachh Bharat</h1>
-          <Carousel images={swachData} />
-        </div>
-      </div>
+
+      <motion.div
+        className="font-medium text-xl space-y-4"
+        variants={animVariants.section}
+        initial="offscreen"
+        whileInView="onscreen"
+      >
+        {EventsImg.map((item, index) => (
+          <motion.div
+            className="space-y-2"
+            key={index}
+            initial="offscreen"
+            whileInView="onscreen"
+            variants={animVariants.section}
+          >
+            <h1 className="carousel-text ">{item.name}</h1>
+            <Carousel images={item.data} />
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 };
