@@ -1,12 +1,15 @@
-const express = require('express');
-const mongo = require('./db/mongo');
-const cors = require('cors');
-const authRoutes = require('./routes/authRoutes');
-const mainRoute = require('../server/routes/mainRoute')
-const bodyparser = require('body-parser');
-require('dotenv').config();
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const authRoutes = require("./routes/authRoutes");
+const mainRoute = require("./routes/mainRoute");
+const adminRoute = require("./routes/adminRoutes");
+const bodyparser = require("body-parser");
+const multer = require("multer");
+
+require("dotenv").config();
 const app = express();
-const port = process.env.port || 3000;
+const PORT = process.env.port || 3000;
 
 app.use(cors()); // enable CORS (Cross-origin resource sharing) for allowing access to resources from other domains
 app.use(express.json());
@@ -17,17 +20,16 @@ app.use(bodyparser.json());
 }); */
 
 /* app.use('/', authRoutes); */
-app.use('/api', mainRoute);
-app.use('/auth', authRoutes)
-
-const run = async () => {
-    try {
-        await mongo(process.env.MONGO_URL);
-        app.listen(port, () => console.log(`Server started on port ${port}`));
-    }
-    catch (err) {
-        console.log(err);
-    }
-}
-
-run();
+app.use("/auth", authRoutes);
+app.use("/api", mainRoute);
+app.use("/admin", adminRoute);
+mongoose
+	.connect(process.env.MONGO_URL)
+	.then(() => {
+		app.listen(PORT, () => {
+			console.log(`Server is running on port ${PORT}`);
+		});
+	})
+	.catch((err) => {
+		console.log(err);
+	});
