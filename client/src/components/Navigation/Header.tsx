@@ -10,6 +10,16 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [hoveredItem, setHoveredItem] = useState<string>("");
 
+  //mobile submenu click
+  const mobileSubmenuClick = (item: string) => {
+    if(hoveredItem === item) {
+      setHoveredItem("");
+    }
+    else {
+      setHoveredItem(item);
+    }
+  };
+
   //funtion for route changing
   const routeClick = () => {
     window.scrollTo(0, 0);
@@ -214,20 +224,20 @@ const Header = () => {
               <div className="relative">
                 <li
                   className="small-nav-items"
-                  onClick={routeClick}
-                  onMouseOver={() => setHoveredItem("know")}
-                  onMouseOut={() => setHoveredItem("")}
+                  onClick={() => mobileSubmenuClick("know")}
                 >
                   Know KSU
                 </li>
                 {hoveredItem === "know" && (
                   <div
                     className=""
-                    onMouseOver={() => setHoveredItem("know")}
-                    onMouseOut={() => setHoveredItem("")}
                   >
                     <MobileSubmenu
                       menuItem={[
+                        {
+                          name: "About KSU",
+                          link: "/know",
+                        },
                         {
                           name: "Careers",
                           link: "/careers",
