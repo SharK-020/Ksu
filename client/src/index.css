@@ -23,9 +23,9 @@
 
     .small-nav-items
     {
-        @apply hover:bg-cyan-500/20 border-transparent border-l-2
-        transition-all hover:border-l-2
-        hover:border-sky-950 duration-300 font-sanserif py-2 px-4 leading-snug font-semibold text-gray-900;
+        @apply hover:bg-cyan-500/20 border-sky-700 border-l-4
+        transition-all hover:border-sky-950 duration-300 font-sanserif py-2 
+        px-4 leading-snug font-semibold text-gray-900 my-2;
     }
     /* used in events component */
     .carousel-text {

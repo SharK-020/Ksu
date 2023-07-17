@@ -1,7 +1,11 @@
 import { useCallback, useState, useEffect } from "react";
 import logo from "../../assets/logo.webp";
 import govtLogo from "../../assets/govtLogo.webp";
-import { Bars3Icon, ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import {
+  Bars3Icon,
+  ChevronDownIcon,
+  ChevronRightIcon,
+} from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 import Submenu from "./Submenu";
 import MobileSubmenu from "./MobileSubmenu";
@@ -12,10 +16,9 @@ const Header = () => {
 
   //mobile submenu click
   const mobileSubmenuClick = (item: string) => {
-    if(hoveredItem === item) {
+    if (hoveredItem === item) {
       setHoveredItem("");
-    }
-    else {
+    } else {
       setHoveredItem(item);
     }
   };
@@ -29,6 +32,7 @@ const Header = () => {
   // Function for menu button in small screens
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen);
+    setHoveredItem("");
   }, [isOpen]);
   //when user scrolls down navbar will close
   useEffect(() => {
@@ -114,24 +118,72 @@ const Header = () => {
               </div>
             </Link>
             <Link to="/governance">
-              <li
-                className="large-nav-item"
-                onClick={routeClick}
-                onMouseOver={() => setHoveredItem("governance")}
-                onMouseOut={() => setHoveredItem("")}
-              >
-                Governance
-              </li>
+              <div className="relative h-full">
+                <li
+                  className=" large-nav-item"
+                  onClick={routeClick}
+                  onMouseOver={() => setHoveredItem("governance")}
+                  onMouseOut={() => setHoveredItem("")}
+                >
+                  Governance
+                </li>
+                {hoveredItem === "governance" && (
+                  <div
+                    className="absolute h-full w-max"
+                    onMouseOver={() => setHoveredItem("governance")}
+                    onMouseOut={() => setHoveredItem("")}
+                  >
+                    <Submenu
+                      menuItem={[
+                        {
+                          name: "Statutory Officers",
+                          link: "/statutory",
+                        },
+                        {
+                          name: "University Authority",
+                          link: "/uniauthority",
+                        },
+                        {
+                          name: "Other Officers And Support Staff",
+                          link: "/otherstaff",
+                        },
+                      ]}
+                    />
+                  </div>
+                )}
+              </div>
             </Link>
-            <Link to="/schools">
+            <Link to="/literature">
+            <div className="relative h-full">
               <li
-                className="large-nav-item"
+                className=" large-nav-item"
                 onClick={routeClick}
                 onMouseOver={() => setHoveredItem("schools")}
                 onMouseOut={() => setHoveredItem("")}
               >
                 Schools
               </li>
+              {hoveredItem === "schools" && (
+                <div
+                  className="absolute"
+                  onMouseOver={() => setHoveredItem("schools")}
+                  onMouseOut={() => setHoveredItem("")}
+                >
+                  <Submenu
+                  menuItem={[
+                    {
+                      name: "Literature",
+                      link: "/literature",
+                    },
+                    {
+                      name: "Law",
+                      link: "/law",
+                    },
+                  ]}
+                  />
+                </div>
+              )}
+            </div>
             </Link>
             <Link to="/admission">
               <li
@@ -214,52 +266,97 @@ const Header = () => {
         } duration-[.5s] h-[100vh] bg-slate-200/70 w-[40vw] right-0 fixed tracking-tight
         md:hidden flex backdrop-blur-md z-[100]`}
       >
-        <ul className="space-y-2 pt-4  w-full">
+        <ul className="w-full">
           <Link to="/">
             <li className="small-nav-items" onClick={routeClick}>
               Home
             </li>
           </Link>
-          <Link to="/know">
-              <div className="relative">
-                <li
-                  className="small-nav-items flex items-center justify-between"
-                  onClick={() => mobileSubmenuClick("know")}
-                >
-                  <h2>Know KSU</h2>
-                  <ChevronDownIcon className={`h-4 w-4 transition duration-300
-                   ${hoveredItem ? "rotate-180" : "rotate-0"}`} />
-                </li>
-                {hoveredItem === "know" && (
-                  <div
-                    className=""
-                  >
-                    <MobileSubmenu
-                      menuItem={[
-                        {
-                          name: "About KSU",
-                          link: "/know",
-                        },
-                        {
-                          name: "Careers",
-                          link: "/careers",
-                        },
-                      ]}
-                    />
-                  </div>
-                )}
+          <div className="relative">
+            <li
+              className="small-nav-items flex items-center justify-between"
+              onClick={() => mobileSubmenuClick("know")}
+            >
+              <h2>Know KSU</h2>
+              <ChevronDownIcon
+                className={`h-4 w-4 transition duration-300
+                   ${hoveredItem === "know" ? "rotate-180" : "rotate-0"}`}
+              />
+            </li>
+            {hoveredItem === "know" && (
+              <div className="">
+                <MobileSubmenu
+                  menuItem={[
+                    {
+                      name: "About KSU",
+                      link: "/know",
+                    },
+                    {
+                      name: "Careers",
+                      link: "/careers",
+                    },
+                  ]}
+                />
               </div>
-            </Link>
-          <Link to="/governance">
-            <li className="small-nav-items" onClick={routeClick}>
-              Governance
+            )}
+          </div>
+
+          <div className="relative">
+            <li
+              className="small-nav-items flex items-center justify-between"
+              onClick={() => mobileSubmenuClick("governance")}
+            >
+              <h2>Governance</h2>
+              <ChevronDownIcon
+                className={`h-4 w-4 transition duration-300
+                   ${hoveredItem === "governance" ? "rotate-180" : "rotate-0"}`}
+              />
             </li>
-          </Link>
-          <Link to="/schools">
-            <li className="small-nav-items" onClick={routeClick}>
-              Schools
+            {hoveredItem === "governance" && (
+              <div className="">
+                <MobileSubmenu
+                  menuItem={[
+                    {
+                      name: "Statutory Officers",
+                      link: "/statutory",
+                    },
+                    {
+                      name: "University Authority",
+                      link: "/uniauthority",
+                    },
+                  ]}
+                />
+              </div>
+            )}
+          </div>
+          <div className="relative">
+            <li
+              className="small-nav-items flex items-center justify-between"
+              onClick={() => mobileSubmenuClick("schools")}
+            >
+              <h2>Schools</h2>
+              <ChevronDownIcon
+                className={`h-4 w-4 transition duration-300
+                   ${hoveredItem === "schools" ? "rotate-180" : "rotate-0"}`}
+              />
             </li>
-          </Link>
+            {hoveredItem === "schools" && (
+              <div className="">
+                <MobileSubmenu
+                  menuItem={[
+                    {
+                      name: "Literature",
+                      link: "/literature",
+                    },
+                    {
+                      name: "Law",
+                      link: "/law",
+                    },
+                  ]}
+                />
+              </div>
+            )}
+          </div>
           <Link to="/admission">
             <li className="small-nav-items" onClick={routeClick}>
               Admission
