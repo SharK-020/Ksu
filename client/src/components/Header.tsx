@@ -3,9 +3,12 @@ import logo from "../assets/logo.webp";
 import govtLogo from "../assets/govtLogo.webp";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
+import Submenu from "./Submenu";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [hoveredItem, setHoveredItem] = useState<string>("");
+
   //funtion for route changing
   const routeClick = () => {
     window.scrollTo(0, 0);
@@ -65,49 +68,109 @@ const Header = () => {
               <li
                 className="large-nav-item rounded-tl-3xl"
                 onClick={routeClick}
+                onMouseOver={() => setHoveredItem("home")}
+                onMouseOut={() => setHoveredItem("")}
               >
                 Home
               </li>
             </Link>
             <Link to="/know">
-              <li className="large-nav-item" onClick={routeClick}>
-                Know KSU
-              </li>
+              <div className="relative h-full">
+                <li
+                  className=" large-nav-item"
+                  onClick={routeClick}
+                  onMouseOver={() => setHoveredItem("know")}
+                  onMouseOut={() => setHoveredItem("")}
+                >
+                  Know KSU
+                </li>
+                {hoveredItem === "know" && (
+                  <div
+                    className="absolute"
+                    onMouseOver={() => setHoveredItem("know")}
+                    onMouseOut={() => setHoveredItem("")}
+                  >
+                    <Submenu
+                      menuItem={[
+                        {
+                          name: "About KSU",
+                          link: "/know",
+                        },
+                        {
+                          name: "Careers",
+                          link: "/careers",
+                        },
+                      ]}
+                    />
+                  </div>
+                )}
+              </div>
             </Link>
             <Link to="/governance">
-              <li className="large-nav-item" onClick={routeClick}>
+              <li
+                className="large-nav-item"
+                onClick={routeClick}
+                onMouseOver={() => setHoveredItem("governance")}
+                onMouseOut={() => setHoveredItem("")}
+              >
                 Governance
               </li>
             </Link>
             <Link to="/schools">
-              <li className="large-nav-item" onClick={routeClick}>
+              <li
+                className="large-nav-item"
+                onClick={routeClick}
+                onMouseOver={() => setHoveredItem("schools")}
+                onMouseOut={() => setHoveredItem("")}
+              >
                 Schools
               </li>
             </Link>
             <Link to="/admission">
-              <li className="large-nav-item" onClick={routeClick}>
+              <li
+                className="large-nav-item"
+                onClick={routeClick}
+                onMouseOver={() => setHoveredItem("admission")}
+              >
                 Admission
               </li>
             </Link>
             <Link to="/life">
-              <li className="large-nav-item" onClick={routeClick}>
+              <li
+                className="large-nav-item"
+                onClick={routeClick}
+                onMouseOver={() => setHoveredItem("life")}
+                onMouseOut={() => setHoveredItem("")}
+              >
                 Life at KSU
               </li>
             </Link>
             <Link to="/research">
-              <li className="large-nav-item" onClick={routeClick}>
+              <li
+                className="large-nav-item"
+                onClick={routeClick}
+                onMouseOver={() => setHoveredItem("research")}
+                onMouseOut={() => setHoveredItem("")}
+              >
                 Research
               </li>
             </Link>
             <Link to="/mandis">
-              <li className="large-nav-item" onClick={routeClick}>
+              <li
+                className="large-nav-item"
+                onClick={routeClick}
+                onMouseOver={() => setHoveredItem("mandis")}
+                onMouseOut={() => setHoveredItem("")}
+              >
                 Mandatory Disclosure
               </li>
             </Link>
           </ul>
         </nav>
-        <h1 className="text-sm md:hidden font-semibold text-gray-100
-         mx-auto text-center">
+        <h1
+          className="text-sm md:hidden font-semibold text-gray-100
+         mx-auto text-center"
+        >
           Khangchenzonga State University
         </h1>
         {/* Nav button */}
@@ -136,13 +199,14 @@ const Header = () => {
           />
         </div>
       </div>
+
+      {/* Mobile nav */}
       <nav
         className={`${
           isOpen ? "right-0" : "right-[-100%]"
         } duration-[.5s] h-[100vh] bg-slate-200/70 w-[40vw] right-0 fixed tracking-tight
         md:hidden flex backdrop-blur-md z-[100]`}
       >
-        {/* Mobile nav */}
         <ul className="space-y-2 pt-4 text-center w-full">
           <Link to="/">
             <li className="small-nav-items" onClick={routeClick}>
@@ -186,6 +250,8 @@ const Header = () => {
           </Link>
         </ul>
       </nav>
+
+      {/* Submenus */}
     </header>
   );
 };

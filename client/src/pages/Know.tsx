@@ -21,8 +21,8 @@ const Know = () => {
           </div>
         </div>
 
-        <article className="space-y-2 font-medium p-10 w-full md:w-[60%]
-        mx-auto">
+        <article className="space-y-2 font-medium p-10 w-full md:w-[90%] lg:w-[70%]
+        mx-auto text-justify">
           <p className="mt-2 text-lg">
             The only State University of Sikkim was established to fulfill the
             need and dreams of the aspiring students of Sikkim and the North
