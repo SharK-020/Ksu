@@ -10,6 +10,7 @@ import Admission from "./pages/Admission";
 import Careers from "./pages/Careers";
 import Literature from "./pages/Literature";
 import Law from "./pages/Law";
+import Contact from "./pages/Contact";
 
 function App() {
 	return (
@@ -26,6 +27,7 @@ function App() {
 				<Route path="/admission" element={<Admission />} />
 				<Route path="/careers" element={<Careers />} />
 				<Route path="/law" element={<Law />} />
+				<Route path="/contact" element={<Contact />} />
 				<Route path="*" element={<Home />} />
 			</Routes>
 		</>
