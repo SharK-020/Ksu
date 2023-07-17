@@ -1,5 +1,5 @@
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import { useCallback, useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import MobileSubmenu from "./MobileSubmenu";
 import { SidebarContext } from "../../utils/SidebarContext";
@@ -24,11 +24,6 @@ const MobileNav = () => {
     setIsOpen(false);
   };
 
-  // Function for menu button in small screens
-  const toggleMenu = useCallback(() => {
-    setIsOpen(!isOpen);
-    setHoveredItem("");
-  }, [isOpen]);
   //when user scrolls down navbar will close
   useEffect(() => {
     const handleScroll = () => {
@@ -68,7 +63,8 @@ const MobileNav = () => {
               />
             </li>
             {hoveredItem === "know" && (
-              <div className="">
+              <div className=""
+              onClick={routeClick}>
                 <MobileSubmenu
                   menuItem={[
                     {
@@ -97,7 +93,8 @@ const MobileNav = () => {
               />
             </li>
             {hoveredItem === "governance" && (
-              <div className="">
+              <div className=""
+              onClick={routeClick}>
                 <MobileSubmenu
                   menuItem={[
                     {
@@ -125,7 +122,8 @@ const MobileNav = () => {
               />
             </li>
             {hoveredItem === "schools" && (
-              <div className="">
+              <div className=""
+              onClick={routeClick}>
                 <MobileSubmenu
                   menuItem={[
                     {
