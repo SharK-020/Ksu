@@ -1,37 +1,20 @@
-import { useCallback, useState, useEffect } from "react";
+import { useCallback, useState, useContext } from "react";
 import logo from "../../assets/logo.webp";
 import govtLogo from "../../assets/govtLogo.webp";
-import { Bars3Icon } from "@heroicons/react/24/solid";
-import { Link } from "react-router-dom";
-import Submenu from "./Submenu";
-import MobileSubmenu from "./MobileSubmenu";
+import {
+  Bars3Icon,
+} from "@heroicons/react/24/solid";
+import MobileNav from "./MobileNav";
+import { SidebarContext } from "../../utils/SidebarContext";
+import DesktopNav from "./DesktopNav";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [hoveredItem, setHoveredItem] = useState<string>("");
-
-  //funtion for route changing
-  const routeClick = () => {
-    window.scrollTo(0, 0);
-    setIsOpen(false);
-  };
+  const { isOpen, setIsOpen } = useContext(SidebarContext);
 
   // Function for menu button in small screens
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen);
-  }, [isOpen]);
-  //when user scrolls down navbar will close
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsOpen(false);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  }, [isOpen, setIsOpen]);
 
   return (
     <header className="bg-[#082F49] ">
@@ -59,111 +42,9 @@ const Header = () => {
           </div>
         </div>
 
-        <nav className="relative place-self-end space-y-1">
-          {/* Desktop nav */}
-          <ul
-            className="hidden md:flex bg-slate-100 text-center
-          rounded-tl-3xl"
-          >
-            <Link to="/">
-              <li
-                className="large-nav-item rounded-tl-3xl"
-                onClick={routeClick}
-                onMouseOver={() => setHoveredItem("home")}
-                onMouseOut={() => setHoveredItem("")}
-              >
-                Home
-              </li>
-            </Link>
-            <Link to="/know">
-              <div className="relative h-full">
-                <li
-                  className=" large-nav-item"
-                  onClick={routeClick}
-                  onMouseOver={() => setHoveredItem("know")}
-                  onMouseOut={() => setHoveredItem("")}
-                >
-                  Know KSU
-                </li>
-                {hoveredItem === "know" && (
-                  <div
-                    className="absolute"
-                    onMouseOver={() => setHoveredItem("know")}
-                    onMouseOut={() => setHoveredItem("")}
-                  >
-                    <Submenu
-                      menuItem={[
-                        {
-                          name: "Careers",
-                          link: "/careers",
-                        },
-                      ]}
-                    />
-                  </div>
-                )}
-              </div>
-            </Link>
-            <Link to="/governance">
-              <li
-                className="large-nav-item"
-                onClick={routeClick}
-                onMouseOver={() => setHoveredItem("governance")}
-                onMouseOut={() => setHoveredItem("")}
-              >
-                Governance
-              </li>
-            </Link>
-            <Link to="/schools">
-              <li
-                className="large-nav-item"
-                onClick={routeClick}
-                onMouseOver={() => setHoveredItem("schools")}
-                onMouseOut={() => setHoveredItem("")}
-              >
-                Schools
-              </li>
-            </Link>
-            <Link to="/admission">
-              <li
-                className="large-nav-item"
-                onClick={routeClick}
-                onMouseOver={() => setHoveredItem("admission")}
-              >
-                Admission
-              </li>
-            </Link>
-            <Link to="/life">
-              <li
-                className="large-nav-item"
-                onClick={routeClick}
-                onMouseOver={() => setHoveredItem("life")}
-                onMouseOut={() => setHoveredItem("")}
-              >
-                Life at KSU
-              </li>
-            </Link>
-            <Link to="/research">
-              <li
-                className="large-nav-item"
-                onClick={routeClick}
-                onMouseOver={() => setHoveredItem("research")}
-                onMouseOut={() => setHoveredItem("")}
-              >
-                Research
-              </li>
-            </Link>
-            <Link to="/mandis">
-              <li
-                className="large-nav-item"
-                onClick={routeClick}
-                onMouseOver={() => setHoveredItem("mandis")}
-                onMouseOut={() => setHoveredItem("")}
-              >
-                Mandatory Disclosure
-              </li>
-            </Link>
-          </ul>
-        </nav>
+        {/* Desktop navbar */}
+        <DesktopNav />
+
         <h1
           className="text-sm md:hidden font-semibold text-gray-100
          mx-auto text-center"
@@ -198,80 +79,7 @@ const Header = () => {
       </div>
 
       {/* Mobile nav */}
-      <nav
-        className={`${
-          isOpen ? "right-0" : "right-[-100%]"
-        } duration-[.5s] h-[100vh] bg-slate-200/70 w-[40vw] right-0 fixed tracking-tight
-        md:hidden flex backdrop-blur-md z-[100]`}
-      >
-        <ul className="space-y-2 pt-4 text-center w-full">
-          <Link to="/">
-            <li className="small-nav-items" onClick={routeClick}>
-              Home
-            </li>
-          </Link>
-          <Link to="/know">
-              <div className="relative">
-                <li
-                  className="small-nav-items"
-                  onClick={routeClick}
-                  onMouseOver={() => setHoveredItem("know")}
-                  onMouseOut={() => setHoveredItem("")}
-                >
-                  Know KSU
-                </li>
-                {hoveredItem === "know" && (
-                  <div
-                    className=""
-                    onMouseOver={() => setHoveredItem("know")}
-                    onMouseOut={() => setHoveredItem("")}
-                  >
-                    <MobileSubmenu
-                      menuItem={[
-                        {
-                          name: "Careers",
-                          link: "/careers",
-                        },
-                      ]}
-                    />
-                  </div>
-                )}
-              </div>
-            </Link>
-          <Link to="/governance">
-            <li className="small-nav-items" onClick={routeClick}>
-              Governance
-            </li>
-          </Link>
-          <Link to="/schools">
-            <li className="small-nav-items" onClick={routeClick}>
-              Schools
-            </li>
-          </Link>
-          <Link to="/admission">
-            <li className="small-nav-items" onClick={routeClick}>
-              Admission
-            </li>
-          </Link>
-          <Link to="/life">
-            <li className="small-nav-items" onClick={routeClick}>
-              Life at KSU
-            </li>
-          </Link>
-          <Link to="/research">
-            <li className="small-nav-items" onClick={routeClick}>
-              Research
-            </li>
-          </Link>
-          <Link to="/mandis">
-            <li className="small-nav-items" onClick={routeClick}>
-              Mandatory Disclosure
-            </li>
-          </Link>
-        </ul>
-      </nav>
-
-      {/* Submenus */}
+      <MobileNav />
     </header>
   );
 };
