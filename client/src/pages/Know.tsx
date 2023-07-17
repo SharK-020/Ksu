@@ -53,7 +53,7 @@ const Know = () => {
         </article>
       </section>
 
-      <section className="flex justify-center">
+      <section className="flex justify-center p-5">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
         gap-4">
           {/* idea taken from stanford university */}

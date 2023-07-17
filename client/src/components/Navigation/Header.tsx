@@ -1,9 +1,10 @@
 import { useCallback, useState, useEffect } from "react";
-import logo from "../assets/logo.webp";
-import govtLogo from "../assets/govtLogo.webp";
+import logo from "../../assets/logo.webp";
+import govtLogo from "../../assets/govtLogo.webp";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 import Submenu from "./Submenu";
+import MobileSubmenu from "./MobileSubmenu";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -92,10 +93,6 @@ const Header = () => {
                   >
                     <Submenu
                       menuItem={[
-                        {
-                          name: "About KSU",
-                          link: "/know",
-                        },
                         {
                           name: "Careers",
                           link: "/careers",
@@ -214,10 +211,33 @@ const Header = () => {
             </li>
           </Link>
           <Link to="/know">
-            <li className="small-nav-items" onClick={routeClick}>
-              Know KSU
-            </li>
-          </Link>
+              <div className="relative">
+                <li
+                  className="small-nav-items"
+                  onClick={routeClick}
+                  onMouseOver={() => setHoveredItem("know")}
+                  onMouseOut={() => setHoveredItem("")}
+                >
+                  Know KSU
+                </li>
+                {hoveredItem === "know" && (
+                  <div
+                    className=""
+                    onMouseOver={() => setHoveredItem("know")}
+                    onMouseOut={() => setHoveredItem("")}
+                  >
+                    <MobileSubmenu
+                      menuItem={[
+                        {
+                          name: "Careers",
+                          link: "/careers",
+                        },
+                      ]}
+                    />
+                  </div>
+                )}
+              </div>
+            </Link>
           <Link to="/governance">
             <li className="small-nav-items" onClick={routeClick}>
               Governance
