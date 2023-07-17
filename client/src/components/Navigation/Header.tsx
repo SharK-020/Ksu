@@ -214,7 +214,7 @@ const Header = () => {
         } duration-[.5s] h-[100vh] bg-slate-200/70 w-[40vw] right-0 fixed tracking-tight
         md:hidden flex backdrop-blur-md z-[100]`}
       >
-        <ul className="space-y-2 pt-4 text-center w-full">
+        <ul className="space-y-2 pt-4  w-full">
           <Link to="/">
             <li className="small-nav-items" onClick={routeClick}>
               Home
