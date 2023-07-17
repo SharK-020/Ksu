@@ -23,7 +23,7 @@ const CollageBanner = () => {
         {/*collage*/}
         <div className="flex flex-1 gap-1 md:gap-2 p-4 md:p-8">
           <div
-            className="flex flex-col items-center"
+            className="flex flex-col items-center justify-center"
           >
             <h1 className="block md:hidden font-extrabold text-2xl md:text-4xl lg:text-5xl
             p-4">

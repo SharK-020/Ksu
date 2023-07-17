@@ -1,6 +1,6 @@
 import Programs2 from "../components/Programs2";
 
-const Schools = () => {
+const Literature = () => {
 	return (
 		<div>
 			{/* Schools of sanskrit and nepali */}
@@ -47,4 +47,4 @@ const Schools = () => {
 	);
 };
 
-export default Schools;
+export default Literature;
