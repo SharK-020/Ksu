@@ -1,7 +1,7 @@
 import { useCallback, useState, useEffect } from "react";
 import logo from "../../assets/logo.webp";
 import govtLogo from "../../assets/govtLogo.webp";
-import { Bars3Icon } from "@heroicons/react/24/solid";
+import { Bars3Icon, ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 import Submenu from "./Submenu";
 import MobileSubmenu from "./MobileSubmenu";
@@ -223,10 +223,12 @@ const Header = () => {
           <Link to="/know">
               <div className="relative">
                 <li
-                  className="small-nav-items"
+                  className="small-nav-items flex items-center justify-between"
                   onClick={() => mobileSubmenuClick("know")}
                 >
-                  Know KSU
+                  <h2>Know KSU</h2>
+                  <ChevronDownIcon className={`h-4 w-4 transition duration-300
+                   ${hoveredItem ? "rotate-180" : "rotate-0"}`} />
                 </li>
                 {hoveredItem === "know" && (
                   <div
@@ -280,8 +282,6 @@ const Header = () => {
           </Link>
         </ul>
       </nav>
-
-      {/* Submenus */}
     </header>
   );
 };
