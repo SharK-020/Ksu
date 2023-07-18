@@ -2,7 +2,7 @@ import logo from "../../assets/logo.webp";
 
 const Why = () => {
   return (
-    <div className="flex flex-col md:flex-row shadow-sm">
+    <div className="flex flex-col md:flex-row shadow-sm lg:px-28">
       {/* Mobile view */}
       <div
         className="flex space-x-4 p-4 items-center justify-center
@@ -12,7 +12,7 @@ const Why = () => {
         <div className="text-3xl font-extrabold">
           <h1 className="">
             <span className="">Career Options</span>
-          <h1 className="text-sky-800">Kanchenjanga State University</h1>
+            <h1 className="text-sky-800">Khangchenzonga State University</h1>
           </h1>
         </div>
       </div>
@@ -24,19 +24,19 @@ const Why = () => {
         <div className="text-3xl font-extrabold hidden md:flex md:space-x-2 md:py-8">
           <h1 className="">
             <span className="">Career Options </span>
-          <h1 className="text-sky-800">Kanchenjanga State University</h1>
+            <h1 className="text-sky-800">Khangchenzonga State University</h1>
           </h1>
         </div>
         <p className="text-justify">
-          Kanchenjunga State University offers a plethora of career options and
-          abundant opportunities for students. With its diverse range of
+          Khangchenzonga State University offers a plethora of career options
+          and abundant opportunities for students. With its diverse range of
           programs and industry-aligned curriculum, the university equips
           students with the skills and knowledge needed to excel in their chosen
           fields. Its strong industry partnerships and robust placement support
           ensure promising career prospects for graduates.
         </p>
         <p className="text-justify">
-          The literature departments at Kanchenjunga State University provide
+          The literature departments at Khangchenzonga State University provide
           comprehensive Nepali and Sanskrit courses, fostering a deep
           appreciation for language, culture, and heritage. Through critical
           analysis, creative expression, and research, students gain a profound
@@ -44,7 +44,7 @@ const Why = () => {
           academia, publishing, translation, cultural preservation, and more.
         </p>
         <p className="text-justify">
-          The literature departments at Kanchenjunga State University provide
+          The literature departments at Khangchenzonga State University provide
           comprehensive Nepali and Sanskrit courses, fostering a deep
           appreciation for language, culture, and heritage. Through critical
           analysis, creative expression, and research, students gain a profound
