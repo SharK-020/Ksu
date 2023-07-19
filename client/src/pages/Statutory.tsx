@@ -1,5 +1,5 @@
-import { StatutoryOfficers } from "./facultyData";
-import FacultyCard from "./FacultyCard";
+import { StatutoryOfficers } from "../components/Governance/facultyData";
+import FacultyCard from "../components/Governance/FacultyCard";
 
 const Statutory = () => {
   return (

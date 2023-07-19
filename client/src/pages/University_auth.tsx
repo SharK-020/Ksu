@@ -1,5 +1,6 @@
-import FacultyCard from "./FacultyCard";
-import { UniAuth } from "./facultyData";
+import Academic from "../components/Governance/Academic";
+import FacultyCard from "../components/Governance/FacultyCard";
+import { UniAuth } from "../components/Governance/facultyData";
 
 const University_auth = () => {
   return (
@@ -22,6 +23,8 @@ const University_auth = () => {
           />
         ))}
       </div>
+
+      <Academic />
     </div>
   );
 };

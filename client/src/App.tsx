@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router";
-import Governance from "./pages/Governance";
 import Know from "./pages/Know";
 import Life from "./pages/Life";
 import Mandis from "./pages/Mandis";
@@ -11,13 +10,18 @@ import Careers from "./pages/Careers";
 import Literature from "./pages/Literature";
 import Law from "./pages/Law";
 import Contact from "./pages/Contact";
+import Statutory from "./pages/Statutory";
+import University_auth from "./pages/University_auth";
+import Other_officers from "./pages/Other_officers";
 
 function App() {
 	return (
 		<>
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/governance" element={<Governance />} />
+				<Route path="/statutory" element={< Statutory/>} />
+				<Route path="/uniauth" element={<University_auth />} />
+				<Route path="/otherofficers" element={<Other_officers />} />
 				<Route path="/literature" element={<Literature />} />
 				<Route path="/know" element={<Know />} />
 				<Route path="/life" element={<Life />} />
