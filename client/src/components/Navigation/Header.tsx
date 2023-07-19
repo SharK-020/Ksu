@@ -1,12 +1,11 @@
 import { useCallback, useContext } from "react";
 import logo from "../../assets/logo.webp";
 import govtLogo from "../../assets/govtLogo.webp";
-import {
-  Bars3Icon,
-} from "@heroicons/react/24/solid";
+import { Bars3Icon } from "@heroicons/react/24/solid";
 import MobileNav from "./MobileNav";
 import { SidebarContext } from "../../utils/SidebarContext";
 import DesktopNav from "./DesktopNav";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const { isOpen, setIsOpen } = useContext(SidebarContext);
@@ -23,14 +22,22 @@ const Header = () => {
           {/* university Logo */}
           <div
             className="bg-white flex space-x-4 items-center rounded-full w-20 
-        md:w-auto m-2 md:m-2 lg:m-4 "
+        md:w-auto m-2 md:m-2 lg:m-4 select-none touch-none "
           >
-            <img className="" src={logo} alt="logo" width={100} height={100} />
+            <Link to="/">
+              <img
+                className=""
+                src={logo}
+                alt="logo"
+                width={100}
+                height={100}
+              />
+            </Link>
           </div>
           {/*Sikkim Govt Logo */}
           <div
             className="bg-white hidden md:flex  rounded-full w-20 
-        md:w-auto m-2 md:m-2 lg:m-4 "
+        md:w-auto m-2 md:m-2 lg:m-4 select-none "
           >
             <img
               className="rounded-full"

@@ -1,6 +1,6 @@
 
-import { ExaminationDivision, FinanceAccountsDivision, OtherOfficersAdmin } from "./facultyData";
-import FacultyCard from "./FacultyCard";
+import { ExaminationDivision, FinanceAccountsDivision, OtherOfficersAdmin } from "../components/Governance/facultyData";
+import FacultyCard from "../components/Governance/FacultyCard";
 
 const Other_officers = () => {
   return (

@@ -54,7 +54,7 @@ const DesktopNav = () => {
             )}
           </div>
         </Link>
-        <Link to="/governance">
+        <Link to="/statutory">
           <div className="relative h-full">
             <li
               className=" large-nav-item"
@@ -78,11 +78,11 @@ const DesktopNav = () => {
                     },
                     {
                       name: "University Authority",
-                      link: "/uniauthority",
+                      link: "/uniauth",
                     },
                     {
                       name: "Other Officers And Support Staff",
-                      link: "/otherstaff",
+                      link: "/otherofficers",
                     },
                   ]}
                 />

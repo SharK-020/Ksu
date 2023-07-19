@@ -1,4 +1,3 @@
-import { FaDownload } from "react-icons/fa";
 const Options = () => {
   return (
     <main className="space-y-4 lg:space-y-6 bg-white mt-4 mx-2 md:mx-3 w-full md:w-[80vw] lg:w-[60vw] ">
@@ -12,7 +11,7 @@ const Options = () => {
           <tbody className="divide-y  divide-gray-200 ">
 
             <tr className="">
-              <th className="p-3 text-sm text-gray-900  whitespace-nowrap">
+              <th className=" text-sm text-gray-900  whitespace-nowrap">
                 <div className="flex flex-col">
                   <span>Subject</span>
                 </div>

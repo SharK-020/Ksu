@@ -35,7 +35,7 @@ const MobileNav = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [setIsOpen]);
 
   return (
          //mobile nav
@@ -103,7 +103,11 @@ const MobileNav = () => {
                     },
                     {
                       name: "University Authority",
-                      link: "/uniauthority",
+                      link: "/uniauth",
+                    },
+                    {
+                      name: "Other Officers And Support Staff",
+                      link: "/otherofficers",
                     },
                   ]}
                 />

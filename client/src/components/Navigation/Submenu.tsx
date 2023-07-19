@@ -25,7 +25,7 @@ const Submenu = ({ menuItem }: SubmenuProps) => {
       {menuItem.map((item, index) => (
         <Link to={item.link} key={index}>
           <div className="flex space-x-2 cursor-pointer transition duration-300
-          px-4 py-3 hover:bg-slate-300">
+          px-4 py-3 hover:bg-slate-300 rounded-b-lg">
             <ArrowRightIcon className="h-6 w-6" />
             <h1 className="text-sm font-semibold text-gray-800 hover:text-gray-950
             transition duration-300">

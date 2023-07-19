@@ -24,7 +24,7 @@ const MobileSubmenu = ({ menuItem }: MobileSubmenuProps) => {
     >
       {menuItem.map((item, index) => (
         <Link to={item.link} key={index}>
-          <div className="flex space-x-2 cursor-pointer ml-12
+          <div className="flex space-x-2 cursor-pointer ml-8 mr-2
           text-gray-800 hover:text-gray-950 transition duration-300">
             <ArrowRightIcon className="h-6 w-6" />
             <h1 className="text-base font-semibold">
