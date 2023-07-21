@@ -1,11 +1,16 @@
-
-import { ExaminationDivision, FinanceAccountsDivision, OtherOfficersAdmin } from "../components/Governance/facultyData";
+import {
+  ExaminationDivision,
+  FinanceAccountsDivision,
+  OtherOfficersAdmin,
+} from "../components/Governance/facultyData";
 import FacultyCard from "../components/Governance/FacultyCard";
 
 const Other_officers = () => {
   return (
     <div className="">
-      <h1 className="text-xl font-bold text-center">Other Officers and Support Staff</h1>
+      <h1 className="text-xl font-bold text-center">
+        Other Officers and Support Staff
+      </h1>
       <div className="space-y-2 py-4">
         <h2 className="text-lg font-semibold text-center">
           Administrative Division
@@ -31,7 +36,7 @@ const Other_officers = () => {
       {/*Examination Division*/}
       <div className="py-4 space-y-2">
         <h2 className="text-lg font-semibold text-center">
-        Examination Division
+          Examination Division
         </h2>
         <div
           className="grid grid-cols-2 gap-2 md:gap-4 md:grid-cols-3
@@ -53,7 +58,7 @@ const Other_officers = () => {
       {/*Finance and Accounts Division*/}
       <div className="py-4 space-y-2">
         <h2 className="text-lg font-semibold text-center">
-        Finance and Accounts Division
+          Finance and Accounts Division
         </h2>
         <div
           className="grid grid-cols-2 gap-2 md:gap-4 md:grid-cols-4

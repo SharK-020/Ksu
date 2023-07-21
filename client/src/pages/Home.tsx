@@ -9,16 +9,10 @@ import About from "../components/Home/About";
 import { noticeSampleData } from "../components/noticeSampleData";
 import { motion } from "framer-motion";
 import animVariants from "../utils/variants";
-import ApplyBox from "../components/ApplyBox";
 
 const Home = () => {
   return (
-    <main className="relative">
-      <div className="fixed w-[70px] -translate-x-1 hover:translate-x-0 transition
-      duration-200 z-[100]">
-        <ApplyBox />
-      </div>
-
+    <main className="">
       {/* Banner */}
       <section className="">
         <Banner />
