@@ -12,11 +12,7 @@ const Why = () => {
         <div className="text-3xl font-extrabold">
           <h1 className="">
             <span className="">Career Options</span>
-<<<<<<< HEAD
-            <h1 className="text-sky-800">Khangchenzonga State University</h1>
-=======
-            <h1 className="text-sky-800">Kanchenjanga State University</h1>
->>>>>>> 0a93d46cb572e9acacebb7f843bde3db8045a6a3
+            <h1 className="text-sky-800">Kanchenzonga State University</h1>
           </h1>
         </div>
       </div>
@@ -28,39 +24,11 @@ const Why = () => {
         <div className="text-3xl font-extrabold hidden md:flex md:space-x-2 md:py-8">
           <h1 className="">
             <span className="">Career Options </span>
-<<<<<<< HEAD
-            <h1 className="text-sky-800">Khangchenzonga State University</h1>
+            <h1 className="text-sky-800">Kanchenzonga State University</h1>
           </h1>
         </div>
         <p className="text-justify">
-          Khangchenzonga State University offers a plethora of career options
-          and abundant opportunities for students. With its diverse range of
-          programs and industry-aligned curriculum, the university equips
-          students with the skills and knowledge needed to excel in their chosen
-          fields. Its strong industry partnerships and robust placement support
-          ensure promising career prospects for graduates.
-        </p>
-        <p className="text-justify">
-          The literature departments at Khangchenzonga State University provide
-          comprehensive Nepali and Sanskrit courses, fostering a deep
-          appreciation for language, culture, and heritage. Through critical
-          analysis, creative expression, and research, students gain a profound
-          understanding of literary traditions, preparing them for careers in
-          academia, publishing, translation, cultural preservation, and more.
-        </p>
-        <p className="text-justify">
-          The literature departments at Khangchenzonga State University provide
-          comprehensive Nepali and Sanskrit courses, fostering a deep
-          appreciation for language, culture, and heritage. Through critical
-          analysis, creative expression, and research, students gain a profound
-          understanding of literary traditions, preparing them for careers in
-          academia, publishing, translation, cultural preservation, and more.
-=======
-            <h1 className="text-sky-800">Kanchenjanga State University</h1>
-          </h1>
-        </div>
-        <p className="text-justify">
-          Kanchenjunga State University (KSU) stands out as a leader in
+          Kanchenzonga State University (KSU) stands out as a leader in
           fostering the formation and improvement of careers, significantly
           enhancing the professional lives of its employees. With a wide range
           of academic programs and disciplines, employees have the opportunity
@@ -80,7 +48,6 @@ const Why = () => {
           KSU fosters a culture of growth and advancement, ensuring that
           employees have the resources and support needed to thrive
           professionally.
->>>>>>> 0a93d46cb572e9acacebb7f843bde3db8045a6a3
         </p>
       </article>
     </div>
