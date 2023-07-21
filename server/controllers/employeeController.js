@@ -12,7 +12,6 @@ exports.getEmployeesByDepartment = async (req, res) => {
 exports.createFaculty = async (req, res) => {
 	try {
 		const files = req.files;
-		console.log(files);
 		const { name, department, designation } = req.body;
 
 		Object.keys(files).forEach(async (key) => {
