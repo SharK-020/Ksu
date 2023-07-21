@@ -1,28 +1,26 @@
 const express = require("express");
+const bodyparser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const helmet = require("helmet");
+const morgan = require("morgan");
 const authRoutes = require("./routes/authRoutes");
-const mainRoute = require("./routes/mainRoute");
-const adminRoute = require("./routes/adminRoutes");
-const bodyparser = require("body-parser");
-const multer = require("multer");
-
+const adminRoutes = require("./routes/adminRoutes");
+/*Configurations*/
 require("dotenv").config();
 const app = express();
+app.use(express.json());
+app.use(helmet());
+app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
+app.use(morgan("common"));
+app.use(bodyparser.json({ limit: "30mb", extended: true }));
+app.use(bodyparser.urlencoded({ limit: "30mb", extended: true }));
+app.use(cors());
+
 const PORT = process.env.port || 3000;
 
-app.use(cors()); // enable CORS (Cross-origin resource sharing) for allowing access to resources from other domains
-app.use(express.json());
-app.use(bodyparser.json());
-/* app.get("/", (req, res) => {
-    res.send("Hello World");
-
-}); */
-
-/* app.use('/', authRoutes); */
 app.use("/auth", authRoutes);
-app.use("/api", mainRoute);
-app.use("/admin", adminRoute);
+app.use("/admin", adminRoutes);
 mongoose
 	.connect(process.env.MONGO_URL)
 	.then(() => {

@@ -3,7 +3,7 @@ const User = require("../models/userSchema.js");
 
 //not yet tested
 
-exports.login = async (req, res, next) => {
+exports.login = async (req, res) => {
 	try {
 		const { username, password } = req.body;
 
@@ -25,10 +25,7 @@ exports.login = async (req, res, next) => {
 		}
 
 		const token = jwtUtils.createToken(user._id);
-		const userObj = user.toObject();
-		delete userObj.password;
-		res.setHeader("Authorization", `Bearer ${token}`);
-		res.status(200).json({ user: userObj, token });
+		res.status(200).json({ token });
 	} catch (err) {
 		res.status(500).json({ error: err.message });
 	}
