@@ -15,8 +15,8 @@ const Mandis = () => {
 				</h1>
 			</div>
 
-			<div className="p-1 py-2 overflow-auto rounded-lg shadow space-y-1">
-				<table className="w-full">
+			<div className="p-1 py-2 overflow-auto rounded-lg shadow space-y-1 md:flex md:justify-center">
+				<table className="w-full md:w-[60vw] lg:w-[55vw]">
 					<tbody className="divide-y  divide-gray-200 bg-slate-50">
 						{data.map((item) => (
 							<Content name={item.name} date={item.date} />
