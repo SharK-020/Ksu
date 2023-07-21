@@ -1,10 +1,11 @@
+
 import { FaDownload } from "react-icons/fa";
 
 const Options = () => {
   return (
-    <main className="space-y-4 lg:space-y-6 bg-white mt-4 mx-2 md:mx-3 w-full md:w-[80vw] lg:w-[60vw] ">
+    <main className="space-y-4 lg:space-y-6 bg-white mt-4 mx-2 md:mx-3 w-full md:w-[80vw] lg:w-[60vw] mb-4 ">
       <div className="flex justify-center align-middle">
-        <h1 className="text-3xl text-gray-800 mt-6 ">Faculty Recruitment</h1>
+        <h1 className="text-3xl font-semibold mt-6 ">Faculty Recuritment</h1>
       </div>
 
       <div className="p-1 py-2 overflow-auto rounded-lg shadow-sm space-y-1">
@@ -79,7 +80,7 @@ const Options = () => {
                 </a>
               </td>
             </tr>
-            
+
             <tr className="">
               <td className="p-3 text-sm text-gray-900  whitespace-nowrap">
                 <div className="flex flex-col hover:text-gray-600 cursor-pointer ">
@@ -104,6 +105,9 @@ const Options = () => {
         </table>
 
       </div>
+
+      
+      
     </main>
   );
 };
