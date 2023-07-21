@@ -32,5 +32,10 @@
         @apply border-b-4 border-blue-400 block w-fit py-1
     }
 
+    .applynow-box {
+        @apply fixed block w-[70px] -translate-x-1 hover:translate-x-0 transition
+        duration-200 z-[100] mt-2;
+    }
+
     
 }
