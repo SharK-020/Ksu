@@ -12,7 +12,7 @@ const Why = () => {
         <div className="text-3xl font-extrabold">
           <h1 className="">
             <span className="">Career Options</span>
-            <h1 className="text-sky-800">Kanchenzonga State University</h1>
+            <h1 className="text-sky-800">Khangchenzonga State University</h1>
           </h1>
         </div>
       </div>
@@ -24,11 +24,11 @@ const Why = () => {
         <div className="text-3xl font-extrabold hidden md:flex md:space-x-2 md:py-8">
           <h1 className="">
             <span className="">Career Options </span>
-            <h1 className="text-sky-800">Kanchenzonga State University</h1>
+            <h1 className="text-sky-800">Khangchenzonga State University</h1>
           </h1>
         </div>
         <p className="text-justify">
-          Kanchenzonga State University (KSU) stands out as a leader in
+          Khangchenzonga State University (KSU) stands out as a leader in
           fostering the formation and improvement of careers, significantly
           enhancing the professional lives of its employees. With a wide range
           of academic programs and disciplines, employees have the opportunity
