@@ -10,7 +10,7 @@ exports.createNotice = async (req, res) => {
 		Object.keys(files).forEach(async (key) => {
 			const filePath = path.join(
 				__dirname,
-				`../files/notices/${files[key].name}`
+				`../assets/notices/${files[key].name}`
 			);
 			files[key].mv(filePath, (err) => {
 				if (err) {
@@ -23,6 +23,15 @@ exports.createNotice = async (req, res) => {
 			});
 		});
 	} catch (err) {
+		res.status(500).json({ error: err.message });
+	}
+};
+
+exports.getNotice = async (req, res) => {
+	try {
+		const notices = await Notice.find();
+		res.status(200).json(notices);
+	} catch {
 		res.status(500).json({ error: err.message });
 	}
 };

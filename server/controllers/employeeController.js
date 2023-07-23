@@ -17,7 +17,7 @@ exports.createFaculty = async (req, res) => {
 		Object.keys(files).forEach(async (key) => {
 			const filePath = path.join(
 				__dirname,
-				`../files/employees/${files[key].name}`
+				`../assets/employees/${files[key].name}`
 			);
 			files[key].mv(filePath, (err) => {
 				if (err) {
