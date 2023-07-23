@@ -9,7 +9,7 @@ exports.createImage = async (req, res) => {
 		Object.keys(files).forEach(async (key) => {
 			const filePath = path.join(
 				__dirname,
-				`../files/${title}/${files[key].name}`
+				`../assets/${title}/${files[key].name}`
 			);
 			files[key].mv(filePath, (err) => {
 				if (err) {
