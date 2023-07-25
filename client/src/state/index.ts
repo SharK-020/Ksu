@@ -1,29 +1,51 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState = {
+interface Faculty {
+	_id: string;
+	// Add other faculty properties as needed
+}
+
+interface Department {
+	_id: string;
+	// Add other department properties as needed
+}
+
+interface Image {
+	_id: string;
+	// Add other image properties as needed
+}
+
+interface AuthState {
+	token: string | null;
+	faculty: Faculty[];
+	department: Department[];
+	images: Image[];
+}
+
+const initialState: AuthState = {
 	token: null,
 	faculty: [],
 	department: [],
 	images: [],
 };
 
-export const authSlice = createSlice({
+const authSlice = createSlice({
 	name: "auth",
 	initialState,
 	reducers: {
-		setLogin: (state, action) => {
+		setLogin: (state, action: PayloadAction<string>) => {
 			state.token = action.payload;
 		},
 		setLogout: (state) => {
 			state.token = null;
 		},
-		setToken: (state, action) => {
-			state.token = action.payload;
-		},
-		setFaculties: (state, action) => {
+		setFaculties: (state, action: PayloadAction<Faculty[]>) => {
 			state.faculty = action.payload;
 		},
-		setFaculty: (state, action) => {
+		setFaculty: (
+			state,
+			action: PayloadAction<{ _id: string; faculty: Faculty }>
+		) => {
 			const updatedFaculty = state.faculty.map((faculty) => {
 				if (faculty._id === action.payload._id) {
 					return action.payload.faculty;
@@ -33,10 +55,13 @@ export const authSlice = createSlice({
 
 			state.faculty = updatedFaculty;
 		},
-		setDepartments: (state, action) => {
+		setDepartments: (state, action: PayloadAction<Department[]>) => {
 			state.department = action.payload;
 		},
-		setDepartment: (state, action) => {
+		setDepartment: (
+			state,
+			action: PayloadAction<{ _id: string; department: Department }>
+		) => {
 			const updatedDepartment = state.department.map((department) => {
 				if (department._id === action.payload._id) {
 					return action.payload.department;
@@ -45,10 +70,13 @@ export const authSlice = createSlice({
 			});
 			state.department = updatedDepartment;
 		},
-		setImages: (state, action) => {
+		setImages: (state, action: PayloadAction<Image[]>) => {
 			state.images = action.payload;
 		},
-		setImage: (state, action) => {
+		setImage: (
+			state,
+			action: PayloadAction<{ _id: string; image: Image }>
+		) => {
 			const updatedImages = state.images.map((image) => {
 				if (image._id === action.payload._id) {
 					return action.payload.image;
@@ -61,7 +89,7 @@ export const authSlice = createSlice({
 });
 
 export const {
-	setToken,
+	setLogin,
 	setFaculties,
 	setFaculty,
 	setDepartments,
@@ -69,4 +97,5 @@ export const {
 	setImages,
 	setImage,
 } = authSlice.actions;
+
 export default authSlice.reducer;

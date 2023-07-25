@@ -10,8 +10,8 @@ const Login = () => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 
-	const login = async (email, password) => {
-		const response = await fetch("http://localhost:5000/api/login", {
+	const login = async (email: string, password: string) => {
+		const response = await fetch("http://localhost:3001/auth/login", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify({ email, password }),
@@ -19,12 +19,9 @@ const Login = () => {
 
 		const data = await response.json();
 
-		if (data.token) {
-			dispatch(
-				setLogin({
-					token: data.token,
-				})
-			);
+		if (typeof data.token === "string") {
+			const token: string = data.token;
+			dispatch(setLogin(token));
 			navigate("/");
 		}
 	};
@@ -110,7 +107,9 @@ const Login = () => {
 									className="flex items-center justify-center focus:outline-none text-white
 									 text-sm sm:text-base bg-blue-600 hover:bg-blue-700 rounded py-2 w-full 
 									 transition duration-150 ease-in"
-									onSubmit={handleSubmit}>
+									onSubmit={() => {
+										login;
+									}}>
 									<span className="mr-2 uppercase">
 										Login
 									</span>
