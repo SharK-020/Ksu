@@ -61,31 +61,31 @@ const Home = () => {
         initial="offscreen"
         whileInView="onscreen"
         >
-          <div>
+          <div className="grid grid-cols-3 md:grid-cols-5 gap-2 place-items-end">
             <PictureCard 
             picture={gov} 
             title="Shri Laxman Prasad Acharya"
-            designation="Honourable Governor of Sikkim"
+            designation="Hon'ble Governor of Sikkim"
              />
             <PictureCard 
             picture={cm} 
-            title=""
-            designation=""
+            title="Shri Prem Singh Tamang (Golay)"
+            designation="Hon'ble Chief Minister of Sikkim"
             />
             <PictureCard 
             picture={knl} 
-            title=""
-            designation=""
+            title="Shri K.N Lepcha"
+            designation="Hon'ble Minister, Education Dept., Govt. of Sikkim"
             />
             <PictureCard 
             picture={ias} 
-            title=""
-            designation=""
+            title="Shri R. Telang, IAS"
+            designation="Additional Chief Secretary, Education Dept., Govt. of Sikkim"
             />
             <PictureCard 
             picture={vc} 
-            title=""
-            designation=""
+            title="Prof. (Dr.) Ashis Pradhan"
+            designation="Vice Chancellor, KSU"
             />
           </div>
 
