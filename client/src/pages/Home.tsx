@@ -9,6 +9,12 @@ import About from "../components/Home/About";
 import { noticeSampleData } from "../components/noticeSampleData";
 import { motion } from "framer-motion";
 import animVariants from "../utils/variants";
+import PictureCard from "../components/Home/PictureCard";
+import cm from "../assets/cm.webp"
+import gov from "../assets/governor.webp"
+import vc from "../assets/vice_chancelor.webp"
+import knl from "../assets/knLepcha.webp"
+import ias from "../assets/iasTelang.webp"
 
 const Home = () => {
   return (
@@ -47,6 +53,42 @@ const Home = () => {
 
           <Notice noticeData={noticeSampleData} noticeTitle="Quick Links" />
         </div>
+      </motion.section>
+
+      <motion.section
+        className="px-5 py-5 md:px-10 lg:px-16"
+        variants={animVariants.section}
+        initial="offscreen"
+        whileInView="onscreen"
+        >
+          <div>
+            <PictureCard 
+            picture={gov} 
+            title="Shri Laxman Prasad Acharya"
+            designation="Honourable Governor of Sikkim"
+             />
+            <PictureCard 
+            picture={cm} 
+            title=""
+            designation=""
+            />
+            <PictureCard 
+            picture={knl} 
+            title=""
+            designation=""
+            />
+            <PictureCard 
+            picture={ias} 
+            title=""
+            designation=""
+            />
+            <PictureCard 
+            picture={vc} 
+            title=""
+            designation=""
+            />
+          </div>
+
       </motion.section>
 
       {/* vision mission */}
