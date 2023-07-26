@@ -1,14 +1,29 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setLogin } from "../state";
 
 const Login = () => {
 	const [email, setEmail] = useState<string>("");
 	const [password, setPassword] = useState<string>("");
 
-	const handleSubmit = (event: FormEvent) => {
-		event.preventDefault();
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
 
-		// TODO: Add login logic here
-		console.log("Login submitted:", email, password);
+	const login = async (email: string, password: string) => {
+		const response = await fetch("http://localhost:3001/auth/login", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({ email, password }),
+		});
+
+		const data = await response.json();
+
+		if (typeof data.token === "string") {
+			const token: string = data.token;
+			dispatch(setLogin(token));
+			navigate("/");
+		}
 	};
 
 	return (
@@ -92,7 +107,9 @@ const Login = () => {
 									className="flex items-center justify-center focus:outline-none text-white
 									 text-sm sm:text-base bg-blue-600 hover:bg-blue-700 rounded py-2 w-full 
 									 transition duration-150 ease-in"
-									onSubmit={handleSubmit}>
+									onSubmit={() => {
+										login;
+									}}>
 									<span className="mr-2 uppercase">
 										Login
 									</span>
