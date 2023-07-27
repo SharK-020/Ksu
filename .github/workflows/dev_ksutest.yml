@@ -21,8 +21,9 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: npm install, build, and test
+      - name: cd client, npm install, build, and test
         run: |
+          cd client
           npm install
           npm run build --if-present
           npm run test --if-present
