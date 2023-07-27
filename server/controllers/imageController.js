@@ -1,6 +1,6 @@
 const Image = require("../models/imageSchema");
 const path = require("path");
-
+const fs = require("fs");
 exports.createImage = async (req, res) => {
 	try {
 		const files = req.files;
@@ -21,6 +21,28 @@ exports.createImage = async (req, res) => {
 				title: title,
 			});
 		});
+	} catch (err) {
+		res.status(500).json({ error: err.message });
+	}
+};
+
+exports.getImage = async (req, res) => {
+	try {
+		const { title } = req.params;
+
+		const images = await Image.find({ title: title });
+
+		if (images) {
+			const path = path.join(__dirname, `../assets/${title}`);
+
+			const files = fs.readdir(path, (err, files) => {
+				files.forEach((file) => {
+					return file;
+				});
+			});
+
+			res.status(200).json({ files });
+		}
 	} catch (err) {
 		res.status(500).json({ error: err.message });
 	}
