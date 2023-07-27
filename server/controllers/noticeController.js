@@ -7,20 +7,28 @@ exports.createNotice = async (req, res) => {
 		const files = req.files;
 		const { title } = req.body;
 
-		Object.keys(files).forEach(async (key) => {
+		const filePath = path.join(
+			__dirname,
+			`../assets/notices/${files.files.name}`
+		);
+
+		files.files.forEach(async (file) => {
 			const filePath = path.join(
 				__dirname,
-				`../assets/notices/${files[key].name}`
+				`../assets/notices/${image.name}`
 			);
-			files[key].mv(filePath, (err) => {
+
+			image.mv(filePath, (err) => {
 				if (err) {
 					return res.status(500).json({ error: err.message });
 				}
 			});
 			const notice = await Notice.create({
 				title: title,
-				doc: filePath,
+				doc: `notices/${files.files.name}`,
 			});
+
+			res.status(200).json({ message: "notice added" });
 		});
 	} catch (err) {
 		res.status(500).json({ error: err.message });

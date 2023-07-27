@@ -7,6 +7,7 @@ const fileUpload = require("express-fileupload");
 const employeeController = require("../controllers/employeeController");
 const noticeController = require("../controllers/noticeController");
 const fileExtLimiter = require("../middleware/fileExtLimiter");
+const imageController = require("../controllers/imageController");
 
 router.post("/create/link", jwtUtils.verifyToken, linkController.createLink);
 router.post(
@@ -25,5 +26,12 @@ router.post(
 	"/create/notice",
 	jwtUtils.verifyToken,
 	noticeController.createNotice
+);
+
+router.post(
+	"/create/image",
+	jwtUtils.verifyToken,
+	fileUpload({ createParentPath: true }),
+	imageController.createImage
 );
 module.exports = router;
