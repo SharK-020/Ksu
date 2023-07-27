@@ -5,8 +5,8 @@ const User = require("../models/userSchema.js");
 
 exports.login = async (req, res) => {
 	try {
-		const { username, password } = req.body;
-
+		const {username, password} = req.body
+		console.log(username, password)
 		const user = await User.findOne({ username: username }).select(
 			"+password"
 		);
@@ -21,7 +21,7 @@ exports.login = async (req, res) => {
 		if (!isMatch) {
 			return res
 				.status(401)
-				.json({ error: "Invalid username or password" });
+				.json({ error: "Invalid password" });
 		}
 
 		const token = jwtUtils.createToken(user._id);

@@ -1,10 +1,10 @@
 type Programs2Props = {
-  url: string;
+  url?: string;
   title: string;
   desc: string;
 };
 
-const Programs2 = ({ url, title, desc }: Programs2Props) => {
+const Programs2 = ({ title, desc }: Programs2Props) => {
   return (
     <div
       className="flex flex-col md:flex-row md:space-x-4 md:space-y-0
