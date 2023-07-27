@@ -14,10 +14,11 @@ const Login = () => {
 		const response = await fetch("http://localhost:3001/auth/login", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify({ email, password }),
+			body: JSON.stringify({ username: email, password }),
 		});
 
 		const data = await response.json();
+
 
 		if (typeof data.token === "string") {
 			const token: string = data.token;
@@ -37,7 +38,11 @@ const Login = () => {
 					</div>
 
 					<div className="mt-10">
-						<form action="#">
+						<form action="#"
+							onSubmit={() => {
+								login(email, password);
+							}}
+						>
 							<div className="flex flex-col mb-6">
 								<label className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">
 									E-Mail Address:
@@ -47,9 +52,9 @@ const Login = () => {
 										<svg
 											className="h-6 w-6"
 											fill="none"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth="2"
 											viewBox="0 0 24 24"
 											stroke="currentColor">
 											<path d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
@@ -78,9 +83,9 @@ const Login = () => {
 											<svg
 												className="h-6 w-6"
 												fill="none"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth="2"
 												viewBox="0 0 24 24"
 												stroke="currentColor">
 												<path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -107,9 +112,7 @@ const Login = () => {
 									className="flex items-center justify-center focus:outline-none text-white
 									 text-sm sm:text-base bg-blue-600 hover:bg-blue-700 rounded py-2 w-full 
 									 transition duration-150 ease-in"
-									onSubmit={() => {
-										login;
-									}}>
+									>
 									<span className="mr-2 uppercase">
 										Login
 									</span>
@@ -117,9 +120,9 @@ const Login = () => {
 										<svg
 											className="h-6 w-6"
 											fill="none"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth="2"
 											viewBox="0 0 24 24"
 											stroke="currentColor">
 											<path d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
