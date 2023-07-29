@@ -25,7 +25,7 @@ exports.createNotice = async (req, res) => {
 			});
 			const notice = await Notice.create({
 				title: title,
-				doc: `notices/${files.files.name}`,
+				doc: filePath,
 			});
 
 			res.status(200).json({ message: "notice added" });

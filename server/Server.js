@@ -7,6 +7,7 @@ const morgan = require("morgan");
 const authRoutes = require("./routes/authRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 const generalRoutes = require("./routes/generalRoutes");
+const path = require("path");
 /*Configurations*/
 require("dotenv").config();
 const app = express();
@@ -19,7 +20,7 @@ app.use(bodyparser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
 const PORT = process.env.port || 3000;
-
+app.use("/assets", express.static(path.join(__dirname, "assets")));
 app.use("/auth", authRoutes);
 app.use("/admin", adminRoutes);
 app.use("/", generalRoutes);
