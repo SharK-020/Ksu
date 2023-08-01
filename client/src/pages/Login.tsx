@@ -18,10 +18,10 @@ const Login = () => {
 		});
 
 		const data = await response.json();
-
-
+		console.log(data);
 		if (typeof data.token === "string") {
 			const token: string = data.token;
+			console.log(token);
 			dispatch(setLogin(token));
 			navigate("/");
 		}
@@ -38,11 +38,11 @@ const Login = () => {
 					</div>
 
 					<div className="mt-10">
-						<form action="#"
+						<form
+							action="#"
 							onSubmit={() => {
 								login(email, password);
-							}}
-						>
+							}}>
 							<div className="flex flex-col mb-6">
 								<label className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">
 									E-Mail Address:
@@ -111,8 +111,7 @@ const Login = () => {
 									type="submit"
 									className="flex items-center justify-center focus:outline-none text-white
 									 text-sm sm:text-base bg-blue-600 hover:bg-blue-700 rounded py-2 w-full 
-									 transition duration-150 ease-in"
-									>
+									 transition duration-150 ease-in">
 									<span className="mr-2 uppercase">
 										Login
 									</span>
