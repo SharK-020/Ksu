@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import Statutory from "./pages/Statutory";
 import University_auth from "./pages/University_auth";
 import Other_officers from "./pages/Other_officers";
+import Dev from "./pages/Dev";
 
 function App() {
 	return (
@@ -32,6 +33,7 @@ function App() {
 				<Route path="/careers" element={<Careers />} />
 				<Route path="/law" element={<Law />} />
 				<Route path="/contact" element={<Contact />} />
+				<Route path="/developers" element={<Dev />} />
 				<Route path="*" element={<Home />} />
 			</Routes>
 		</>
