@@ -16,8 +16,10 @@ export const Item = ({Links,title}: ItemProps) => {
         {   
             Links.map((link)=>(
               <Link to={link.link}
-              onClick={routeClick}> 
-                <li key ={link.name} className='text-gray-400 hover:text-blue-400 duration-300 text-sm 
+              onClick={routeClick}
+              key ={link.name}
+              > 
+                <li  className='text-gray-400 hover:text-blue-400 duration-300 text-sm 
                 cursor-pointer leading-6 md:text-base lg:text-lg'>
                     {link.name}
                 </li>

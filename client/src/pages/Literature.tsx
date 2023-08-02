@@ -1,6 +1,32 @@
 import Programs2 from "../components/Programs2";
+import { base_url } from "../utils/api";
+import { useEffect } from "react";
 
 const Literature = () => {
+	//test code for route checking
+	const getDepartments = async (school:string) => {
+		try {
+			const encodedSchool = encodeURIComponent(school);
+			const res = await fetch(`${base_url}/get/departments?school=${encodedSchool}`, {
+			method: "GET",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			});
+		
+			const data = await res.json();
+			console.log(data);
+		} catch (err) {
+			console.error("Error fetching departments:", err);
+		}
+		};
+		
+		
+		useEffect(() => {
+		const school = "Languages & Literature"; // Replace with the desired school name
+		getDepartments(school);
+		}, []);
+
 	return (
 		<div>
 			{/* Schools of sanskrit and nepali */}
