@@ -1,11 +1,21 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { RootState } from "../state/rootRecucer";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setLogin, setLogout } from "../state";
 
 const ApplyBox = () => {
   const isLoggedIn = useSelector(
     (state: RootState) => state.auth.token !== null
   );
+
+  const dispatch = useDispatch();
+	const navigate = useNavigate();
+    //when admin logs out
+  const logoutHandler = () => {
+    dispatch(setLogout());
+    navigate("/");
+  };
+
   return (
     <div>
       <Link to="/admission">
@@ -19,7 +29,19 @@ const ApplyBox = () => {
 
       {/* Display this if logged in */}
       {isLoggedIn && (
-        <div className="bg-red-500 p-2 font-extrabold text-sm">Admin Mode</div>
+        <div className="relative w-full text-center mt-2">
+        <h1 className="bg-red-400 p-2 font-extrabold text-sm">
+          Admin Mode
+        </h1>
+        <div className="absolute  h-full w-full">
+          <button className="p-2 bg-red-200 font-semibold cursor-pointer"
+          onClick={logoutHandler}
+          >
+            Logout
+          </button>
+        </div>
+        </div>
+
       )}
     </div>
   );

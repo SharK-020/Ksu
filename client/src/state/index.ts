@@ -90,6 +90,7 @@ const authSlice = createSlice({
 
 export const {
 	setLogin,
+	setLogout,
 	setFaculties,
 	setFaculty,
 	setDepartments,
