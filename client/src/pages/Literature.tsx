@@ -4,28 +4,26 @@ import { useEffect } from "react";
 
 const Literature = () => {
 	//test code for route checking
-	const getDepartments = async (school:string) => {
+	const getDepartments = async (school: string) => {
 		try {
-			const encodedSchool = encodeURIComponent(school);
-			const res = await fetch(`${base_url}/get/departments?school=${encodedSchool}`, {
-			method: "GET",
-			headers: {
-				"Content-Type": "application/json",
-			},
+			const res = await fetch(`${base_url}/get/departments/${school}`, {
+				method: "GET",
+				headers: {
+					"Content-Type": "application/json",
+				},
 			});
-		
+
 			const data = await res.json();
 			console.log(data);
 		} catch (err) {
 			console.error("Error fetching departments:", err);
 		}
-		};
-		
-		
-		useEffect(() => {
+	};
+
+	useEffect(() => {
 		const school = "Languages & Literature"; // Replace with the desired school name
 		getDepartments(school);
-		}, []);
+	}, []);
 
 	return (
 		<div>
