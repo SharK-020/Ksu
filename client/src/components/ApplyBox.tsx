@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
+import { RootState } from "../state/rootRecucer";
+import { useSelector } from "react-redux";
 
 const ApplyBox = () => {
+  const isLoggedIn = useSelector(
+    (state: RootState) => state.auth.token !== null
+  );
   return (
     <div>
       <Link to="/admission">
@@ -11,6 +16,11 @@ const ApplyBox = () => {
           Apply Now
         </button>
       </Link>
+
+      {/* Display this if logged in */}
+      {isLoggedIn && (
+        <div className="bg-red-500 p-2 font-extrabold text-sm">Admin Mode</div>
+      )}
     </div>
   );
 };
