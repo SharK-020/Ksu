@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { RootState } from "../state/rootRecucer";
 import { useDispatch, useSelector } from "react-redux";
-import { setLogin, setLogout } from "../state";
+import { setLogout } from "../state";
 
 const ApplyBox = () => {
   const isLoggedIn = useSelector(
