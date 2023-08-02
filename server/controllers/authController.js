@@ -6,7 +6,6 @@ const User = require("../models/userSchema.js");
 exports.login = async (req, res) => {
 	try {
 		const {username, password} = req.body
-		console.log(username, password)
 		const user = await User.findOne({ username: username }).select(
 			"+password"
 		);

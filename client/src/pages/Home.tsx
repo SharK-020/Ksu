@@ -15,11 +15,10 @@ import gov from "../assets/governor.webp";
 import vc from "../assets/vice_chancelor.webp";
 import knl from "../assets/knLepcha.webp";
 import ias from "../assets/iasTelang.webp";
-import { useSelector } from "react-redux";
-import { RootState } from "../state/rootRecucer";
+
 const Home = () => {
-	const token = useSelector((state: RootState) => state.auth.token);
-	console.log(token);
+/* 	const token = useSelector((state: RootState) => state.auth.token);
+	console.log(token); */
 	return (
 		<main className="">
 			{/* Banner */}
