@@ -12,4 +12,6 @@ export const RESOURCES = [
 export const SUPPORT = [
   { name: "Governance", link: "/governance" },
   { name: "Mandatory Disclosure", link: "mandis" },
+  { name: "Developers", link: "developers" },
 ];
+
