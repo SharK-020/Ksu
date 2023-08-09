@@ -4,9 +4,7 @@ import Stats from "../components/Home/Stats";
 import Campus from "../components/Home/Campus";
 import Scholarships from "../components/Home/Scholarships";
 import Programs from "../components/Home/Programs";
-import Notice from "../components/Notice";
 import About from "../components/Home/About";
-import { noticeSampleData } from "../components/noticeSampleData";
 import { motion } from "framer-motion";
 import animVariants from "../utils/variants";
 import PictureCard from "../components/Home/PictureCard";
@@ -15,6 +13,7 @@ import gov from "../assets/governor.webp";
 import vc from "../assets/vice_chancelor.webp";
 import knl from "../assets/knLepcha.webp";
 import ias from "../assets/iasTelang.webp";
+import NoticeSection from "../components/Home/NoticeSection";
 
 const Home = () => {
 /* 	const token = useSelector((state: RootState) => state.auth.token);
@@ -44,17 +43,7 @@ const Home = () => {
 				variants={animVariants.section}
 				initial="offscreen"
 				whileInView="onscreen">
-				<div className="relative flex flex-col md:flex-row justify-center gap-6 lg:gap-20 ">
-					<Notice
-						noticeData={noticeSampleData}
-						noticeTitle="Latest Notifications"
-					/>
-
-					<Notice
-						noticeData={noticeSampleData}
-						noticeTitle="Quick Links"
-					/>
-				</div>
+				<NoticeSection />
 			</motion.section>
 
 			<motion.section
