@@ -22,7 +22,7 @@ const Notice = ({ noticeData, noticeTitle }: NoticeProps) => {
             <div
               key={notice.id}
               className="border-b-[1px] border-gray-300
-                        px-4 py-1 cursor-pointer hover:bg-[#082F49]/20 transition duration-300
+                        px-4 py-1 cursor-pointer hover:bg-[#082F49]/10 transition duration-300
                         max-w-[90%] mx-auto"
               onClick={() => {
                 notice.link ? window.open(notice.link, "_blank"): null;
