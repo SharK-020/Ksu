@@ -38,3 +38,21 @@ exports.createFaculty = async (req, res) => {
 		res.status(500).json({ error: err.message });
 	}
 };
+
+exports.deleteFaculty = async (req, res) => {
+	try {
+		const { id } = req.params;
+		const employee = await Employee.findById(id);
+		const filePath = employee.img;
+
+		fs.unlink(filePath, (err) => {
+			if (err) {
+				return res.status(500).json({ error: err.message });
+			}
+		});
+		await Employee.findByIdAndDelete(id);
+		res.status(200).json({ message: "Employee deleted successfully" });
+	} catch (err) {
+		res.status(500).json({ error: err.message });
+	}
+};
