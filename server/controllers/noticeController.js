@@ -1,7 +1,6 @@
 const Notice = require("../models/noticeSchema");
 const path = require("path");
-const fileUpload = require("express-fileupload");
-
+const fs = require("fs");
 exports.createNotice = async (req, res) => {
 	try {
 		const files = req.files;
@@ -30,6 +29,25 @@ exports.createNotice = async (req, res) => {
 
 			res.status(200).json({ message: "notice added" });
 		});
+	} catch (err) {
+		res.status(500).json({ error: err.message });
+	}
+};
+
+exports.deleteNotice = async (req, res) => {
+	try {
+		const { id } = req.params;
+		const notice = await Notice.findById(id);
+		const filePath = notice.doc;
+
+		fs.unlink(filePath, (err) => {
+			if (err) {
+				return res.status(500).json({ error: err.message });
+			}
+		});
+
+		await Notice.findByIdAndDelete(id);
+		res.status(200).json({ message: "notice deleted successfully" });
 	} catch (err) {
 		res.status(500).json({ error: err.message });
 	}
