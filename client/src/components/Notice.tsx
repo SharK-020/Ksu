@@ -1,4 +1,6 @@
+import { TrashIcon } from "@heroicons/react/24/solid";
 import { NoticeType } from "./noticeSampleData";
+import { base_url } from "../utils/api";
 
 type NoticeProps = {
   noticeData: NoticeType[];
@@ -6,6 +8,22 @@ type NoticeProps = {
 };
 
 const Notice = ({ noticeData, noticeTitle }: NoticeProps) => {
+
+  const deleteNotice = async (id: string) => {
+    try {
+      const res = await fetch(`${base_url}/delete/notice/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await res.json();
+      console.log(data);
+    } catch (err) {
+      console.error("Error deleting notice:", err);
+    }
+  };
+
   return (
     <div className="flex flex-col">
       <div
@@ -20,16 +38,27 @@ const Notice = ({ noticeData, noticeTitle }: NoticeProps) => {
         {noticeData.map((notice) => {
           return (
             <div
-              key={notice.id}
-              className="border-b-[1px] border-gray-300
-                        px-4 py-1 cursor-pointer hover:bg-[#082F49]/10 transition duration-300
-                        max-w-[90%] mx-auto"
-              onClick={() => {
-                notice.link ? window.open(notice.link, "_blank"): null;
-              }}
+              className="flex justify-between px-2 py-2 items-center"
+              key={notice._id}
             >
-              <h1 className=" text-gray-950 text-md">{notice.title}</h1>
-              <p className="text-end text-gray-600 text-sm">{notice.date}</p>
+              <div
+                className="border-b-[1px] border-gray-300
+                        px-4 py-1 cursor-pointer hover:bg-[#082F49]/10 transition duration-300
+                        w-[90%] rounded-lg"
+                onClick={() => {
+                  notice.link ? window.open(notice.link, "_blank") : null;
+                }}
+              >
+                <h1 className=" text-gray-950 text-md">{notice.title}</h1>
+                <p className="text-end text-gray-600 text-sm">{notice.date}</p>
+              </div>
+              <TrashIcon
+                className="h-5 w-5 text-gray-600 cursor-pointer hover:text-red-600 transition-all
+              duration-300"
+                onClick={() => {
+                  deleteNotice(notice._id);
+                }}
+              />
             </div>
           );
         })}
