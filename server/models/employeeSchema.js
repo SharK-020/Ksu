@@ -20,6 +20,10 @@ const employeeSchema = new Schema({
 		type: String,
 		default: "",
 	},
+	email: {
+		type: String,
+		required: true,
+	}
 });
 
 const Employee = mongoose.model("Employee", employeeSchema);

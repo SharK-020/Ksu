@@ -40,11 +40,11 @@ exports.deleteNotice = async (req, res) => {
 		const notice = await Notice.findById(id);
 		const filePath = notice.doc;
 
-		fs.unlink(filePath, (err) => {
-			if (err) {
-				return res.status(500).json({ error: err.message });
-			}
-		});
+//		fs.unlink(filePath, (err) => {
+//			if (err) {
+//				return res.status(500).json({ error: err.message });
+//			}
+//		}); // delete file from assets folder
 
 		await Notice.findByIdAndDelete(id);
 		res.status(200).json({ message: "notice deleted successfully" });

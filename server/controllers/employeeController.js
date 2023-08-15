@@ -12,7 +12,7 @@ exports.getEmployeesByDepartment = async (req, res) => {
 exports.createFaculty = async (req, res) => {
 	try {
 		const files = req.files;
-		const { name, department, designation } = req.body;
+		const { name, department, designation, email } = req.body;
 
 		files.files.forEach(async (image) => {
 			const filePath = path.join(
@@ -30,6 +30,7 @@ exports.createFaculty = async (req, res) => {
 				department: department,
 				designation: designation,
 				img: filePath,
+				email: email,
 			});
 
 			res.status(200).json({ message: "Employee created successfully" });
