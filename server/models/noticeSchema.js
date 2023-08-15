@@ -6,6 +6,10 @@ const noticeSchema = new Schema({
 		type: String,
 		required: true,
 	},
+	date : {
+		type: String,
+		required: true,
+	},
 	doc: {
 		type: String,
 		required: true,

@@ -4,7 +4,7 @@ const fs = require("fs");
 exports.createNotice = async (req, res) => {
 	try {
 		const files = req.files;
-		const { title } = req.body;
+		const { title, date } = req.body;
 
 		const filePath = path.join(
 			__dirname,
@@ -24,6 +24,7 @@ exports.createNotice = async (req, res) => {
 			});
 			const notice = await Notice.create({
 				title: title,
+				date: date,
 				doc: filePath,
 			});
 
