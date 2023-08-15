@@ -1,5 +1,4 @@
 import {
-  CheckBadgeIcon,
   CheckIcon,
   PlusIcon,
   TrashIcon,
@@ -18,11 +17,40 @@ type NoticeProps = {
 
 const Notice = ({ noticeData, noticeTitle }: NoticeProps) => {
   const [isEditing, setIsEditing] = useState(false);
+  const [newTitle, setNewTitle] = useState("");
+  const [newLink, setNewLink] = useState("");
+  const [newDate, setNewDate] = useState("");
 
   const isLoggedIn = useSelector(
     (state: RootState) => state.auth.token !== null
   );
 
+  //add notice
+  const addNotice = async () => {
+    if (!newTitle || !newDate) {
+      toast.error("Please fill all the fields");
+      return;
+    }
+    try {
+      const res = await fetch(`${base_url}/post/notice`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({title: newTitle, date: newDate}),
+        
+      });
+      const data = await res.json();
+      console.log(data);
+      toast.success("Notice added successfully");
+    } catch (err) {
+      console.error("Error adding notice:", err);
+      toast.error("Error adding notice");
+    }
+  };
+
+
+//delete notice
   const deleteNotice = async (id: string) => {
     try {
       const res = await fetch(`${base_url}/delete/notice/${id}`, {
@@ -75,18 +103,35 @@ const Notice = ({ noticeData, noticeTitle }: NoticeProps) => {
                   type="text"
                   className="border-2 border-gray-300 rounded-lg p-1"
                   placeholder="Title"
+                  value={newTitle}
+                  onChange={(e) => {
+                    setNewTitle(e.target.value);
+                  }}
                 />
                 <input
                   type="text"
                   className="border-2 border-gray-300 rounded-lg p-1"
                   placeholder="Link"
+                  value={newLink}
+                  onChange={(e) => {
+                    setNewLink(e.target.value);
+                  }}
                 />
                 <input
                   type="text"
                   className="border-2 border-gray-300 rounded-lg p-1"
                   placeholder="Date"
+                  value={newDate}
+                  onChange={(e) => {
+                    setNewDate(e.target.value);
+                  }}
                 />
-                <button type="submit">
+                <button type="submit"
+                onClick={()=>{
+                  addNotice();
+                  isEditing && setIsEditing(false);
+                }}
+                >
                   <CheckIcon className="h-8 w-8 text-gray-100 bg-green-600" />
                 </button>
               </form>
