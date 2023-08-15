@@ -22,6 +22,7 @@ import Header from "./components/Navigation/Header.tsx";
 import { Footer } from "./components/Footer/Footer.tsx";
 import { SidebarProvider } from "./utils/SidebarContext.tsx";
 import ApplyBox from "./components/ApplyBox.tsx";
+import { Toaster } from "react-hot-toast";
 
 const persistConfig = {
 	key: "root",
@@ -59,6 +60,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 						</div>
 						<App />
 						<Footer />
+						<Toaster />
 					</BrowserRouter>
 				</SidebarProvider>
 			</PersistGate>

@@ -1,6 +1,9 @@
 import { TrashIcon } from "@heroicons/react/24/solid";
 import { NoticeType } from "./noticeSampleData";
 import { base_url } from "../utils/api";
+import { useSelector } from "react-redux";
+import { RootState } from "../state/rootRecucer";
+import toast from "react-hot-toast";
 
 type NoticeProps = {
   noticeData: NoticeType[];
@@ -8,6 +11,10 @@ type NoticeProps = {
 };
 
 const Notice = ({ noticeData, noticeTitle }: NoticeProps) => {
+
+  const isLoggedIn = useSelector(
+    (state: RootState) => state.auth.token !== null
+  );
 
   const deleteNotice = async (id: string) => {
     try {
@@ -19,8 +26,10 @@ const Notice = ({ noticeData, noticeTitle }: NoticeProps) => {
       });
       const data = await res.json();
       console.log(data);
+      toast.success("Notice deleted successfully");
     } catch (err) {
       console.error("Error deleting notice:", err);
+      toast.error("Error deleting notice");
     }
   };
 
@@ -38,13 +47,13 @@ const Notice = ({ noticeData, noticeTitle }: NoticeProps) => {
         {noticeData.map((notice) => {
           return (
             <div
-              className="flex justify-between px-2 py-2 items-center"
+              className="flex justify-between items-center px-2 py-2"
               key={notice._id}
             >
               <div
-                className="border-b-[1px] border-gray-300
+                className={`border-b-[1px] border-gray-300
                         px-4 py-1 cursor-pointer hover:bg-[#082F49]/10 transition duration-300
-                        w-[90%] rounded-lg"
+                        rounded-lg ${isLoggedIn? "w-[90%]": "w-full"}`}
                 onClick={() => {
                   notice.link ? window.open(notice.link, "_blank") : null;
                 }}
@@ -52,6 +61,7 @@ const Notice = ({ noticeData, noticeTitle }: NoticeProps) => {
                 <h1 className=" text-gray-950 text-md">{notice.title}</h1>
                 <p className="text-end text-gray-600 text-sm">{notice.date}</p>
               </div>
+              { isLoggedIn &&
               <TrashIcon
                 className="h-5 w-5 text-gray-600 cursor-pointer hover:text-red-600 transition-all
               duration-300"
@@ -59,6 +69,7 @@ const Notice = ({ noticeData, noticeTitle }: NoticeProps) => {
                   deleteNotice(notice._id);
                 }}
               />
+              }
             </div>
           );
         })}
