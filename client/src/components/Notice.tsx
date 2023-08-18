@@ -32,7 +32,7 @@ const Notice = ({ noticeData, noticeTitle }: NoticeProps) => {
       return;
     }
     try {
-      const res = await fetch(`${base_url}/post/notice`, {
+      const res = await fetch(`${base_url}/create/notice`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

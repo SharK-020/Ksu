@@ -2,7 +2,7 @@ const Employee = require("../models/employeeSchema");
 const path = require("path");
 exports.getEmployeesByDepartment = async (req, res) => {
 	try {
-		const { department } = req.body;
+		const department = req.params.dept;
 		const employees = await Employee.find({ department: department });
 		res.status(200).json(employees);
 	} catch (err) {

@@ -7,7 +7,7 @@ import FacultyCard from "../components/Governance/FacultyCard";
 
 const Other_officers = () => {
   return (
-    <div className="">
+    <div className="p-10">
       <h1 className="text-xl font-bold text-center">
         Other Officers and Support Staff
       </h1>

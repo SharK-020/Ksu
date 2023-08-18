@@ -4,7 +4,7 @@ import { UniAuth } from "../components/Governance/facultyData";
 
 const University_auth = () => {
   return (
-    <div className="space-y-2">
+    <div className="space-y-2 p-10">
       <h1 className="text-2xl font-bold text-center">University Authority</h1>
       <h2 className="text-xl font-semibold text-center">University court</h2>
       {/*university court members*/}
