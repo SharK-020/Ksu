@@ -13,12 +13,10 @@ exports.createFaculty = async (req, res) => {
 	try {
 		const files = req.files;
 		const { name, department, designation } = req.body;
-
+		let filep;
 		files.files.forEach(async (image) => {
-			const filePath = path.join(
-				__dirname,
-				`../assets/employees/${image.name}`
-			);
+			filep = `assets/employees/${image.name}`;
+			const filePath = path.join(__dirname, `../${filep}`);
 
 			image.mv(filePath, (err) => {
 				if (err) {
@@ -29,7 +27,7 @@ exports.createFaculty = async (req, res) => {
 				name: name,
 				department: department,
 				designation: designation,
-				img: filePath,
+				img: filep,
 			});
 
 			res.status(200).json({ message: "Employee created successfully" });
