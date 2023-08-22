@@ -27,7 +27,7 @@ const Programs = (props: {
 					width="800px"
 					height="800px"
 					viewBox="0 0 37 32"
-					enable-background="new 0 0 37 32">
+					enableBackground="new 0 0 37 32">
 					<path
 						fill="#808184"
 						d="M36.078,7.173L19.876,0.346c-0.865-0.365-1.858-0.365-2.728,0L0.922,7.183C0.362,7.42,0.009,7.944,0,8.554

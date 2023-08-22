@@ -11,5 +11,8 @@ router.get("/get/departments/:school", deptController.getDepartmentsBySchool);
 router.get("/get/image/", imageController.getImage);
 router.get("/get/notice", noticeController.getNotice);
 router.get("/get/link", linkController.getLinks);
+router.delete("/delete/notice/:id", noticeController.deleteNotice);
+router.delete("/delete/faculty/:id", employeeController.deleteFaculty);
+router.post("/post/notice", noticeController.createNotice);
 
 module.exports = router;

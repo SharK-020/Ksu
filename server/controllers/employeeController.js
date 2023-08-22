@@ -27,7 +27,7 @@ exports.createFaculty = async (req, res) => {
 				name: name,
 				department: department,
 				designation: designation,
-				img: filep,
+				img: filePath,
 			});
 
 			res.status(200).json({ message: "Employee created successfully" });

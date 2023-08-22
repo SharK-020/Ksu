@@ -4,7 +4,7 @@ const fs = require("fs");
 exports.createNotice = async (req, res) => {
 	try {
 		const files = req.files;
-		const { title } = req.body;
+		const { title, date } = req.body;
 
 		const filePath = path.join(
 			__dirname,
@@ -24,6 +24,7 @@ exports.createNotice = async (req, res) => {
 			});
 			const notice = await Notice.create({
 				title: title,
+				date: date,
 				doc: filePath,
 			});
 
@@ -40,11 +41,11 @@ exports.deleteNotice = async (req, res) => {
 		const notice = await Notice.findById(id);
 		const filePath = notice.doc;
 
-		fs.unlink(filePath, (err) => {
-			if (err) {
-				return res.status(500).json({ error: err.message });
-			}
-		});
+//		fs.unlink(filePath, (err) => {
+//			if (err) {
+//				return res.status(500).json({ error: err.message });
+//			}
+//		}); // delete file from assets folder
 
 		await Notice.findByIdAndDelete(id);
 		res.status(200).json({ message: "notice deleted successfully" });

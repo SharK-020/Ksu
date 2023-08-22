@@ -1,4 +1,3 @@
-import React from 'react'
 import Developer from '../components/Developer/Developer'
 
 const Dev = () => {
