@@ -3,12 +3,12 @@ import {
   PlusIcon,
   TrashIcon,
 } from "@heroicons/react/24/solid";
-import { NoticeType } from "./noticeSampleData";
 import { base_url } from "../utils/api";
 import { useSelector } from "react-redux";
 import { RootState } from "../state/rootRecucer";
 import toast from "react-hot-toast";
 import { useState } from "react";
+import { NoticeType } from "../utils/typings";
 
 type NoticeProps = {
   noticeData: NoticeType[];
