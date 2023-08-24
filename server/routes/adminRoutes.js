@@ -9,7 +9,11 @@ const noticeController = require("../controllers/noticeController");
 const fileExtLimiter = require("../middleware/fileExtLimiter");
 const imageController = require("../controllers/imageController");
 
-router.post("/create/link", jwtUtils.verifyToken, linkController.createLink);
+router.post("/create/link", 
+jwtUtils.verifyToken, 
+linkController.createLink
+);
+
 router.post(
 	"/create/department",
 	jwtUtils.verifyToken,

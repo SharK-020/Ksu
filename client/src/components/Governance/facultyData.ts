@@ -1,5 +1,13 @@
 //sample data for faculty
 
+export type facultyDataTypes = {
+	_id: string;
+	name: string;
+	designation: string;
+	email: string;
+	department: string;
+}
+
 const UniAuth = [
 	{
 		id: 1,

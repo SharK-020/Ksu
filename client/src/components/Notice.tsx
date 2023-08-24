@@ -3,12 +3,12 @@ import {
   PlusIcon,
   TrashIcon,
 } from "@heroicons/react/24/solid";
-import { NoticeType } from "./noticeSampleData";
 import { base_url } from "../utils/api";
 import { useSelector } from "react-redux";
 import { RootState } from "../state/rootRecucer";
 import toast from "react-hot-toast";
 import { useState } from "react";
+import { NoticeType } from "../utils/typings";
 
 type NoticeProps = {
   noticeData: NoticeType[];
@@ -32,7 +32,7 @@ const Notice = ({ noticeData, noticeTitle }: NoticeProps) => {
       return;
     }
     try {
-      const res = await fetch(`${base_url}/post/notice`, {
+      const res = await fetch(`${base_url}/create/notice`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -78,6 +78,7 @@ const Notice = ({ noticeData, noticeTitle }: NoticeProps) => {
           <h1 className="text-center font-semibold text-gray-100 text-2xl mx-auto">
             {noticeTitle}
           </h1>
+          { isLoggedIn && (
           <button>
             <PlusIcon
               className={`h-8 w-8 cursor-pointer transition-all duration-300 text-white
@@ -90,6 +91,7 @@ const Notice = ({ noticeData, noticeTitle }: NoticeProps) => {
               }}
             />
           </button>
+          )}
           {isEditing && (
             <div
               className="absolute w-fit block bg-slate-700 px-6 pb-6 pt-2 rounded-lg

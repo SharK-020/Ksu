@@ -8,7 +8,7 @@ exports.getLinks = async (req, res) => {
 		res.status(500).json({ error: err.message });
 	}
 };
-exports.createLink = async (req, res, next) => {
+exports.createLink = async (req, res) => {
 	try {
 		const { title, link } = req.body;
 		const linkObj = await Link.create({
@@ -39,3 +39,12 @@ exports.updateLink = async (req, res, next) => {
 		res.status(500).json({ error: err.message });
 	}
 };
+
+exports.deleteLink = async (req, res, next) => {
+	try {
+		const linkObj = await Link.findByIdAndDelete(req.params.id);
+		res.status(200).json(linkObj);
+	} catch (err) {
+		res.status(500).json({ error: err.message });
+	}
+}
