@@ -42,7 +42,7 @@ import { LinkType } from "../utils/typings";
           body: JSON.stringify({title: newTitle, link: newLink}),
           
         });
-        const data = await res.json();
+
         toast.success("Link added successfully");
       } catch (err) {
         console.error("Error adding Link:", err);
@@ -60,8 +60,7 @@ import { LinkType } from "../utils/typings";
             "Content-Type": "application/json",
           },
         });
-        const data = await res.json();
-        console.log(data);
+
         toast.success("link deleted successfully");
       } catch (err) {
         console.error("Error deleting link:", err);
@@ -152,7 +151,7 @@ import { LinkType } from "../utils/typings";
                   }}
                 >
                   <h1 className=" text-gray-950 text-md">{link.title}</h1>
-                  <p className="text-end text-gray-600 text-sm">{link.createdAt}</p>
+                  <p className="text-end text-gray-600 text-sm">{link.createdAt.slice(0, 10)}</p>
                 </div>
                 {isLoggedIn && (
                   <TrashIcon
