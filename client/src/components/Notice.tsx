@@ -92,7 +92,7 @@ const Notice = ({ noticeData, noticeTitle }: NoticeProps) => {
             />
           </button>
           )}
-          {isEditing && (
+          {isEditing && isLoggedIn && (
             <div
               className="absolute w-fit block bg-slate-700 px-6 pb-6 pt-2 rounded-lg
             top-12 left-[20%]"

@@ -92,7 +92,7 @@ import { LinkType } from "../utils/typings";
               />
             </button>
             )}
-            {isEditing && (
+            {isEditing && isLoggedIn && (
               <div
                 className="absolute w-fit block bg-slate-700 px-6 pb-6 pt-2 rounded-lg
               top-12 left-[20%]"
@@ -128,7 +128,7 @@ import { LinkType } from "../utils/typings";
                     isEditing && setIsEditing(false);
                   }}
                   >
-                    <CheckIcon className="h-8 w-8 text-gray-100 bg-green-600" />
+                    <CheckIcon className="h-8 w-8 text-gray-100 bg-green-600 cursor-pointer" />
                   </button>
                 </form>
               </div>
